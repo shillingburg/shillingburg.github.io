@@ -1,0 +1,26 @@
+.cred {
+	width:200px;
+	height:0;
+	position:relative;
+	float:none;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+	margin-top:20px;
+}
+
+.innerbody {
+	width:1280px;
+	height:720px;
+	margin-left:auto;
+	position:relative;
+	float:none;
+	margin-right:auto;
+	display:block;
+	margin-top:50px;
+}
+
+body {
+	background-color:#161C1E;
+}
+
