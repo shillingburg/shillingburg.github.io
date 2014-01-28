@@ -1,3 +1,26 @@
+a {
+	border-image-source:initial;
+	border-image-slice:initial;
+	border-image-width:initial;
+	border-image-outset:initial;
+	border-image-repeat:initial;
+	border-top-width:0;
+	border-right-width:0;
+	border-bottom-width:0;
+	border-left-width:0;
+}
+
+.contentholder {
+	width:400px;
+	height:300px;
+	position:relative;
+	float:none;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+	margin-top:100px;
+}
+
 .cred {
 	width:200px;
 	height:0;
@@ -12,6 +35,17 @@
 .innerbody {
 	width:1280px;
 	height:720px;
+	margin-left:auto;
+	position:relative;
+	float:none;
+	margin-right:auto;
+	display:block;
+	margin-top:50px;
+}
+
+.innerbody1x {
+	width:640px;
+	height:360px;
 	margin-left:auto;
 	position:relative;
 	float:none;
