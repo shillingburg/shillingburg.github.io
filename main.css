@@ -1,0 +1,164 @@
+body {
+	margin: 0px;
+	background-color: #2f2f2f;
+}
+
+img {
+	border: none;
+}
+
+.navcontainer {
+	float: left;
+	width:200px;
+	height:100%;
+	padding-left: 40px;
+	padding-right: 40px;
+	background-color: #2f2f2f;
+	border-right: 2px solid #3f3f3f;
+	position: fixed;
+
+}
+
+.logobox {
+	width:100%;
+	height:245px;
+	background-image: url('images/msolo.png'); 
+	background-repeat: no-repeat;
+	background-position: bottom;
+
+}
+
+.thin {
+	width:600px;
+}
+
+.navtext {
+font-family: 'Montserrat';
+font-weight: 700;
+color:#e2b5a0;
+margin-top: 30px;
+margin-left: 28px;
+font-size: 13px;
+line-height: 50px;
+}
+
+.active {
+	color:#e8355f;
+	letter-spacing: 1.4px;
+}
+
+.navtext a {text-decoration: none; color:#e2b5a0; letter-spacing: 1.2px;}
+.navtext a:hover {
+	-webkit-animation: linkhover 0.4s;
+	-webkit-animation-fill-mode: forwards;
+	-o-animation: linkhover 0.4s;
+	-o-animation-fill-mode: forwards;
+	-moz-animation: linkhover 0.4s;
+	-moz-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes linkhover {
+from {color: #e2b5a0;}
+to {color: #e8355f; letter-spacing: 1.4px;}
+}
+@-o-keyframes linkhover {
+from {color: #e2b5a0;}
+to {color: #e8355f; letter-spacing: 1.4px;}
+}
+@-moz-keyframes linkhover {
+from {color: #e2b5a0;}
+to {color: #e8355f; letter-spacing: 1.4px;}
+}
+
+.contentbox {
+	float:left;
+	width:800px;
+	margin-left: 375px;
+	padding-top: 57px;
+	padding-bottom: 100px;
+}
+
+.contentbox img {
+	max-width: 800px;
+	margin-top: 30px;
+}
+
+.contentbox p {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	color: #fafafa;
+	font-size: 12px;
+	letter-spacing: 1.1px;
+	line-height: 1.7;
+
+}
+
+.contentbox h2 {
+	font-family: 'Montserrat';
+	font-weight: 700;
+	color:#e2b5a0;
+	font-size: 16px;
+	margin-top: 40px;
+	text-transform: uppercase;
+	letter-spacing: 1.3px;
+}
+
+.contentbox h1 {
+	font-family: 'Montserrat';
+	font-weight: 700;
+	color:#e2b5a0;
+	font-size: 20px;
+	margin-top: 40px;
+	text-transform: uppercase;
+	letter-spacing: 1.3px;
+}
+
+.contentbox .name {
+	width:100%;
+	height:43px;
+	background-image: url("images/name.png");
+	background-size: 800px;
+	margin-top: 40px;
+	margin-bottom: -10px;
+}
+
+.contentbox hr {
+	border: none;
+	height:2px;
+	background-color: #3f3f3f;
+	margin-top:60px;
+	margin-bottom: 50px;
+}
+
+.contentbox a {
+	font-weight: 700;
+	color:#e2b5a0;
+	text-decoration: none;	
+	font-family: 'Montserrat';
+	text-transform: uppercase;
+	font-size: 13px;
+	letter-spacing: 1.3px;
+}
+
+.contentbox a:hover {
+	-webkit-animation: linkhover 0.4s;
+	-webkit-animation-fill-mode: forwards;
+	-o-animation: linkhover 0.4s;
+	-o-animation-fill-mode: forwards;
+	-moz-animation: linkhover 0.4s;
+	-moz-animation-fill-mode: forwards;
+}
+
+.widecontentbox {
+	width: 100%;
+	height: 568px;
+	overflow: auto;
+	margin-top: 40px;
+	white-space: nowrap;
+}
+
+.widecontentbox img {
+	height:568px;
+	margin-top: 0px;
+	margin-right: 10px;
+}
