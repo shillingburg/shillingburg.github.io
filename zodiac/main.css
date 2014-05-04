@@ -19,15 +19,12 @@ top:200px;
 border-radius: 50%;
 width: 100px;
 height: 100px;
-border-width: 2px;
+border-width: 1px;
 border: #fff solid;
--webkit-box-sizing: border-box;
+
 -webkit-transition: border-width 2s ease;
 }
 
-.circle:active {
-border-width: 50px;
-}
 
 .bob {
 -webkit-animation:bob 2s ease;
@@ -35,7 +32,13 @@ border-width: 50px;
 }
 
 @-webkit-keyframes bob {
-	0% {-webkit-transform:translateY(0px);}
-	50% {-webkit-transform:translateY(15px);}
-	0% {-webkit-transform:translateY(0px);}
+	0% {-webkit-transform:translateY(0px); -webkit-transform:scale(1,1);}
+	50% {-webkit-transform:translateY(15px); -webkit-transform:scale(1.1,1.1);}
+	0% {-webkit-transform:translateY(0px); -webkit-transform:scale(1,1);}
+}
+
+.aqua {
+	background-image: url(images/aqua.png);
+	background-size: 100px 100px;
+	background-position: center;
 }
