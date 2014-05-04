@@ -14,7 +14,7 @@ background-size: 768px 1024px;
 border-radius: 50%;
 width: 100px;
 height: 100px;
-border: rgba(255,255,255,0.5) solid 2px;
+border: rgba(255,255,255,0.3) solid 2px;
 
 -webkit-transition: border-width 2s ease;
 }
@@ -26,9 +26,9 @@ border: rgba(255,255,255,0.5) solid 2px;
 }
 
 @-webkit-keyframes bob {
-	0% {-webkit-transform:translateY(0px); border-color: rgba(255,255,255,0.5);}
+	0% {-webkit-transform:translateY(0px); border-color: rgba(255,255,255,0.3);}
 	50% {-webkit-transform:translateY(-10px); border-color: rgba(255,255,255,1);}
-	0% {-webkit-transform:translateY(0px); border-color: rgba(255,255,255,0.5);}
+	0% {-webkit-transform:translateY(0px); border-color: rgba(255,255,255,0.3);}
 }
 
 .aqua {
@@ -38,7 +38,7 @@ border: rgba(255,255,255,0.5) solid 2px;
 	position: absolute;
 	left: 200px;
 	top:691px;
-	-webkit-animation-delay: 0s;
+	-webkit-animation-delay: 0.3s;
 }
 
 .pisces{
@@ -48,7 +48,7 @@ border: rgba(255,255,255,0.5) solid 2px;
 	position: absolute;
 	left: 334px;
 	top:727px;
-	-webkit-animation-delay: 0.1s;
+	-webkit-animation-delay: 0.4s;
 }
 
 .aries {
@@ -58,7 +58,7 @@ border: rgba(255,255,255,0.5) solid 2px;
 	position: absolute;
 	left: 468px;
 	top:691px;
-	-webkit-animation-delay: 0.2s;
+	-webkit-animation-delay: 0.5s;
 }
 
 .taurus {
@@ -68,7 +68,7 @@ border: rgba(255,255,255,0.5) solid 2px;
 	position: absolute;
 	left: 564px;
 	top:594px;
-	-webkit-animation-delay: 0.3s;
+	-webkit-animation-delay: 0.5s;
 }
 .gemini {
 	background-image: url(images/aqua.png);
@@ -106,31 +106,40 @@ border: rgba(255,255,255,0.5) solid 2px;
 	top:196px;
 	-webkit-animation-delay: 0.1s;
 }
+.libra {
+	background-image: url(images/aqua.png);
+	background-size: 100px 100px;
+	background-position: center;
+	position: absolute;
+	left: 200px;
+	top:232px;
+	-webkit-animation-delay: 0s;
+}
 
 .scorpio {
 	background-image: url(images/aqua.png);
 	background-size: 100px 100px;
 	background-position: center;
 	position: absolute;
-	left: 200px;
-	top:691px;
-	-webkit-animation-delay: 1s;
+	left: 104px;
+	top:329px;
+	-webkit-animation-delay: 0s;
 }
 .sag {
 	background-image: url(images/aqua.png);
 	background-size: 100px 100px;
 	background-position: center;
 	position: absolute;
-	left: 200px;
-	top:691px;
-	-webkit-animation-delay: 1s;
+	left: 68px;
+	top:462px;
+	-webkit-animation-delay: 0.1s;
 }
 .capricorn {
 		background-image: url(images/aqua.png);
 	background-size: 100px 100px;
 	background-position: center;
 	position: absolute;
-	left: 200px;
-	top:691px;
-	-webkit-animation-delay: 1s;
+	left: 104px;
+	top:594px;
+	-webkit-animation-delay: 0.2s;
 }
