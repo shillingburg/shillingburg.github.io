@@ -125,7 +125,7 @@ border: rgba(255,255,255,0.3) solid 1px;
 	position: absolute;
 	left: 200px;
 	top:232px;
-	-webkit-animation-delay: 0s;
+	-webkit-animation-delay: 0.01s;
 }
 
 .scorpio {
@@ -135,7 +135,7 @@ border: rgba(255,255,255,0.3) solid 1px;
 	position: absolute;
 	left: 104px;
 	top:329px;
-	-webkit-animation-delay: 0s;
+	-webkit-animation-delay: 0.01s;
 }
 .sag {
 	background-image: url(images/sag.png);
