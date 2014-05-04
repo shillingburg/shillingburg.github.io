@@ -15,17 +15,6 @@
 }
 
 
-window.addEventListener('deviceorientation', function(eventData) {
-  // The compass direction - will return a value between 0 and 360
-  eventData.alpha
-
-  // Side to side value - will return a value between -180 and 180
-  eventData.beta
-
-  // Front to back value - will return a value between -90 and 90
-  eventData.gamma
-});
-
 
 
 </script>
@@ -37,29 +26,33 @@ window.addEventListener('deviceorientation', function(eventData) {
 
 <script>
 
-window.addEventListener('deviceorientation', function(eventData) {
-  // Retrieving the front/back tilting of the device and moves the
-  // background in the opposite way of the tilt
+document.addEventListener("DOMContentLoaded", function() {
+  window.scrollTo(0,0);
+  
+  var background = document.getElementById('background');
+  var debug = document.getElementById('debug');
+  
+  if (window.DeviceOrientationEvent) {
+    window.addEventListener('deviceorientation', function(e){
+      var beta = e.beta;
+      var gamma = e.gamma;
+      var pad = 80;
+      
+      if (gamma > 90) gamma = 180 - gamma;
+      if (gamma < -90) gamma = -180 - gamma;
+      
+      var yTilt = Math.round(-beta/180 * pad);
+      var xTilt = Math.round(-gamma/180 * pad);
 
-  var yTilt = Math.round((-eventData.beta + 90) * (40/180) - 40);
-
-  // Retrieve the side to side tilting of the device and move the
-  // background the opposite direction.
-
-  var xTilt = Math.round(-eventData.gamma * (20/180) - 20);
-
-  // Thi 'if' statement checks if the phone is upside down and corrects
-  // the value that is returned.
-  if (xTilt &gt; 0) {
-    xTilt = -xTilt;
-  } else if (xTilt &lt; -40) {
-    xTilt = -(xTilt + 80);
+      debug.innerHTML = 'beta: ' + beta.toFixed(1) + '\ngamma: ' + gamma.toFixed(1) + '\nyTilt: ' + yTilt + '\nxTilt: ' + xTilt;
+      
+      var position = 'translate3d(' + xTilt + 'px, ' + yTilt + 'px, ' + pad + 'px)';
+      background.style.transform = position;
+      background.style.webkitTransform = position;
+    }, false);
+    
   }
-
-  var backgroundPositionValue = yTilt + 'px ' + xtilt + "px";
-
-  background.style.backgroundPosition = backgroundPositionValue;
-}, false);
+});
 
 </script>
 
