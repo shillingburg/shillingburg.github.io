@@ -1,19 +1,25 @@
 body {
-width: 768px;
-height: 1024px;
 background-color: #2b2b2b;
 margin:0;
 }
 
-.circle {
+.container {
+width:768px;
+height: 1024px;
 margin-left: auto;
 margin-right: auto;
+background-color: #3b3b3b;
+}
+
+.circle {
+position: relative;
+left: 100px;
+top:200px;
 border-radius: 50%;
 width: 100px;
 height: 100px;
 border-width: 1px;
 border: #fff solid;
-margin-top: 300px;
 -webkit-transition: 2s ease;
 -webkit-box-sizing: border-box;
 -webkit-animation:bob 2s ease;
@@ -26,7 +32,7 @@ background-color: #fff;
 }
 
 @-webkit-keyframes bob {
-	0% {margin-top: 300;}
-	50% {margin-top: 310;}
-	0% {margin-top: 300;}
+	0% {-webkit-transform:translateY(0px);}
+	50% {-webkit-transform:translateY(15px);}
+	0% {-webkit-transform:translateY(0px);}
 }
