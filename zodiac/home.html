@@ -14,15 +14,27 @@
    function blockMove() {
       event.preventDefault() ;
 }
+
+function transitionPage() {
+	document.getElementById('container').classList.add('fadeout');
+}
+
+
+function stateChange() {
+	 window.location="pisces.html";
+}
+
+
+
 </script>
 
 <body ontouchmove="blockMove()">
 
 	</head>
-	<body><div class="container">
+	<body><div class="container" id="container">
 
 		<div class="fadein"><div class="circle borderfade bob aqua"></div>
-		<div class="circle bob pisces" onclick="location.href='pisces.html'"></div>
+		<div class="circle bob pisces" onclick="transitionPage(); setTimeout('stateChange()',3000)"></div>
 		<div class="circle bob aries"></div>
 		<div class="circle bob taurus"></div>
 		<div class="circle bob gemini"></div>
