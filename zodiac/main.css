@@ -4,3 +4,21 @@ height: 1024px;
 background-color: #2b2b2b;
 margin:0;
 }
+
+.circle {
+margin-left: auto;
+margin-right: auto;
+border-radius: 50%;
+width: 100px;
+height: 100px;
+border-width: 1px;
+border: #fff solid;
+margin-top: 300px;
+-webkit-transition: 2s ease;
+-webkit-box-sizing: border-box;
+}
+
+.circle:hover {
+border-width: 90px;
+background-color: #fff;
+}
