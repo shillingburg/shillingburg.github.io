@@ -31,6 +31,18 @@ border: rgba(255,255,255,0.3) solid 2px;
 	0% {-webkit-transform:translateY(0px); border-color: rgba(255,255,255,0.3);}
 }
 
+
+.centerbox {
+	position: absolute;
+	width:272px;
+	height:282px;
+	left:247px;
+	top:371px;
+	background-size: 272px 282px;
+	background-image: url(images/relabg.png);
+	-webkit-animation-delay:0.2s;
+}
+
 .aqua {
 	background-image: url(images/aqua.png);
 	background-size: 100px 100px;
