@@ -1,3 +1,7 @@
+html {
+background-color: #1b1b1b;
+}
+
 body {
 background-color: #2b2b2b;
 margin:0;
@@ -41,7 +45,14 @@ background-size: 768px 1024px;
 width:768px;
 height: 1024px;
 background-image: url(images/chel.jpg);
-background-size: 768px 1024px;	
+background-size: 950px 1124px;
+background-position: center center;	
+}
+
+.fadein {
+opacity: 0;
+-webkit-animation: fadein 1s cubic-bezier(.42,0,.58,1);
+-webkit-animation-fill-mode: forwards;
 }
 
 .circle {
@@ -75,7 +86,10 @@ border: rgba(255,255,255,0.3) solid 1px;
 	50% {-webkit-transform:translateY(-6px); opacity: 1;}
 	0% {-webkit-transform:translateY(0px); opacity: 0.4;}
 }
-
+@-webkit-keyframes fadein {
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
 
 .centerbox {
 	position: absolute;
