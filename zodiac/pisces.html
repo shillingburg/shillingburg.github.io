@@ -20,41 +20,13 @@
 </script>
 		
 	</head>
-	<body ontouchmove="blockMove()"><img src="images/chel.jpg" width="768" height="1024" id="background">
-
+	<body ontouchmove="blockMove()"><div class="piscescont fadein" content="user-scalable=yes"></div>
 
 
 	</body>
 
 <script>
 
-document.addEventListener("DOMContentLoaded", function() {
-  window.scrollTo(0,0);
-  
-  var background = document.getElementById('background');
-  var debug = document.getElementById('debug');
-  
-  if (window.DeviceOrientationEvent) {
-    window.addEventListener('deviceorientation', function(e){
-      var beta = e.beta;
-      var gamma = e.gamma;
-      var pad = 80;
-      
-      if (gamma > 90) gamma = 180 - gamma;
-      if (gamma < -90) gamma = -180 - gamma;
-      
-      var yTilt = Math.round(-beta/180 * pad);
-      var xTilt = Math.round(-gamma/180 * pad);
-
-      debug.innerHTML = 'beta: ' + beta.toFixed(1) + '\ngamma: ' + gamma.toFixed(1) + '\nyTilt: ' + yTilt + '\nxTilt: ' + xTilt;
-      
-      var position = 'translate3d(' + xTilt + 'px, ' + yTilt + 'px, ' + pad + 'px)';
-      background.style.transform = position;
-      background.style.webkitTransform = position;
-    }, false);
-    
-  }
-});
 
 </script>
 
