@@ -52,9 +52,8 @@ background-position: center center;	*/
 #background {
   margin: 0 auto;
   padding-top: 100px;
-  height: 768px;
-  width: 1024px;
-  background-size: 950px 1124px;
+  height: 1024px;
+  width: 900px;
   background-position: -50px -50px;
 }
 
