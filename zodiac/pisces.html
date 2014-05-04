@@ -13,6 +13,21 @@
    function blockMove() {
       event.preventDefault() ;
 }
+
+
+window.addEventListener('deviceorientation', function(eventData) {
+  // The compass direction - will return a value between 0 and 360
+  eventData.alpha
+
+  // Side to side value - will return a value between -180 and 180
+  eventData.beta
+
+  // Front to back value - will return a value between -90 and 90
+  eventData.gamma
+});
+
+
+
 </script>
 		
 	</head>
