@@ -45,7 +45,7 @@ background-size: 768px 1024px;
 width:768px;
 height: 1024px;
 background-image: url(images/chel.jpg);
-background-size: 950px 1124px;
+background-size: 768px 1024px;
 background-position: center center;	
 }
 
@@ -101,7 +101,7 @@ border: rgba(255,255,255,0.3) solid 1px;
 	top:371px;
 	background-size: 272px 282px;
 	background-image: url(images/relabg.png);
-	-webkit-animation-delay:0.2s;
+	-webkit-animation-delay:1.2s;
 }
 
 .aqua {
@@ -111,7 +111,7 @@ border: rgba(255,255,255,0.3) solid 1px;
 	position: absolute;
 	left: 200px;
 	top:691px;
-	-webkit-animation-delay: 0.3s;
+	-webkit-animation-delay: 1.3s;
 }
 
 .pisces{
@@ -121,7 +121,7 @@ border: rgba(255,255,255,0.3) solid 1px;
 	position: absolute;
 	left: 334px;
 	top:727px;
-	-webkit-animation-delay: 0.4s;
+	-webkit-animation-delay: 1.4s;
 }
 
 .aries {
@@ -131,7 +131,7 @@ border: rgba(255,255,255,0.3) solid 1px;
 	position: absolute;
 	left: 468px;
 	top:691px;
-	-webkit-animation-delay: 0.5s;
+	-webkit-animation-delay: 1.5s;
 }
 
 .taurus {
@@ -141,7 +141,7 @@ border: rgba(255,255,255,0.3) solid 1px;
 	position: absolute;
 	left: 564px;
 	top:594px;
-	-webkit-animation-delay: 0.5s;
+	-webkit-animation-delay: 1.5s;
 }
 .gemini {
 	background-image: url(images/gemini.png);
@@ -150,7 +150,7 @@ border: rgba(255,255,255,0.3) solid 1px;
 	position: absolute;
 	left: 599px;
 	top:462px;
-	-webkit-animation-delay: 0.4s;
+	-webkit-animation-delay: 1.4s;
 }
 .cancer{
 	background-image: url(images/cancer.png);
@@ -159,7 +159,7 @@ border: rgba(255,255,255,0.3) solid 1px;
 	position: absolute;
 	left: 564px;
 	top:329px;
-	-webkit-animation-delay: 0.3s;
+	-webkit-animation-delay: 1.3s;
 }
 .leo {
 	background-image: url(images/leo.png);
@@ -168,7 +168,7 @@ border: rgba(255,255,255,0.3) solid 1px;
 	position: absolute;
 	left: 468px;
 	top:232px;
-	-webkit-animation-delay: 0.2s;
+	-webkit-animation-delay: 1.2s;
 }
 .virgo {
 	background-image: url(images/virgo.png);
@@ -177,7 +177,7 @@ border: rgba(255,255,255,0.3) solid 1px;
 	position: absolute;
 	left: 334px;
 	top:196px;
-	-webkit-animation-delay: 0.1s;
+	-webkit-animation-delay: 1.1s;
 }
 .libra {
 	background-image: url(images/libra.png);
@@ -186,7 +186,7 @@ border: rgba(255,255,255,0.3) solid 1px;
 	position: absolute;
 	left: 200px;
 	top:232px;
-	-webkit-animation-delay: 0.01s;
+	-webkit-animation-delay: 1.01s;
 }
 
 .scorpio {
@@ -196,7 +196,7 @@ border: rgba(255,255,255,0.3) solid 1px;
 	position: absolute;
 	left: 104px;
 	top:329px;
-	-webkit-animation-delay: 0.01s;
+	-webkit-animation-delay: 1.01s;
 }
 .sag {
 	background-image: url(images/sag.png);
@@ -205,7 +205,7 @@ border: rgba(255,255,255,0.3) solid 1px;
 	position: absolute;
 	left: 68px;
 	top:462px;
-	-webkit-animation-delay: 0.1s;
+	-webkit-animation-delay: 1.1s;
 }
 .capricorn {
 		background-image: url(images/cap.png);
@@ -214,5 +214,5 @@ border: rgba(255,255,255,0.3) solid 1px;
 	position: absolute;
 	left: 104px;
 	top:594px;
-	-webkit-animation-delay: 0.2s;
+	-webkit-animation-delay: 1.2s;
 }
