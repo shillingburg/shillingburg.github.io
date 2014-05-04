@@ -16,9 +16,17 @@ border: #fff solid;
 margin-top: 300px;
 -webkit-transition: 2s ease;
 -webkit-box-sizing: border-box;
+-webkit-animation:bob 2s ease;
+-webkit-animation-iteration-count:infinite;
 }
 
 .circle:hover {
-border-width: 90px;
+border-width: 50px;
 background-color: #fff;
+}
+
+@-webkit-keyframes bob {
+	0% {margin-top: 300;}
+	50% {margin-top: 310;}
+	0% {margin-top: 300;}
 }
