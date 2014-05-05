@@ -67,6 +67,14 @@ background-size: 768px 1024px;
 background-position: center center;	
 }
 
+.capcont {
+width:768px;
+height: 1024px;
+background-image: url(images/rachel.jpg);
+background-size: 768px 1024px;
+background-position: center center;	
+}
+
 
 
 .fadein {
@@ -271,6 +279,20 @@ background-size: 768px 1024px;
 background-position: center center;	
 opacity: 0;
 }
+
+.textCapricorn {
+position: absolute;
+top: 0;
+left: 0;
+background-color: rgba(27,27,27,0.8);
+width:768px;
+height: 1024px;
+background-image: url(images/texts/capricorn.png);
+background-size: 768px 1024px;
+background-position: center center;	
+opacity: 0;
+}
+
 
 .touchme {
 border-radius: 50%;
