@@ -14,13 +14,38 @@
       event.preventDefault() ;
 }
 
+	function loadText() {
+		document.getElementById('textPisces').classList.add('fadein');
+		document.getElementById('toucher').classList.remove('touchme');
+	}
 
+	function destroyText() {
+		document.getElementById('toucher').classList.add('touchme');
+		document.getElementById('textPisces').classList.remove('fadein');
+		document.getElementById('textPisces').classList.add('fadeout');
+	}
+
+
+	function transitionPage() {
+	document.getElementById('container').classList.add('fadeout');
+}
+function stateChange() {
+	 window.location="home.html";
+}
 
 
 </script>
 		
 	</head>
-	<body ontouchmove="blockMove()"><div class="piscescont fadein"></div>
+	<body ontouchmove="blockMove()">
+		<div class="blankcontainer" id="container">
+
+
+		<div class="piscescont fadein"></div>
+		<div id="textPisces"  onclick="destroyText()"></div>
+		<div class="touchme" id="toucher" onclick="loadText()"></div>
+		<div class="backbutton" onclick="transitionPage(); setTimeout('stateChange()',2000);"></div>
+	</div>
 
 
 	</body>

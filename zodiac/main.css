@@ -45,6 +45,10 @@ height: 1024px;
 background-image: url(images/bg2.jpg);
 background-size: 768px 1024px;
 }
+.blankcontainer {
+width:768px;
+height: 1024px;
+}
 
 .piscescont {
 width:768px;
@@ -59,6 +63,12 @@ background-position: center center;
 .fadein {
 opacity: 0;
 -webkit-animation: fadein 1s cubic-bezier(.42,0,.58,1);
+-webkit-animation-fill-mode: forwards;
+}
+
+.fadeinearly {
+opacity: 0;
+-webkit-animation: fadein 0.5s cubic-bezier(.42,0,.58,1);
 -webkit-animation-fill-mode: forwards;
 }
 
@@ -97,6 +107,7 @@ border: rgba(255,255,255,0.3) solid 1px;
 	0%{opacity: 0;}
 	100%{opacity: 1;}
 }
+
 @-webkit-keyframes fadeout {
 	0%{opacity: 1;}
 	100%{opacity: 0;}
@@ -225,3 +236,48 @@ border: rgba(255,255,255,0.3) solid 1px;
 	top:594px;
 	-webkit-animation-delay: 1.2s;
 }
+
+#textPisces {
+position: absolute;
+top: 0;
+left: 0;
+background-color: rgba(27,27,27,0.8);
+width:768px;
+height: 1024px;
+background-image: url(images/texts/pisces.png);
+background-size: 768px 1024px;
+background-position: center center;	
+opacity: 0;
+}
+
+.touchme {
+border-radius: 50%;
+width: 50px;
+height: 50px;
+border: rgba(255,255,255,0.5) solid 10px;
+-webkit-box-sizing: border-box;
+position: relative;
+margin-left: auto;
+margin-right: auto;
+bottom: 100px;
+-webkit-animation: borderjitter 1.5s infinite;
+}
+
+@-webkit-keyframes  borderjitter{
+0% {border-width: 22px; opacity: 0;}
+13%{border-width: 20px;}
+40% {opacity: 0.8;}
+100% {border-width: 1px; opacity: 0;}
+}
+
+.backbutton {
+	background-image: url(images/texts/back.png);
+	background-size: 21px 21px;
+	position: absolute;
+	top: 30px;
+	left: 10px;
+	z-index: 30;
+	width: 21px;
+	height: 21px;
+}
+
