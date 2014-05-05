@@ -237,7 +237,7 @@ border: rgba(255,255,255,0.3) solid 1px;
 	-webkit-animation-delay: 1.2s;
 }
 
-#textPisces {
+.textPisces {
 position: absolute;
 top: 0;
 left: 0;

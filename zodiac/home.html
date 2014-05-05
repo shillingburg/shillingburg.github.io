@@ -16,6 +16,7 @@
 }
 
 function transitionPage() {
+	document.getElementById('container').classList.remove('fadein');
 	document.getElementById('container').classList.add('fadeout');
 }
 function stateChange() {
@@ -34,7 +35,7 @@ function stateChange() {
 
 
 
-		<div class="container" id="container">
+		<div class="container fadein" id="container">
 
 		<div class="fadein"><div class="circle borderfade bob aqua"></div>
 		<div class="circle bob pisces" onclick="transitionPage(); setTimeout('stateChange()',2000)"></div>
