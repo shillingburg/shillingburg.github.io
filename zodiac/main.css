@@ -75,6 +75,14 @@ background-size: 768px 1024px;
 background-position: center center;	
 }
 
+.sagcont {
+width:768px;
+height: 1024px;
+background-image: url(images/kent.jpg);
+background-size: 768px 1024px;
+background-position: center center;	
+}
+
 
 
 .fadein {
@@ -288,6 +296,19 @@ background-color: rgba(27,27,27,0.8);
 width:768px;
 height: 1024px;
 background-image: url(images/texts/capricorn.png);
+background-size: 768px 1024px;
+background-position: center center;	
+opacity: 0;
+}
+
+.textSagittarius {
+position: absolute;
+top: 0;
+left: 0;
+background-color: rgba(27,27,27,0.8);
+width:768px;
+height: 1024px;
+background-image: url(images/texts/sagittarius.png);
 background-size: 768px 1024px;
 background-position: center center;	
 opacity: 0;
