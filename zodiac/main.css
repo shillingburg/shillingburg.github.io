@@ -59,6 +59,14 @@ background-size: 768px 1024px;
 background-position: center center;	
 }
 
+.virgocont {
+width:768px;
+height: 1024px;
+background-image: url(images/katie.jpg);
+background-size: 768px 1024px;
+background-position: center center;	
+}
+
 
 
 .fadein {
@@ -246,6 +254,19 @@ background-color: rgba(27,27,27,0.8);
 width:768px;
 height: 1024px;
 background-image: url(images/texts/pisces.png);
+background-size: 768px 1024px;
+background-position: center center;	
+opacity: 0;
+}
+
+.textVirgo {
+position: absolute;
+top: 0;
+left: 0;
+background-color: rgba(27,27,27,0.8);
+width:768px;
+height: 1024px;
+background-image: url(images/texts/virgo.png);
 background-size: 768px 1024px;
 background-position: center center;	
 opacity: 0;

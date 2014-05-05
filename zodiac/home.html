@@ -22,6 +22,9 @@ function transitionPage() {
 function stateChange() {
 	 window.location="pisces.html";
 }
+function stateChange2() {
+	 window.location="virgo.html";
+}
 
 
 
@@ -44,7 +47,7 @@ function stateChange() {
 		<div class="circle bob gemini"></div>
 		<div class="circle bob cancer"></div>
 		<div class="circle bob leo"></div>
-		<div class="circle bob virgo"></div>
+		<div class="circle bob virgo" onclick="transitionPage(); setTimeout('stateChange2()',2000)"></div>
 		<div class="circle bob libra"></div>
 		<div class="circle bob scorpio"></div>
 		<div class="circle bob sag"></div>
