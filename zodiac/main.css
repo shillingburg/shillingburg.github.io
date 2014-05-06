@@ -83,6 +83,30 @@ background-size: 768px 1024px;
 background-position: center center;	
 }
 
+.aquacont {
+width:768px;
+height: 1024px;
+background-image: url(images/aquarius.jpg);
+background-size: 768px 1024px;
+background-position: center center;	
+}
+
+.scorpiocont {
+width:768px;
+height: 1024px;
+background-image: url(images/daniel.jpg);
+background-size: 768px 1024px;
+background-position: center center;	
+}
+
+.ariescont {
+width:768px;
+height: 1024px;
+background-image: url(images/connor.jpg);
+background-size: 768px 1024px;
+background-position: center center;	
+}
+
 
 
 .fadein {
@@ -314,6 +338,45 @@ background-position: center center;
 opacity: 0;
 }
 
+.textAquarius {
+position: absolute;
+top: 0;
+left: 0;
+background-color: rgba(27,27,27,0.8);
+width:768px;
+height: 1024px;
+background-image: url(images/texts/aquarius.png);
+background-size: 768px 1024px;
+background-position: center center;	
+opacity: 0;
+}
+
+.textScorpio {
+position: absolute;
+top: 0;
+left: 0;
+background-color: rgba(27,27,27,0.8);
+width:768px;
+height: 1024px;
+background-image: url(images/texts/scorpio.png);
+background-size: 768px 1024px;
+background-position: center center;
+opacity: 0;
+}
+
+.textAries {
+position: absolute;
+top: 0;
+left: 0;
+background-color: rgba(27,27,27,0.8);
+width:768px;
+height: 1024px;
+background-image: url(images/texts/aries.png);
+background-size: 768px 1024px;
+background-position: center center;
+opacity: 0;
+}
+
 
 .touchme {
 border-radius: 50%;
@@ -328,6 +391,18 @@ bottom: 100px;
 -webkit-animation: borderjitter 1.5s infinite;
 }
 
+.touchmeL {
+border-radius: 50%;
+width: 50px;
+height: 50px;
+border: rgba(255,255,255,0.5) solid 10px;
+-webkit-box-sizing: border-box;
+position: relative;
+margin-left: 50px;
+bottom: 100px;
+-webkit-animation: borderjitter 1.5s infinite;
+}
+
 @-webkit-keyframes  borderjitter{
 0% {border-width: 22px; opacity: 0;}
 13%{border-width: 20px;}
@@ -338,12 +413,26 @@ bottom: 100px;
 .backbutton {
 	background-image: url(images/texts/back.png);
 	background-size: 28px 28px;
+	background-repeat: no-repeat;
 	position: absolute;
 	top: 30px;
 	left: 10px;
 	z-index: 30;
-	width: 28px;
-	height: 28px;
+	width: 40px;
+	height: 40px;
+	opacity: 0.7;
+}
+
+.backbuttonL {
+	background-image: url(images/texts/backl.png);
+	background-size: 28px 28px;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 30px;
+	left: 718px;
+	z-index: 30;
+	width: 40px;
+	height: 40px;
 	opacity: 0.7;
 }
 
