@@ -165,7 +165,6 @@ border-radius: 50%;
 width: 100px;
 height: 100px;
 border: rgba(255,255,255,0.3) solid 1px;
-
 -webkit-transition: border-width 2s ease;
 }
 
@@ -514,6 +513,20 @@ bottom: 100px;
 100% {border-width: 1px; opacity: 0;}
 }
 
+@-webkit-keyframes  borderjitterhuh{
+0% { border-color: rgba(255,255,255,0.4);}
+50% {border-color: rgba(255,255,255,1);}
+100% {border-color: rgba(255,255,255,0.4);}
+}
+
+
+@-webkit-keyframes  moveup {
+0% { -webkit-transform: translateY(0);}
+100% {-webkit-transform: translateY(-500);}
+}
+
+
+
 .backbutton {
 	background-image: url(images/texts/back.png);
 	background-size: 28px 28px;
@@ -540,3 +553,37 @@ bottom: 100px;
 	opacity: 0.7;
 }
 
+
+.moveup {
+	-webkit-animation: moveup 3s ease;
+	-webkit-animation-fill-mode: forwards;
+}
+
+.huhcont {
+width:768px;
+height: 1024px;
+background-image: url(images/fefe.jpg);
+background-size: 768px 1024px;
+background-position: center center;	
+}
+
+.huhtext {
+width:768px;
+height: 1024px;
+background-image: url(images/fin.jpg);
+background-size: 768px 1024px;
+background-position: center center;	
+}
+
+.huhbutt {
+opacity: 0.7;
+width: 49px;
+height: 44px;
+background-image: url(images/huh.png);
+background-size: 49px 44px;
+position: relative;
+left: 357px;
+top: 640px;
+background-position: center center;
+	-webkit-animation-delay:1.2s;
+}

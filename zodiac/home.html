@@ -19,6 +19,8 @@ function transitionPage() {
 	document.getElementById('container').classList.remove('fadein');
 	document.getElementById('container').classList.add('fadeout');
 }
+
+
 function stateChange() {
 	 window.location="pisces.html";
 }
@@ -63,6 +65,9 @@ function stateChange11() {
 function stateChange12() {
 	 window.location="libra.html";
 }
+function stateChange13() {
+	 window.location="about.html";
+}
 
 
 
@@ -79,18 +84,19 @@ function stateChange12() {
 		<div class="container fadein" id="container">
 
 		<div class="fadein"><div class="circle borderfade bob aqua" onclick="transitionPage(); setTimeout('stateChange5()',2000)"></div>
-		<div class="circle bob pisces" onclick="transitionPage(); setTimeout('stateChange()',2000)"></div>
-		<div class="circle bob aries" onclick="transitionPage(); setTimeout('stateChange7()',2000)"></div>
-		<div class="circle bob taurus" onclick="transitionPage(); setTimeout('stateChange9()',2000)"></div>
-		<div class="circle bob gemini" onclick="transitionPage(); setTimeout('stateChange8()',2000)"></div>
-		<div class="circle bob cancer" onclick="transitionPage(); setTimeout('stateChange10()',2000)"></div>
-		<div class="circle bob leo" onclick="transitionPage(); setTimeout('stateChange11()',2000)"></div>
-		<div class="circle bob virgo" onclick="transitionPage(); setTimeout('stateChange2()',2000)"></div>
-		<div class="circle bob libra" onclick="transitionPage(); setTimeout('stateChange12()',2000)"></div>
-		<div class="circle bob scorpio" onclick="transitionPage(); setTimeout('stateChange6()',2000)"></div>
-		<div class="circle bob sag" onclick="transitionPage(); setTimeout('stateChange4()',2000)"></div>
-		<div class="circle bob capricorn" onclick="transitionPage(); setTimeout('stateChange3()',2000)"></div>
-		<div class="centerbox bob"></div>
+		<div id="circlex" class="circle bob pisces" onclick="transitionPage(); setTimeout('stateChange()',2000)"></div>
+		<div id="circlex" class="circle bob aries" onclick="transitionPage(); setTimeout('stateChange7()',2000)"></div>
+		<div id="circlex" class="circle bob taurus" onclick="transitionPage(); setTimeout('stateChange9()',2000)"></div>
+		<div id="circlex" class="circle bob gemini" onclick="transitionPage(); setTimeout('stateChange8()',2000)"></div>
+		<div id="circlex" class="circle bob cancer" onclick="transitionPage(); setTimeout('stateChange10()',2000)"></div>
+		<div id="circlex" class="circle bob leo" onclick="transitionPage(); setTimeout('stateChange11()',2000)"></div>
+		<div id="circlex" class="circle bob virgo" onclick="transitionPage(); setTimeout('stateChange2()',2000)"></div>
+		<div id="circlex" class="circle bob libra" onclick="transitionPage(); setTimeout('stateChange12()',2000)"></div>
+		<div id="circlex" class="circle bob scorpio" onclick="transitionPage(); setTimeout('stateChange6()',2000)"></div>
+		<div id="circlex" class="circle bob sag" onclick="transitionPage(); setTimeout('stateChange4()',2000)"></div>
+		<div id="circlex" class="circle bob capricorn" onclick="transitionPage(); setTimeout('stateChange3()',2000)"></div>
+		<div id="circlex" class="centerbox bob"></div>
+		<div class="huhbutt bob" onclick="transitionPage(); setTimeout('stateChange13()',2000)"></div>
 		</div>
 	</div></body>
 </html>
