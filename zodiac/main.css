@@ -107,6 +107,45 @@ background-size: 768px 1024px;
 background-position: center center;	
 }
 
+.geminicont {
+width:768px;
+height: 1024px;
+background-image: url(images/drew.jpg);
+background-size: 768px 1024px;
+background-position: center center;	
+}
+
+.tauruscont {
+width:768px;
+height: 1024px;
+background-image: url(images/sluke.jpg);
+background-size: 768px 1024px;
+background-position: center center;	
+}
+
+.cancercont {
+width:768px;
+height: 1024px;
+background-image: url(images/omar.jpg);
+background-size: 768px 1024px;
+background-position: center center;	
+}
+
+.leocont {
+width:768px;
+height: 1024px;
+background-image: url(images/cc.jpg);
+background-size: 768px 1024px;
+background-position: center center;	
+}
+.libracont {
+width:768px;
+height: 1024px;
+background-image: url(images/mila.jpg);
+background-size: 768px 1024px;
+background-position: center center;	
+}
+
 
 
 .fadein {
@@ -372,6 +411,71 @@ background-color: rgba(27,27,27,0.8);
 width:768px;
 height: 1024px;
 background-image: url(images/texts/aries.png);
+background-size: 768px 1024px;
+background-position: center center;
+opacity: 0;
+}
+
+.textGemini {
+position: absolute;
+top: 0;
+left: 0;
+background-color: rgba(27,27,27,0.8);
+width:768px;
+height: 1024px;
+background-image: url(images/texts/gemini.png);
+background-size: 768px 1024px;
+background-position: center center;
+opacity: 0;
+}
+
+.textTaurus {
+position: absolute;
+top: 0;
+left: 0;
+background-color: rgba(27,27,27,0.8);
+width:768px;
+height: 1024px;
+background-image: url(images/texts/taurus.png);
+background-size: 768px 1024px;
+background-position: center center;
+opacity: 0;
+}
+
+.textCancer {
+position: absolute;
+top: 0;
+left: 0;
+background-color: rgba(27,27,27,0.8);
+width:768px;
+height: 1024px;
+background-image: url(images/texts/cancer.png);
+background-size: 768px 1024px;
+background-position: center center;
+opacity: 0;
+}
+
+.textLeo {
+position: absolute;
+top: 0;
+left: 0;
+background-color: rgba(27,27,27,0.8);
+width:768px;
+height: 1024px;
+background-image: url(images/texts/leo.png);
+background-size: 768px 1024px;
+background-position: center center;
+opacity: 0;
+}
+
+.textLibra {
+position: absolute;
+top: 0;
+left: 0;
+background-color: rgba(27,27,27,0.8);
+width:768px;
+height: 1024px;
+background-image: url(images/texts/libra.png);
 background-size: 768px 1024px;
 background-position: center center;
 opacity: 0;
