@@ -1,0 +1,590 @@
+html {
+background-color: #1b1b1b;
+}
+
+body {
+margin:0;
+}
+
+.fadeout {
+opacity: 1;
+-webkit-animation: fadeout 1s cubic-bezier(.42,0,.58,1);
+-webkit-animation-fill-mode: forwards;
+}
+
+.greybg {
+width:1024px;
+height: 768px;
+background-color: #1b1b1b;
+}
+
+.innerlines {
+width: 100%;
+height:90%;
+border-top: 1px solid #fff;
+border-bottom: 1px solid #fff;
+position: relative;
+top:5%;
+}
+
+.begin {
+width:150px;
+height: 50px;
+background-image: url(images/begin.png);
+position: relative;
+margin-left: auto;
+margin-right: auto;
+top: 50%;
+margin-top: -25px;
+opacity: 0.4;
+background-size: 150px 50px; 
+}
+
+.container {
+width:768px;
+height: 1024px;
+background-image: url(images/bgx1.png);
+background-color: #3b99f0;
+
+}
+.blankcontainer {
+width:768px;
+height: 1024px;
+}
+
+.piscescont {
+width:768px;
+height: 1024px;
+background-image: url(images/chel.jpg);
+background-size: 768px 1024px;
+background-position: center center;	
+}
+
+.virgocont {
+width:768px;
+height: 1024px;
+background-image: url(images/katie.jpg);
+background-size: 768px 1024px;
+background-position: center center;	
+}
+
+.capcont {
+width:768px;
+height: 1024px;
+background-image: url(images/rachel.jpg);
+background-size: 768px 1024px;
+background-position: center center;	
+}
+
+.sagcont {
+width:768px;
+height: 1024px;
+background-image: url(images/kent.jpg);
+background-size: 768px 1024px;
+background-position: center center;	
+}
+
+.aquacont {
+width:768px;
+height: 1024px;
+background-image: url(images/aquarius.jpg);
+background-size: 768px 1024px;
+background-position: center center;	
+}
+
+.scorpiocont {
+width:768px;
+height: 1024px;
+background-image: url(images/daniel.jpg);
+background-size: 768px 1024px;
+background-position: center center;	
+}
+
+.ariescont {
+width:768px;
+height: 1024px;
+background-image: url(images/connor.jpg);
+background-size: 768px 1024px;
+background-position: center center;	
+}
+
+.geminicont {
+width:768px;
+height: 1024px;
+background-image: url(images/drew.jpg);
+background-size: 768px 1024px;
+background-position: center center;	
+}
+
+.tauruscont {
+width:768px;
+height: 1024px;
+background-image: url(images/sluke.jpg);
+background-size: 768px 1024px;
+background-position: center center;	
+}
+
+.cancercont {
+width:768px;
+height: 1024px;
+background-image: url(images/omar.jpg);
+background-size: 768px 1024px;
+background-position: center center;	
+}
+
+.leocont {
+width:768px;
+height: 1024px;
+background-image: url(images/cc.jpg);
+background-size: 768px 1024px;
+background-position: center center;	
+}
+.libracont {
+width:768px;
+height: 1024px;
+background-image: url(images/mila.jpg);
+background-size: 768px 1024px;
+background-position: center center;	
+}
+
+
+
+.fadein {
+opacity: 0;
+-webkit-animation: fadein 1s cubic-bezier(.42,0,.58,1);
+-webkit-animation-fill-mode: forwards;
+}
+
+.fadeinearly {
+opacity: 0;
+-webkit-animation: fadein 0.5s cubic-bezier(.42,0,.58,1);
+-webkit-animation-fill-mode: forwards;
+}
+
+.circle {
+border-radius: 50%;
+width: 100px;
+height: 100px;
+border: rgba(255,255,255,0.3) solid 1px;
+-webkit-transition: border-width 2s ease;
+}
+
+
+.bob {
+-webkit-animation:bob 2s cubic-bezier(.42,0,.58,1);
+-webkit-animation-iteration-count:infinite;	
+}
+
+.bobopap {
+-webkit-animation:bobopap 2s cubic-bezier(.42,0,.58,1);
+-webkit-animation-iteration-count:infinite;	
+}
+
+@-webkit-keyframes bob {
+	0% {-webkit-transform:translateY(0px); border-color: rgba(255,255,255,0.3);}
+	50% {-webkit-transform:translateY(-10px); border-color: rgba(255,255,255,1);}
+	0% {-webkit-transform:translateY(0px); border-color: rgba(255,255,255,0.3);}
+}
+
+@-webkit-keyframes bobopap {
+	0% {-webkit-transform:translateY(0px); opacity: 0.4;}
+	50% {-webkit-transform:translateY(-6px); opacity: 1;}
+	0% {-webkit-transform:translateY(0px); opacity: 0.4;}
+}
+@-webkit-keyframes fadein {
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+	0%{opacity: 1;}
+	100%{opacity: 0;}
+}
+
+.centerbox {
+	position: absolute;
+	width:272px;
+	height:282px;
+	left:247px;
+	top:371px;
+	background-size: 272px 282px;
+	background-image: url(images/relabg.png);
+	-webkit-animation-delay:1.2s;
+}
+
+.aqua {
+	background-image: url(images/aqua.png);
+	background-size: 100px 100px;
+	background-position: center;
+	position: absolute;
+	left: 200px;
+	top:691px;
+	-webkit-animation-delay: 1.3s;
+}
+
+.pisces{
+	background-image: url(images/pisces.png);
+	background-size: 100px 100px;
+	background-position: center;
+	position: absolute;
+	left: 334px;
+	top:727px;
+	-webkit-animation-delay: 1.4s;
+}
+
+.aries {
+	background-image: url(images/aries.png);
+	background-size: 100px 100px;
+	background-position: center;
+	position: absolute;
+	left: 468px;
+	top:691px;
+	-webkit-animation-delay: 1.5s;
+}
+
+.taurus {
+	background-image: url(images/taurus.png);
+	background-size: 100px 100px;
+	background-position: center;
+	position: absolute;
+	left: 564px;
+	top:594px;
+	-webkit-animation-delay: 1.5s;
+}
+.gemini {
+	background-image: url(images/gemini.png);
+	background-size: 100px 100px;
+	background-position: center;
+	position: absolute;
+	left: 599px;
+	top:462px;
+	-webkit-animation-delay: 1.4s;
+}
+.cancer{
+	background-image: url(images/cancer.png);
+	background-size: 100px 100px;
+	background-position: center;
+	position: absolute;
+	left: 564px;
+	top:329px;
+	-webkit-animation-delay: 1.3s;
+}
+.leo {
+	background-image: url(images/leo.png);
+	background-size: 100px 100px;
+	background-position: center;
+	position: absolute;
+	left: 468px;
+	top:232px;
+	-webkit-animation-delay: 1.2s;
+}
+.virgo {
+	background-image: url(images/virgo.png);
+	background-size: 100px 100px;
+	background-position: center;
+	position: absolute;
+	left: 334px;
+	top:196px;
+	-webkit-animation-delay: 1.1s;
+}
+.libra {
+	background-image: url(images/libra.png);
+	background-size: 100px 100px;
+	background-position: center;
+	position: absolute;
+	left: 200px;
+	top:232px;
+	-webkit-animation-delay: 1.01s;
+}
+
+.scorpio {
+	background-image: url(images/scorpio.png);
+	background-size: 100px 100px;
+	background-position: center;
+	position: absolute;
+	left: 104px;
+	top:329px;
+	-webkit-animation-delay: 1.01s;
+}
+.sag {
+	background-image: url(images/sag.png);
+	background-size: 100px 100px;
+	background-position: center;
+	position: absolute;
+	left: 68px;
+	top:462px;
+	-webkit-animation-delay: 1.1s;
+}
+.capricorn {
+		background-image: url(images/cap.png);
+	background-size: 100px 100px;
+	background-position: center;
+	position: absolute;
+	left: 104px;
+	top:594px;
+	-webkit-animation-delay: 1.2s;
+}
+
+.textPisces {
+position: absolute;
+top: 0;
+left: 0;
+background-color: rgba(27,27,27,0.8);
+width:768px;
+height: 1024px;
+background-image: url(images/texts/pisces.png);
+background-size: 768px 1024px;
+background-position: center center;	
+opacity: 0;
+}
+
+.textVirgo {
+position: absolute;
+top: 0;
+left: 0;
+background-color: rgba(27,27,27,0.8);
+width:768px;
+height: 1024px;
+background-image: url(images/texts/virgo.png);
+background-size: 768px 1024px;
+background-position: center center;	
+opacity: 0;
+}
+
+.textCapricorn {
+position: absolute;
+top: 0;
+left: 0;
+background-color: rgba(27,27,27,0.8);
+width:768px;
+height: 1024px;
+background-image: url(images/texts/capricorn.png);
+background-size: 768px 1024px;
+background-position: center center;	
+opacity: 0;
+}
+
+.textSagittarius {
+position: absolute;
+top: 0;
+left: 0;
+background-color: rgba(27,27,27,0.8);
+width:768px;
+height: 1024px;
+background-image: url(images/texts/sagittarius.png);
+background-size: 768px 1024px;
+background-position: center center;	
+opacity: 0;
+}
+
+.textAquarius {
+position: absolute;
+top: 0;
+left: 0;
+background-color: rgba(27,27,27,0.8);
+width:768px;
+height: 1024px;
+background-image: url(images/texts/aquarius.png);
+background-size: 768px 1024px;
+background-position: center center;	
+opacity: 0;
+}
+
+.textScorpio {
+position: absolute;
+top: 0;
+left: 0;
+background-color: rgba(27,27,27,0.8);
+width:768px;
+height: 1024px;
+background-image: url(images/texts/scorpio.png);
+background-size: 768px 1024px;
+background-position: center center;
+opacity: 0;
+}
+
+.textAries {
+position: absolute;
+top: 0;
+left: 0;
+background-color: rgba(27,27,27,0.8);
+width:768px;
+height: 1024px;
+background-image: url(images/texts/aries.png);
+background-size: 768px 1024px;
+background-position: center center;
+opacity: 0;
+}
+
+.textGemini {
+position: absolute;
+top: 0;
+left: 0;
+background-color: rgba(27,27,27,0.8);
+width:768px;
+height: 1024px;
+background-image: url(images/texts/gemini.png);
+background-size: 768px 1024px;
+background-position: center center;
+opacity: 0;
+}
+
+.textTaurus {
+position: absolute;
+top: 0;
+left: 0;
+background-color: rgba(27,27,27,0.8);
+width:768px;
+height: 1024px;
+background-image: url(images/texts/taurus.png);
+background-size: 768px 1024px;
+background-position: center center;
+opacity: 0;
+}
+
+.textCancer {
+position: absolute;
+top: 0;
+left: 0;
+background-color: rgba(27,27,27,0.8);
+width:768px;
+height: 1024px;
+background-image: url(images/texts/cancer.png);
+background-size: 768px 1024px;
+background-position: center center;
+opacity: 0;
+}
+
+.textLeo {
+position: absolute;
+top: 0;
+left: 0;
+background-color: rgba(27,27,27,0.8);
+width:768px;
+height: 1024px;
+background-image: url(images/texts/leo.png);
+background-size: 768px 1024px;
+background-position: center center;
+opacity: 0;
+}
+
+.textLibra {
+position: absolute;
+top: 0;
+left: 0;
+background-color: rgba(27,27,27,0.8);
+width:768px;
+height: 1024px;
+background-image: url(images/texts/libra.png);
+background-size: 768px 1024px;
+background-position: center center;
+opacity: 0;
+}
+
+
+.touchme {
+border-radius: 50%;
+width: 50px;
+height: 50px;
+border: rgba(255,255,255,0.5) solid 10px;
+-webkit-box-sizing: border-box;
+position: relative;
+margin-left: auto;
+margin-right: auto;
+bottom: 100px;
+-webkit-animation: borderjitter 1.5s infinite;
+}
+
+.touchmeL {
+border-radius: 50%;
+width: 50px;
+height: 50px;
+border: rgba(255,255,255,0.5) solid 10px;
+-webkit-box-sizing: border-box;
+position: relative;
+margin-left: 50px;
+bottom: 100px;
+-webkit-animation: borderjitter 1.5s infinite;
+}
+
+@-webkit-keyframes  borderjitter{
+0% {border-width: 22px; opacity: 0;}
+13%{border-width: 20px;}
+40% {opacity: 0.8;}
+100% {border-width: 1px; opacity: 0;}
+}
+
+@-webkit-keyframes  borderjitterhuh{
+0% { border-color: rgba(255,255,255,0.4);}
+50% {border-color: rgba(255,255,255,1);}
+100% {border-color: rgba(255,255,255,0.4);}
+}
+
+
+@-webkit-keyframes  moveup {
+0% { -webkit-transform: translateY(0);}
+100% {-webkit-transform: translateY(-500);}
+}
+
+
+
+.backbutton {
+	background-image: url(images/texts/back.png);
+	background-size: 28px 28px;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 30px;
+	left: 10px;
+	z-index: 30;
+	width: 40px;
+	height: 40px;
+	opacity: 0.7;
+}
+
+.backbuttonL {
+	background-image: url(images/texts/backl.png);
+	background-size: 28px 28px;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 30px;
+	left: 718px;
+	z-index: 30;
+	width: 40px;
+	height: 40px;
+	opacity: 0.7;
+}
+
+
+.moveup {
+	-webkit-animation: moveup 3s ease;
+	-webkit-animation-fill-mode: forwards;
+}
+
+.huhcont {
+width:768px;
+height: 1024px;
+background-image: url(images/flef.jpg);
+background-size: 768px 1024px;
+background-position: center center;	
+}
+
+.huhtext {
+width:768px;
+height: 1024px;
+background-image: url(images/fin.jpg);
+background-size: 768px 1024px;
+background-position: center center;	
+}
+
+.huhbutt {
+opacity: 0.7;
+width: 49px;
+height: 44px;
+background-image: url(images/huh.png);
+background-size: 49px 44px;
+position: relative;
+left: 357px;
+top: 640px;
+background-position: center center;
+	-webkit-animation-delay:1.2s;
+}
