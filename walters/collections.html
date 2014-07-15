@@ -6,9 +6,7 @@
 <style>
 
 	body {
-		background-image:url(images/collectionheader.jpg);
-		background-attachment: fixed;
-		background-size: 320px auto;
+		background-color: #000;
 		background-repeat: no-repeat;
 		margin: 0;
 		max-width: 320px;
@@ -33,9 +31,22 @@
 		background-size: 320px auto;
 	}
 
+	.fixedhead {
+		width: 100%;
+		height: 509px;
+		background-image:url(images/collectionheader.jpg);
+		background-size: 320px auto;
+		position: fixed;
+		background-repeat: no-repeat;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+
 </style>
 </head>
 <body>
+	<div class="fixedhead"></div>
 	<div class="numberinput"></div>
 	<img src="images/testimage.png" width="320"/>
 </body>
