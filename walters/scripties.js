@@ -1,3 +1,8 @@
+
+
+
+
+
 function changeMenuBar() {
 	if(document.getElementById('navbar').classList.contains("numberinput")) {
     document.getElementById('navbar').classList.remove('numberinput');
