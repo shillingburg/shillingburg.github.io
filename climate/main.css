@@ -1,0 +1,136 @@
+body {
+
+	background-color: #1e1c27;
+	background-image: url(images/bg.png);
+	background-position: bottom;
+	background-repeat: repeat-x;
+	margin: 0;
+}
+
+@font-face {
+    font-family: Uni;
+    src: url(fonts/uni_sans_heavy-webfont.woff);
+}
+
+
+.logobox {
+	background-image: url(images/logo.gif);
+	width: 400px;
+	height: 150px;
+	background-size: 400px 150px;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+}
+
+
+.leftnavbox {
+	width: 33.33%;
+	text-align: center;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+}
+
+
+
+.welcomecontainer {
+	font-family: "Uni";
+	font-size: 8em;
+	width: 100%;
+	text-align: center;
+	margin-top: 20%;
+}
+
+@-webkit-keyframes rainbow {
+	14% {color: #ed3062; transform:translateY(10px);}
+	28% {color: #ee9236;}
+	42% {color: #fff033;}
+	56% {color: #b2ea47;}
+	70% {color:#3bd2f4;}
+	84% {color:#7f50ff;}
+	100% {color:#ed3062;}
+}
+
+
+@-webkit-keyframes bob {
+	0% {transform: translateY(0px);}
+	50% {transform: translateY(-20px);}
+	100% {transform: translateY (0px);} 
+	/* to {transform: translateY(100px);} */
+}
+
+
+.textformat {
+	color:#ed3062;
+
+}
+
+
+
+
+
+
+
+.delay1 {
+	-webkit-animation: rainbow 1s infinite ease;
+
+}
+.delay2 {
+	-webkit-animation: rainbow 1s infinite ease;
+	-webkit-animation-delay: -0.16s;
+}
+.delay3 {
+	-webkit-animation: rainbow 1s infinite ease;
+	-webkit-animation-delay: -0.32s;
+}
+.delay4 {
+	-webkit-animation: rainbow 1s infinite ease;
+	-webkit-animation-delay: -0.48s;
+}
+.delay5 {
+	-webkit-animation: rainbow 1s infinite ease;
+	-webkit-animation-delay: -0.64s;
+}
+.delay6 {
+	-webkit-animation: rainbow 1s infinite ease;
+	-webkit-animation-delay: -0.8s;
+}
+
+.moveit {
+	-webkit-animation: bob 2s infinite ease;
+	-webkit-animation-timing-function: cubic-bezier(.42,0,.58,1);
+}
+
+/*
+.bobdelay1 {
+	-webkit-animation: bob 2s infinite ease;
+	-webkit-animation-timing-function: cubic-bezier(.42,0,.58,1);
+}
+.bobdelay2 {
+	-webkit-animation: bob 2s infinite ease;
+	-webkit-animation-timing-function: cubic-bezier(.42,0,.58,1);
+	-webkit-animation-delay: -0.16s;
+}
+.bobdelay3 {
+	-webkit-animation: bob 2s infinite ease;
+	-webkit-animation-timing-function: cubic-bezier(.42,0,.58,1);
+	-webkit-animation-delay: -0.32s;
+}
+.bobdelay4 {
+	-webkit-animation: bob 2s infinite ease;
+	-webkit-animation-timing-function: cubic-bezier(.42,0,.58,1);
+	-webkit-animation-delay: -0.48s;
+}
+.bobdelay5 {
+	-webkit-animation: bob 2s infinite ease;
+	-webkit-animation-timing-function: cubic-bezier(.42,0,.58,1);
+	-webkit-animation-delay: -0.64s;
+}
+.bobdelay6 {
+	-webkit-animation: bob 2s infinite ease;
+	-webkit-animation-timing-function: cubic-bezier(.42,0,.58,1);
+	-webkit-animation-delay: -0.8s;
+}
+
+*/
