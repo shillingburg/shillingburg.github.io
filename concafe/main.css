@@ -50,7 +50,7 @@
 		background-size: 320px auto;
 		height: 256px;
 		-webkit-animation: nice 3s ease infinite;
-		position: absolute;
+		position: fixed;
 		top: 0px;
 		left: 0px;
 	}
