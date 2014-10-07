@@ -24,7 +24,6 @@
 
 
 	body {
-		background-image: url(images/background.gif);
 		background-color: #100025;
 		background-repeat: no-repeat;
 		margin: 0;
@@ -62,6 +61,9 @@
 		top: 0;
 		left: 0;
 		overflow: auto;
+		background-image: url(images/background.gif);
+		background-repeat: no-repeat;
+		background-size: 320px auto;
 	}
 
 	@-webkit-keyframes nice {
