@@ -44,28 +44,100 @@
 		left: 0px;
 	}
 
+	.titleglow2 {
+		background-image: url(images/blur2.png);
+		width: 320px;
+		background-size: 320px auto;
+		height: 256px;
+		-webkit-animation: nice 3s ease infinite;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+
 	.container {
 		width: 320px;
 		height:568px;
 		position: fixed;
 		top: 0;
 		left: 0;
+		overflow: auto;
 	}
 
 	@-webkit-keyframes nice {
-	0% {opacity: 0.3;}
-	14% {opacity: 0.3;}
-	28% {opacity: 0.3;}
+	0% {opacity: 0.4;}
+	14% {opacity: 0.4;}
+	28% {opacity: 0.4;}
 	30% {opacity: 0.5;}
 	32% {opacity: 0.3;}
-	42% {opacity: 0.3;}
-	44% {opacity: 0.5;}
-	46% {opacity: 0.3;}
-	66% {opacity: 0.3;}
-	68% {opacity: 0.3;}
-	70% {opacity: 0.3;}
-	89% {opacity: 0.3;}
-	91% {opacity: 0.5;}
-	93% {opacity: 0.3;}
-	100% {opacity: 0.3;}
+	42% {opacity: 0.4;}
+	44% {opacity: 0.6;}
+	46% {opacity: 0.4;}
+	66% {opacity: 0.4;}
+	68% {opacity: 0.4;}
+	70% {opacity: 0.4;}
+	89% {opacity: 0.4;}
+	91% {opacity: 0.6;}
+	93% {opacity: 0.4;}
+	100% {opacity: 0.4;}
 }
+
+
+
+.leftlink {
+	position: absolute;
+	top: 36px;
+	left:30px;
+	width: 45px;
+	height:45px;
+	background-color: transparent;
+}
+.rightlink {
+	position: absolute;
+	top: 36px;
+	left:250px;
+	width: 45px;
+	height:45px;
+	background-color: transparent;
+}
+.midlink {
+	position: absolute;
+	top: 36px;
+	left:130px;
+	width: 86px;
+	height:66px;
+}
+
+.bottomlink1 {
+	width: 100%;
+	height:45px;
+	position: absolute;
+	top: 433px;
+}
+
+
+.bottomlink2 {
+	width: 100%;
+	height:45px;
+	position: absolute;
+	top: 496px;
+}
+
+.bottombox {
+	position: fixed;
+	bottom: 0px;
+	width: 320px;
+	height: 126px;
+	background-size: 320px auto;
+	background-image: url(images/eventbottom.png);
+}
+.bottombox2 {
+	position: fixed;
+	bottom: 0px;
+	width: 320px;
+	height: 104px;
+	background-size: 320px auto;
+	background-image: url(images/mapbottoms.png);
+}
+
+
