@@ -102,7 +102,7 @@ body {
 
 
 @media only screen 
-and (max-width : 600px) {
+and (max-width : 668px) {
 .logobox {
 	background-image: url(images/logo.png);
 	background-size: 100% auto;
@@ -115,20 +115,6 @@ and (max-width : 600px) {
 	top: 35%;
 
 }
-@media only screen 
-and (max-device-width : 600px) {
-.logobox {
-	background-image: url(images/logo.png);
-	background-size: 100% auto;
-	background-repeat: no-repeat;
-	width:  90%;
-	height: 50%;
-	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-	top: 35%;
 
-}
-}
 
 
