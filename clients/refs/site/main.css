@@ -1,6 +1,7 @@
 body {
 	background-color: #1a1337;
 	margin: 0 auto;
+	min-height: 600px;
 }
 
 .bg {
@@ -97,13 +98,50 @@ body {
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
-	top: 40%;
+	top: 35%;
 	
 	-webkit-animation: fff 2s;
 	-webkit-animation-fill-mode: forwards;
 	-webkit-animation-delay: 2s;
 
 
+}
+
+.nav {
+	position: fixed;
+	bottom: 3%;
+	padding: 10px;
+	border-top: 2px solid #63d4fe;
+	text-align: center;
+	font-family: "Montserrat";
+	font-weight: 400;
+	color: #b3655d;
+	font-size: 14px;
+	margin-bottom: 0px;
+	right: 27.5%;
+	left: 27.5%;
+	margin-top: 200px;
+	line-height: 35px;
+
+}
+
+.nav a {
+	color: #63d4fe;
+	text-decoration: none;
+	-webkit-transition: letter-spacing 0.5s, color 0.3s;
+	
+	padding-left: 10px;
+	padding-right: 10px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.nav a:hover {
+	letter-spacing: 1.3px;
+	color: #4fefed;
+}
+
+.nav h2 {
+	font-size: 8px;
 }
 
 @-webkit-keyframes fadein {
@@ -113,9 +151,7 @@ body {
 
 
 @media only screen 
-and (max-width : 1000px) and only screen and (-webkit-min-device-pixel-ratio: 1.5),
-  only screen and (min--moz-device-pixel-ratio: 1.5),
-  only screen and (min-device-pixel-ratio: 1.5){
+and (max-width : 600px) {
 .logobox {
 	background-image: url(images/logo.png);
 	background-size: 100% auto;
@@ -125,7 +161,22 @@ and (max-width : 1000px) and only screen and (-webkit-min-device-pixel-ratio: 1.
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
-	top: 35%;
+	top: 100px;
+
+}
+
+.nav {
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	height: 100px;
+	font-size: 15px;
+	margin: 0 auto;
+	left: 0px;
+	right: 0px;
+
+}
+}
 
 }
 
