@@ -99,3 +99,22 @@ body {
 	top: 40%;
 
 }
+
+
+@media only screen 
+and (max-width : 600px) {
+.logobox {
+	background-image: url(images/logo.png);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	width:  90%;
+	height: 50%;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	top: 35%;
+
+}
+}
+
+
