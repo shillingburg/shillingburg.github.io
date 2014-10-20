@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<meta name="author" content="REFS">
+		<meta name="description" content="My Website">
+		<meta name="keywords" content="">
+		<link href="main.css" rel="stylesheet" media="screen" type="text/css">
+
+		<script type="text/javascript">
+		
+		window.onload = function() {
+ 
+    		var x = 0;
+    setInterval(function(){
+        x+=1;
+        $('#stars4').css('background-position', 0.5 * x + 'px 0');
+        $('#stars1').css('background-position', 1 * x + 'px 0');
+        $('#stars2').css('background-position', 1.6 * x + 'px 0');
+        $('#stars3').css('background-position', 2.1 * x + 'px 0');
+ 
+    }, 1);
+ 
+}
+		</script>
+
+
+
+		<title>REFS</title>
+	</head>
+	<body>
+		<div class="bg">
+		<div id = "stars4"></div>
+		<div id="stars1"></div>
+		<div id ="stars2"></div>
+		<div id = "stars3"></div>	
+		
+		</div>
+				
+
+
+	</body>
+</html>

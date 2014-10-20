@@ -1,0 +1,82 @@
+body {
+	background-color: #1a1337;
+	margin: 0 auto;
+}
+
+.bg {
+	background-image: url(images/bgxl.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+.edgeTL {
+	background-image: url(images/edge.png);
+	background-repeat: no-repeat;
+	width: 80%;
+	height: 80%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-size: 100% 100%;
+}
+.edgeTR {
+	background-image: url(images/edge.png);
+	background-repeat: no-repeat;
+	width: 80%;
+	height: 80%;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	background-size: 100% 100%;
+	-webkit-transform: scale(-1, 1);
+}
+
+#stars1 {
+	background-image: url(images/stars/stars1.png);
+	background-repeat: repeat;
+	width: 100%;
+	height: 100%;
+	background-position: 0, 0;
+	left: 0px;
+	z-index: 0;
+	position: fixed;
+
+}
+
+#stars2 {
+	background-image: url(images/stars/stars2.png);
+	background-repeat: repeat;
+	width: 100%;
+	height: 100%;
+	background-position: 0, 0;
+	left: 0px;
+	
+	position: fixed;
+}
+#stars3 {
+	background-image: url(images/stars/stars3.png);
+	background-repeat: repeat;
+	width: 100%;
+	height: 100%;
+	background-position: 0, 0;
+	left: 0px;
+	position: fixed;
+}
+#stars4 {
+	background-image: url(images/stars/stars4.png);
+	background-repeat: repeat;
+	width: 100%;
+	height: 100%;
+	background-position: 0, 0;
+	left: 0px;
+	position: fixed;
+}
+
+pic {
+	position: relative;
+	z-index: 1;
+}
