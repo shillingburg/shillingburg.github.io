@@ -41,42 +41,57 @@ body {
 #stars1 {
 	background-image: url(images/stars/stars1.png);
 	background-repeat: repeat;
-	width: 100%;
+	width: 120%;
 	height: 100%;
 	background-position: 0, 0;
-	left: 0px;
+	left: -300px;
 	z-index: 0;
 	position: fixed;
+	-webkit-animation-name: MOVE-BG1;
+	-webkit-animation-duration: 6s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
 
 }
 
 #stars2 {
 	background-image: url(images/stars/stars2.png);
 	background-repeat: repeat;
-	width: 100%;
+	width: 120%;
 	height: 100%;
 	background-position: 0, 0;
-	left: 0px;
-	
+	left: -500px;
 	position: fixed;
+	-webkit-animation-name: MOVE-BG2;
+	-webkit-animation-duration: 5s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
 }
 #stars3 {
 	background-image: url(images/stars/stars3.png);
 	background-repeat: repeat;
-	width: 100%;
+	width: 200%;
 	height: 100%;
 	background-position: 0, 0;
-	left: 0px;
+	left: -850px;
 	position: fixed;
+	-webkit-animation-name: MOVE-BG3;
+	-webkit-animation-duration: 4s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
 }
 #stars4 {
 	background-image: url(images/stars/stars4.png);
 	background-repeat: repeat;
-	width: 100%;
+	width: 120%;
 	height: 100%;
 	background-position: 0, 0;
-	left: 0px;
+	left: -200px;
 	position: fixed;
+	-webkit-animation-name: MOVE-BG4;
+	-webkit-animation-duration: 6s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
 }
 #stars5 {
 	background-image: url(images/stars/stars5.png);
@@ -103,6 +118,48 @@ body {
 
 
 }
+
+
+
+@-webkit-keyframes MOVE-BG1 {
+	from {
+		-webkit-transform: translateX(0);
+	}
+	to { 
+		-webkit-transform: translateX(299px);
+	}
+}
+
+@-webkit-keyframes MOVE-BG2 {
+	from {
+		-webkit-transform: translateX(0);
+	}
+	to { 
+		-webkit-transform: translateX(499px);
+	}
+}
+@-webkit-keyframes MOVE-BG3 {
+	from {
+		-webkit-transform: translateX(0);
+	}
+	to { 
+		-webkit-transform: translateX(849px);
+	}
+}
+@-webkit-keyframes MOVE-BG4 {
+	from {
+		-webkit-transform: translateX(0);
+	}
+	to { 
+		-webkit-transform: translateX(199px);
+	}
+}
+
+
+
+
+
+
 
 .nav {
 	position: fixed;
