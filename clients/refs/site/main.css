@@ -41,7 +41,7 @@ body {
 #stars1 {
 	background-image: url(images/stars/stars1.png);
 	background-repeat: repeat;
-	width: 120%;
+	width: 130%;
 	height: 100%;
 	background-position: 0, 0;
 	left: -300px;
@@ -57,7 +57,7 @@ body {
 #stars2 {
 	background-image: url(images/stars/stars2.png);
 	background-repeat: repeat;
-	width: 120%;
+	width: 130%;
 	height: 100%;
 	background-position: 0, 0;
 	left: -500px;
