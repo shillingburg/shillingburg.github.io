@@ -11,6 +11,72 @@ body {
 	background-color: 
 }
 
+
+.navbutton {
+	background-image: url(images/button.gif);
+	background-size: 50px auto;
+	background-color: transparent;
+	border: 0px;
+	width: 50px;
+	height: 50px;
+	position:fixed;
+	top: 5px;
+	left: 5px;
+	cursor: pointer;
+
+
+}
+.navbutton:focus {
+	outline: none;
+	border: 0px;
+}
+
+.links {
+	position: fixed;
+	top: 19px;
+	left: 75px;
+	font-family: "Droid Sans Mono";
+	font-weight: 400;
+	color:#fff;
+	font-size: 14px;
+	width: 100%;
+	-webkit-transition: letter-spacing 0.3s ease-in;
+	letter-spacing: 0;
+	
+}
+
+.links a {
+	margin-right: 10px;
+	color: #36c2e5;
+	text-decoration: none;
+	-webkit-transition: color 0.4s;
+	cursor: pointer;
+}
+.links a:hover {
+	color:#fff;
+}
+
+.add {
+	display: block;
+}
+
+.textIn {
+	-webkit-animation: spaceIt 0.4s cubic-bezier(.25,.77,.68,1);
+	-webkit-animation-fill-mode: forwards;
+	letter-spacing: 1.4;
+}
+
+@-webkit-keyframes spaceIt {
+	from {letter-spacing: -8px; opacity: 0;}
+	to {letter-spacing: 1.4; opacity: 1;}
+}
+
+
+
+
+
+
+
 .bg {
 	background-image: url(images/bgxl.jpg);
 	background-repeat: no-repeat;
