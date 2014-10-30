@@ -1,8 +1,38 @@
-body {
+/* body {
 	background-image: url(images/bgb.gif);
 	background-size: 100% auto;
 	background-position: bottom;
 	margin: 0;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-color: #2a2440;
+}
+
+
+body {
+	background-color: #2a2440;
+	margin: 0;
+}
+
+.aspectwrapper {
+	width: 100%;
+	height: 324px;
+	position: fixed;
+	bottom: 0px;
+	margin: 0;
+}
+
+.framesheet {
+	background: url(images/wavesonly.jpg);
+	background-position: 0 bottom;
+	background-size: 100% auto;
+	width: 100%;
+	height: 100%;
+	-webkit-animation: play 1s steps(29) infinite;
+}
+@-webkit-keyframes play {
+	0% {background-position: 0 bottom;}
+   100% { background-position: 0 -9072px ;}
 }
 
 .overlay {
@@ -10,6 +40,84 @@ body {
 	height: 100%;
 	background-color: 
 }
+*/
+
+
+/*  Setup & Starfield  */
+
+
+body {
+	background-color: #2a2440;
+	margin: 0;
+}
+
+.stars {
+	width: 100%;
+	height: 100%;
+}
+
+.waves {
+	width: 100%;
+	height: 100%;
+	background-position: bottom;
+	background-size: 100% auto;
+	background-image: url(images/wavesonly.gif);
+	position: absolute;
+	background-repeat: no-repeat;
+}
+
+.particular1 {
+	background-image: url(images/particles/sheet1.png);
+	background-position: 0 0;
+	background-repeat: repeat;
+	background-size: 200% 200%;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	-webkit-animation: movebg1 1s infinite;
+	-webkit-animation-timing-function: linear;
+	pointer-events:none;
+}
+
+.particular2 {
+	background-image: url(images/particles/sheet2.png);
+	background-position: 0 0;
+	background-repeat: repeat;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	-webkit-animation: movebg1 0.5s infinite;
+	-webkit-animation-timing-function: linear;
+	pointer-events:none;
+}
+
+.fader {
+	width: 100%;
+	height: 50%;
+	background-image: url(images/fader.png);
+	background-repeat: repeat-x;
+	pointer-events:none;
+	background-size: 100% 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 30;
+}
+
+/*  Keyframing  */
+
+
+@-webkit-keyframes movebg1 {
+	0% {background-position: 0 0;}
+	100% {background-position: 0 -500;}
+}
+
+
+/*  Navigation  */
 
 
 .navbutton {
@@ -23,6 +131,7 @@ body {
 	top: 5px;
 	left: 5px;
 	cursor: pointer;
+	z-index: 51;
 
 
 }
@@ -42,6 +151,7 @@ body {
 	width: 100%;
 	-webkit-transition: letter-spacing 0.3s ease-in;
 	letter-spacing: 0;
+	z-index: 50;
 	
 }
 
@@ -112,33 +222,37 @@ body {
 }
 
 #stars1 {
-	background-image: url(images/stars/stars1.png);
+	background-image: url(images/sf1.png);
 	background-repeat: repeat;
 	width: 130%;
-	height: 100%;
-	background-position: 0, 0;
+	height: 180%;
+	
 	left: -300px;
-	z-index: 0;
+	z-index: 1;
 	position: fixed;
-	-webkit-animation-name: MOVE-BG1;
-	-webkit-animation-duration: 6s;
+	-webkit-animation-name: MOVE-BGA;
+	-webkit-animation-duration: 1s;
 	-webkit-animation-timing-function: linear;
 	-webkit-animation-iteration-count: infinite;
+	overflow: hidden;
 
 }
 
 #stars2 {
-	background-image: url(images/stars/stars2.png);
+	background-image: url(images/sf2.png);
 	background-repeat: repeat;
+	background-size: 600px;
 	width: 130%;
-	height: 100%;
+	height: 180%;
 	background-position: 0, 0;
 	left: -500px;
 	position: fixed;
-	-webkit-animation-name: MOVE-BG2;
-	-webkit-animation-duration: 5s;
+	opacity: 0.5;
+	-webkit-animation-name: MOVE-BGB;
+	-webkit-animation-duration: 2s;
 	-webkit-animation-timing-function: linear;
 	-webkit-animation-iteration-count: infinite;
+	overflow: hidden;
 }
 #stars3 {
 	background-image: url(images/stars/stars3.png);
@@ -187,48 +301,34 @@ body {
 	position: fixed;
 	margin-left: auto;
 	margin-right: auto;
-	top: 20%
+	top: 20%;
+	z-index: 52;
 
 
 }
 
 
 
-@-webkit-keyframes MOVE-BG1 {
+@-webkit-keyframes MOVE-BGA {
 	from {
-		-webkit-transform: translateX(0);
+		-webkit-transform: translateY(0);
 	}
 	to { 
-		-webkit-transform: translateX(299px);
-	}
-}
-
-@-webkit-keyframes MOVE-BG2 {
-	from {
-		-webkit-transform: translateX(0);
-	}
-	to { 
-		-webkit-transform: translateX(499px);
-	}
-}
-@-webkit-keyframes MOVE-BG3 {
-	from {
-		-webkit-transform: translateX(0);
-	}
-	to { 
-		-webkit-transform: translateX(849px);
-	}
-}
-@-webkit-keyframes MOVE-BG4 {
-	from {
-		-webkit-transform: translateX(0);
-	}
-	to { 
-		-webkit-transform: translateX(199px);
+		-webkit-transform: translateY(-759px);
 	}
 }
 
 
+@-webkit-keyframes MOVE-BGB {
+	0% {
+		-webkit-transform: translateY(0);
+		
+		
+	}
+	100% { 
+		-webkit-transform: translateY(-379px);
+			}
+}
 
 
 
