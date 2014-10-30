@@ -1,0 +1,502 @@
+/* body {
+	background-image: url(images/bgb.gif);
+	background-size: 100% auto;
+	background-position: bottom;
+	margin: 0;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-color: #2a2440;
+}
+
+
+body {
+	background-color: #2a2440;
+	margin: 0;
+}
+
+.aspectwrapper {
+	width: 100%;
+	height: 324px;
+	position: fixed;
+	bottom: 0px;
+	margin: 0;
+}
+
+.framesheet {
+	background: url(images/wavesonly.jpg);
+	background-position: 0 bottom;
+	background-size: 100% auto;
+	width: 100%;
+	height: 100%;
+	-webkit-animation: play 1s steps(29) infinite;
+}
+@-webkit-keyframes play {
+	0% {background-position: 0 bottom;}
+   100% { background-position: 0 -9072px ;}
+}
+
+.overlay {
+	width: 100%;
+	height: 100%;
+	background-color: 
+}
+*/
+
+
+/*  Setup & Starfield  */
+
+
+body {
+	background-color: #2a2440;
+	margin: 0;
+}
+
+.stars {
+	width: 100%;
+	height: 100%;
+}
+
+.waves {
+	width: 100%;
+	height: 100%;
+	background-position: bottom;
+	background-size: 100% auto;
+	background-image: url(images/wavesonly.gif);
+	position: absolute;
+	background-repeat: no-repeat;
+}
+
+.particular1 {
+	background-image: url(images/particles/sheet1.png);
+	background-position: 0 0;
+	background-repeat: repeat;
+	background-size: 200% 200%;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	-webkit-animation: movebg1 1s infinite;
+	-webkit-animation-timing-function: linear;
+	pointer-events:none;
+}
+
+.particular2 {
+	background-image: url(images/particles/sheet2.png);
+	background-position: 0 0;
+	background-repeat: repeat;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	-webkit-animation: movebg1 0.5s infinite;
+	-webkit-animation-timing-function: linear;
+	pointer-events:none;
+}
+
+.fader {
+	width: 100%;
+	height: 50%;
+	background-image: url(images/fader.png);
+	background-repeat: repeat-x;
+	pointer-events:none;
+	background-size: 100% 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 30;
+}
+
+#cont {
+	width: 150%;
+	height: 150%;
+	position: fixed;	
+	/*-webkit-animation: movebg1 1s linear infinite;*/
+	overflow: hidden;
+}
+
+
+/*  Keyframing  */
+
+/*
+@-webkit-keyframes movebg1 {
+	0% {-webkit-transform: translateX(0px);}
+	50% {-webkit-transform: translateX(100px);}
+	100% {-webkit-transform: translateX(0px);}
+}
+*/
+
+/*  Navigation  */
+
+
+.navbutton {
+	background-image: url(images/button.gif);
+	background-size: 50px auto;
+	background-color: transparent;
+	border: 0px;
+	width: 50px;
+	height: 50px;
+	position:fixed;
+	top: 5px;
+	left: 5px;
+	cursor: pointer;
+	z-index: 51;
+
+
+}
+.navbutton:focus {
+	outline: none;
+	border: 0px;
+}
+
+.links {
+	position: fixed;
+	top: 19px;
+	left: 75px;
+	font-family: "Droid Sans Mono";
+	font-weight: 400;
+	color:#fff;
+	font-size: 14px;
+	width: 100%;
+	-webkit-transition: letter-spacing 0.3s ease-in;
+	letter-spacing: 0;
+	z-index: 50;
+	
+}
+
+.links a {
+	margin-right: 10px;
+	color: #36c2e5;
+	text-decoration: none;
+	-webkit-transition: color 0.4s;
+	cursor: pointer;
+}
+.links a:hover {
+	color:#fff;
+}
+
+.add {
+	display: block;
+}
+
+.textIn {
+	-webkit-animation: spaceIt 0.4s cubic-bezier(.25,.77,.68,1);
+	-webkit-animation-fill-mode: forwards;
+	letter-spacing: 1.4;
+}
+
+@-webkit-keyframes spaceIt {
+	from {letter-spacing: -8px; opacity: 0;}
+	to {letter-spacing: 1.4; opacity: 1;}
+}
+
+
+
+
+
+
+.bg {
+	background-image: url(images/bgxl.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+.edgeTL {
+	background-image: url(images/edge.png);
+	background-repeat: no-repeat;
+	width: 80%;
+	height: 80%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-size: 100% 100%;
+	opacity: 0.3;
+}
+.edgeTR {
+	background-image: url(images/edge.png);
+	background-repeat: no-repeat;
+	width: 80%;
+	height: 80%;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	background-size: 100% 100%;
+	-webkit-transform: scale(-1, 1);
+	opacity: 0.3;
+}
+/*
+#stars1 {
+	background-image: url(images/sf1.png);
+	background-repeat: repeat;
+	width: 130%;
+	height: 180%;
+	
+	left: -300px;
+	z-index: 1;
+	position: fixed;
+	-webkit-animation-name: MOVE-BGA;
+	-webkit-animation-duration: 5s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	overflow: hidden;
+
+}
+*/
+#stars1 {
+	background-image: url(images/g1.png);
+	background-repeat: repeat;
+	width: 130%;
+	height: 180%;
+	left: -300px;
+	z-index: 1;
+	position: fixed;
+	-webkit-animation-name: MOVE-BGA;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	overflow: hidden;
+
+}
+
+#stars2 {
+	background-image: url(images/g2.png);
+	background-repeat: repeat;
+	width: 130%;
+	height: 180%;
+	background-position: 0, 0;
+	left: -500px;
+	position: fixed;
+	opacity: 0.5;
+	-webkit-animation-name: MOVE-BGB;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	overflow: hidden;
+}
+#stars3 {
+	background-image: url(images/g3.png);
+	background-repeat: repeat;
+	width: 130%;
+	height: 180%;
+	background-position: 0, 0;
+	left: -500px;
+	position: fixed;
+	opacity: 0.5;
+	-webkit-animation-name: MOVE-BGC;
+	-webkit-animation-duration: 3s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	overflow: hidden;
+}
+
+
+.logobox {
+	
+	
+	background-image: url(images/logo.png);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	width:  90%;
+	height: 50%;
+	position: fixed;
+	margin-left: auto;
+	margin-right: auto;
+	top: 20%;
+	z-index: 52;
+
+
+}
+
+
+
+@-webkit-keyframes MOVE-BGA {
+	from {
+		-webkit-transform: translateY(0);
+	}
+	to { 
+		-webkit-transform: translateY(-149px);
+	}
+}
+
+
+@-webkit-keyframes MOVE-BGB {
+	0% {
+		-webkit-transform: translateY(0);
+		
+		
+	}
+	100% { 
+		-webkit-transform: translateY(-124px);
+			}
+}
+
+@-webkit-keyframes MOVE-BGC {
+	0% {
+		-webkit-transform: translateY(0);
+		
+		
+	}
+	100% { 
+		-webkit-transform: translateY(-99px);
+			}
+}
+
+
+
+
+
+.nav {
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	height: 100px;
+	font-size: 15px;
+	margin: 0 auto;
+	left: 0px;
+	right: 0px;
+
+}
+
+.nav a {
+	color: #63d4fe;
+	text-decoration: none;
+	-webkit-transition: letter-spacing 0.5s, color 0.3s;
+	
+	padding-left: 10px;
+	padding-right: 10px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.nav a:hover {
+	letter-spacing: 1.3px;
+	color: #4fefed;
+}
+
+.nav h2 {
+	font-size: 8px;
+}
+
+@-webkit-keyframes fadein {
+0% { opacity: 0;}
+100% {opacity: 1;}
+}
+
+
+@media only screen and (min-width : 320px) {
+.logobox {
+	background-image: url(images/logo.png);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	width:  88%;
+	height: 50%;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	top: 35%;
+
+}
+.nav  {
+position: fixed;
+	bottom: 0px;
+	width: 100%;
+	height: 100px;
+	font-size: 15px;
+	margin: 0 auto;
+	left: 0px;
+	right: 0px;
+	font-family: "Montserrat";
+	font-weight: 400;
+	color: #b3655d;
+	font-size: 14px;
+	border-top: 2px solid #63d4fe;
+	padding: 10px;
+}
+
+}
+
+
+
+@media only screen and (min-width : 600px) {
+.logobox {
+	background-image: url(images/logo.png);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	width:  40%;
+	height: 50%;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	top: 35%;
+
+}
+
+.nav {
+	position: fixed;
+	bottom: 2%;
+	padding: 10px;
+	border-top: 2px solid #63d4fe;
+	text-align: center;
+	font-family: "Montserrat";
+	font-weight: 400;
+	color: #b3655d;
+	font-size: 14px;
+	margin-bottom: 0px;
+	right: 15%;
+	left: 15%;
+	margin-top: 300px;
+	line-height: 35px;
+	width: 70%
+}
+
+
+}
+/*
+@media only screen and (min-width : 601px) and (max-width : 800px) {
+.logobox {
+	background-image: url(images/logo.png);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	width:  70%;
+	height: 50%;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	top: 100px;
+
+}
+
+
+
+
+.nav {
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	height: 100px;
+	font-size: 15px;
+	margin: 0 auto;
+	left: 0px;
+	right: 0px;
+
+}
+}
+
+}
+
+
+*/
+
+
+
+
+
+
+
+
+
+

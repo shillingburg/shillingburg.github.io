@@ -229,7 +229,24 @@ body {
 	-webkit-transform: scale(-1, 1);
 	opacity: 0.3;
 }
+/*
+#stars1 {
+	background-image: url(images/sf1.png);
+	background-repeat: repeat;
+	width: 130%;
+	height: 180%;
+	
+	left: -300px;
+	z-index: 1;
+	position: fixed;
+	-webkit-animation-name: MOVE-BGA;
+	-webkit-animation-duration: 5s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	overflow: hidden;
 
+}
+*/
 #stars1 {
 	background-image: url(images/sf1.png);
 	background-repeat: repeat;

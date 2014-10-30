@@ -1,0 +1,63 @@
+<html>
+<head>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta name="author" content="REFS">
+	<meta name="description" content="REFS">
+	<meta name="keywords" content="">
+	<link href="main.css" rel="stylesheet" media="screen" type="text/css">
+
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+
+
+
+
+	<title>REFS</title>
+</head>
+<body>
+	
+	<div class="waves"></div>
+	<button class="navbutton" onclick="clickButton();"></button>
+	<div id="cont">
+	<div id="stars1"></div>
+	<div id="stars2"></div>
+	<div id="stars3"></div>
+	</div>
+	<div class="logobox"></div>
+	<div class="links" id="linkbox"><a href="http://www.twitter.com">Twitter</a> <a href="http://www.soundcloud.com">Soundcloud</a> <a href="http://www.google.com">Mailing List</a></div>
+	<div class="fader"></div>
+
+
+
+</body>
+
+<script>
+
+var buttonPress = false;
+var links = document.getElementById("linkbox");
+links.style.display = "none";
+
+function clickButton () {
+	if(buttonPress == false) {
+		links.style.display = "block";
+		links.className += " textIn";
+		buttonPress = true;
+	} else if(buttonPress == true) {
+		links.style.display = "none";
+		links.className = "links";
+		buttonPress = false;
+	}
+}
+</script>
+<script>
+
+$(document).mousemove(function(e){
+    var amountMovedX = (e.pageX * -1 / 3);
+      $("#stars1").css('background-position', amountMovedX + 'px ');
+      $("#stars2").css('background-position', amountMovedX/2 + 'px ');
+      $("#stars3").css('background-position', amountMovedX/3 + 'px ');
+});
+
+</script>
+
+</html>
