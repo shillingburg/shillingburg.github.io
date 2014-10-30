@@ -18,9 +18,10 @@
 	
 	<div class="waves"></div>
 	<button class="navbutton" onclick="clickButton();"></button>
+	<div id="cont">
 	<div id="stars1"></div>
 	<div id="stars2"></div>
-	
+	</div>
 	<div class="logobox"></div>
 	<div class="links" id="linkbox"><a href="http://www.twitter.com">Twitter</a> <a href="http://www.soundcloud.com">Soundcloud</a> <a href="http://www.google.com">Mailing List</a></div>
 	<div class="fader"></div>
@@ -49,11 +50,12 @@ function clickButton () {
 </script>
 <script>
 
-$('#stars1').mousemove(function(e){
-    var amountMovedX = (e.pageX * -1 / 10);
-      $(this).css('background-position', amountMovedX + 'px ');
+$(document).mousemove(function(e){
+    var amountMovedX = (e.pageX * -1 / 3);
+      $("#stars1").css('background-position', amountMovedX + 'px ');
       $("#stars2").css('background-position', amountMovedX/2 + 'px ');
 });
+
 </script>
 
 </html>
