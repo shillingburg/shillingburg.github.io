@@ -38,6 +38,7 @@ var links = document.getElementById("linkbox");
 links.style.display = "none";
 
 function clickButton () {
+	canMouse = false;
 	if(buttonPress == false) {
 		links.style.display = "block";
 		links.className += " textIn";
@@ -48,16 +49,30 @@ function clickButton () {
 		buttonPress = false;
 	}
 }
-</script>
-<script>
+
+var canMouse = true;
+if (canMouse == true) {
+	var x = 0;
+	x+=1;
+    setInterval(function(){
+    	
+        
+       /* $('#stars1').animate('margin-top');
+        bgp += 1;
+
+
+        $('#stars1').css('margin-top', bgp + 'px');
+
+ */
+    }, 1);
 
 $(document).mousemove(function(e){
     var amountMovedX = (e.pageX * -1 / 3);
-      $("#stars1").css('background-position', amountMovedX + 'px ');
-      $("#stars2").css('background-position', amountMovedX/2 + 'px ');
-      $("#stars3").css('background-position', amountMovedX/3 + 'px ');
+      $("#stars1").css('background-position', amountMovedX + ' ' + 0.5 * x + 'px');
+      $("#stars2").css('background-position', amountMovedX/2 + ' ' + 0.5 * x + 'px');
+      $("#stars3").css('background-position', amountMovedX/3 + ' ' + 0.5 * x + 'px');
 });
-
+}
 </script>
 
 </html>

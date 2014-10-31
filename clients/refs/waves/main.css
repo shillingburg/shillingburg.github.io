@@ -257,7 +257,7 @@ body {
 	z-index: 1;
 	position: fixed;
 	-webkit-animation-name: MOVE-BGA;
-	-webkit-animation-duration: 5s;
+	-webkit-animation-duration: 2s;
 	-webkit-animation-timing-function: linear;
 	-webkit-animation-iteration-count: infinite;
 	overflow: hidden;
@@ -275,7 +275,7 @@ body {
 	position: fixed;
 	opacity: 0.5;
 	-webkit-animation-name: MOVE-BGB;
-	-webkit-animation-duration: 8s;
+	-webkit-animation-duration: 3.5s;
 	-webkit-animation-timing-function: linear;
 	-webkit-animation-iteration-count: infinite;
 	overflow: hidden;
