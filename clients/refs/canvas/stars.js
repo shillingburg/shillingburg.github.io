@@ -87,7 +87,7 @@ function Particle() {
 		//var value1 = '#3E96FF';
 		//var value2 = '#64D3FF';
 		//var chosenValue = Math.random() >= 0.5 ? value1 : value2;
-		ctx.fillStyle = "rgba(110,211,255,1)";
+		ctx.fillStyle = "rgba(110,211,255,0.7)";
     
 		ctx.beginPath();
 		ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
