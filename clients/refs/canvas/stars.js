@@ -83,7 +83,11 @@ function Particle() {
 	// whether the arc is to be drawn in counter clockwise or 
 	// in a clockwise direction. False for clockwise.
 	this.draw = function() {
-		ctx.fillStyle = "white";
+
+		//var value1 = '#3E96FF';
+		//var value2 = '#64D3FF';
+		//var chosenValue = Math.random() >= 0.5 ? value1 : value2;
+		ctx.fillStyle = "rgba(110,211,255,0.7";
     
 		ctx.beginPath();
 		ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);

@@ -1,9 +1,15 @@
 body {
 	padding: 0;
 	margin: 0;
+	margin-left: 0;
 	overflow: hidden;
-	background-color: #091b45;
+	background-color: #001340;
+	background-image: url(images/bgf.png);
+	background-position: bottom left;
+	background-repeat: repeat-x;
 }
+
+
 
 .fader {
 	width: 100%;
@@ -15,17 +21,69 @@ body {
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 30;
+	z-index: 1;
 }
 
+
 .logobox {
+	width: 35%;
+	height: 40%;
 	background-image: url(images/logo.png);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	top: 35%;
+	left: 50%;
+	margin: 0 0 0 -17.5%;
+	background-color: transparent;
+	position: fixed;
+	z-index: 20;
+	back
+}
+
+.facebook {
+	width: 7%;
+	height: 5%;
+	background-image: url(images/facebooklink.svg);
 	background-size: 100% auto;
 	background-repeat: no-repeat;
-	width:  40%;
-	height: 50%;
 	position: fixed;
-	
-	top: 35%;
+	top: 20px;
+	left: 20px;
+	z-index: 50;
+}
 
+.twitter {
+	width: 6%;
+	height: 5%;
+	background-image: url(images/twitter.svg);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	position: fixed;
+	bottom: -10px;
+	left: 20px;
+	z-index: 50;
+}
+
+.email {
+	width: 7%;
+	height: 5%;
+	background-image: url(images/email.svg);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	z-index: 50;
+}
+
+.mailing {
+	width: 9%;
+	height: 5%;
+	background-image: url(images/mailing.svg);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	position: fixed;
+	bottom: -10px;
+	right: 20px;
+	z-index: 50;
 }
