@@ -179,9 +179,10 @@ function distance(p1, p2) {
 		
 		// Draw the line
 		ctx.beginPath();
-		ctx.strokeStyle = "rgba(0,153,87,"+ (1.2-dist/minDist) +")";
+		ctx.strokeStyle = "rgba(10,153,87,"+ (1.0-dist/minDist) +")";
 		ctx.moveTo(p1.x, p1.y);
 		ctx.lineTo(p2.x, p2.y);
+		ctx.lineWidth = 1;
 		ctx.stroke();
 		ctx.closePath();
 		
