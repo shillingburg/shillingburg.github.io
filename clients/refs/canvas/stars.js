@@ -176,15 +176,15 @@ function distance(p1, p2) {
 	// Draw the line when distance is smaller
 	// then the minimum distance
 	if(dist <= minDist) {
-		/*
+		
 		// Draw the line
 		ctx.beginPath();
-		ctx.strokeStyle = "rgba(255,255,255,"+ (1.2-dist/minDist) +")";
+		ctx.strokeStyle = "rgba(0,153,87,"+ (1.2-dist/minDist) +")";
 		ctx.moveTo(p1.x, p1.y);
 		ctx.lineTo(p2.x, p2.y);
 		ctx.stroke();
 		ctx.closePath();
-		*/
+		
 		// Some acceleration for the partcles 
 		// depending upon their distance
 		var ax = dx/10000,

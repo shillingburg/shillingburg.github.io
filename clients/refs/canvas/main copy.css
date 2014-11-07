@@ -41,8 +41,8 @@ body {
 }
 
 .facebook {
-	width: 150px;
-	height: 70px;
+	width: 7%;
+	height: 5%;
 	background-image: url(images/facebooklink.svg);
 	background-size: 100% auto;
 	background-repeat: no-repeat;
@@ -80,8 +80,8 @@ body {
 }
 
 .email {
-	width: 155px;
-	height: 50px;
+	width: 7%;
+	height: 5%;
 	background-image: url(images/email.svg);
 	background-size: 100% auto;
 	background-repeat: no-repeat;
@@ -93,13 +93,13 @@ body {
 }
 
 .mailing {
-	width: 200px;
-	height: 50px;
+	width: 9%;
+	height: 5%;
 	background-image: url(images/mailing.svg);
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	position: fixed;
-	bottom: -4px;
+	bottom: -10px;
 	right: 20px;
 	z-index: 50;
 	cursor: pointer;
