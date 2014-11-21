@@ -8,6 +8,11 @@
     src: url(font/textamed.ttf);
 }
 
+@font-face {
+    font-family: textareg;
+    src: url(font/textareg.ttf);
+}
+
 body {
 	background-image: url(images/bg.png);
 	background-size: auto 100%;
@@ -53,11 +58,13 @@ body {
 }
 
 .content p {
-	font-family: textamed;
+	font-family: textareg;
 	font-size: 26px;
 	font-color: #555555;
 	padding-top: 20px;
 	text-align: left;
+	padding-left: 20px;
+	padding-right: 20px;
 
 }
 
