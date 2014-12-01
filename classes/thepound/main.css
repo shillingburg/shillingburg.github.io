@@ -85,6 +85,25 @@ body {
 	cursor: pointer;
 }
 
+/* ——————— */
+
+.homeContentsContainer {
+	width: 768px;
+	height: 2168px;
+	background-color: #fff;
+	position: relative;
+	overflow: hidden;
+}
+
+.homeContentsLogohead {
+	width: 248px;
+	height: 142px;
+	background: url(images/logo2.svg) no-repeat;
+	position: relative;
+	top: 60px;
+	left: 44px;
+}
+
 /* Jiggle Meats */
 
 .meat1 {
@@ -140,4 +159,15 @@ body {
 	background-size: 100% auto;
 	position: absolute;
 	opacity: 0.5;
+}
+
+.dog1 {
+	width: 500px;
+	height: 450px;
+	background-image: url(images/reddog.gif);
+	background-repeat: no-repeat;
+	position:relative;
+	top: 0px;
+	float: right;
+	right: -200px;
 }
