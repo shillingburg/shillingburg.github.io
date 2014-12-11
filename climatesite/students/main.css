@@ -1,15 +1,18 @@
 @font-face {
     font-family: textabold;
+    font-weight: bolder;
     src: url(font/textabold.ttf);
 }
 
 @font-face {
     font-family: textamed;
+    font-weight: bold;
     src: url(font/textamed.ttf);
 }
 
 @font-face {
-    font-family: textareg;
+    font-family: texta;
+    font-weight: normal;
     src: url(font/textareg.ttf);
 }
 
@@ -20,6 +23,14 @@ body {
 	margin: 0;
 }
 
+#invisible {
+	display: inherit;
+}
+
+#visible {
+	display: inherit;
+}
+
 .baby {
 
 }
@@ -28,6 +39,7 @@ body {
 	position: relative;
 	width: 1100px;
 	min-height: 900px;
+	height: auto;
 	border-radius: 8px;
 	background-color: #fff;
 	margin-left: auto;
@@ -36,7 +48,87 @@ body {
 	padding-left: 50px;
 	padding-right: 50px;
 	padding-top: 60px;
+	padding-bottom: 100px;
+	margin-bottom: 100px;
 	text-align: center;
+}
+
+.contentbox1 {
+	position: relative;
+	top: 10px;
+width: 100%;
+height: auto;
+font-family: textamed;
+	font-size: 0px;
+	color: transparent;
+	padding-top: 20px;
+	text-align: left;
+	padding-left: 20px;
+	padding-right: 20px;
+	box-sizing: border-box;
+	text-align: center;
+	margin-bottom: 20px;
+
+}
+
+.contentbox1 img {
+	margin-top: 0px;
+	width: 100%;
+}
+
+
+
+.contentbox2 {
+	position: relative;
+	top: 10px;
+width: 100%;
+height: auto;
+font-family: texta;
+	font-size: 26px;
+	font-color: #555555;
+	padding-top: 20px;
+	text-align: left;
+	padding-left: 20px;
+	padding-right: 20px;
+	box-sizing: border-box;
+}
+
+.contentbox2 img {
+	margin-top: 0px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 20px;
+	padding-bottom: 15px;
+}
+
+.contentbox3 {
+	position: relative;
+	top: 10px;
+width: 80%;
+height: auto;
+font-family: texta;
+	font-size: 26px;
+	font-color: #555555;
+	padding-top: 20px;
+	text-align: left;
+	padding: 20px;
+	padding-top: 40px;
+	box-sizing: border-box;
+	margin-top: 100px;
+	text-align: center;
+
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.contentbox3 img {
+	margin-top: 0px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 20px;
+	padding-bottom: 15px;
 }
 
 .logobox {
@@ -51,14 +143,58 @@ body {
 	margin-top: 100px;
 	color: #5fc4bb;
 	background-position: center top;
+	cursor: pointer;
 }
 
-.content img {
+.dlbutton {
+	width: 300px;
+	height: auto;
+	padding: 20px;
+	padding-left: 30px;
+	padding-right: 30px;
+	background-color: blue;
+	border: none;
+	background-color: #5fc4bb;
+	border-radius: 10px;
+	font-family: textabold;
+	color: #fff;
+	font-size: 25px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.dlbutton a {
+	font-family: textabold;
+	color: #fff;
+	font-size: 25px;
+	text-decoration: none;
+}
+
+
+
+.studentimagecontainer {
 	margin-top: -160px;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 100%;
+	background-color: #000;
+	width: 200px;
+	height: 200px;
+	margin-bottom: 40px;
+	overflow: hidden;
+}
+
+.studentimagecontainer img {
+	width: 100%;
+	height: auto;
+	background-position: center center;
 }
 
 .content p {
-	font-family: textareg;
+	font-family: texta;
 	font-size: 26px;
 	font-color: #555555;
 	padding-top: 20px;
@@ -76,6 +212,7 @@ body {
 	padding-bottom: 13px;
 	margin-top: 0px;
 	color: #5fc4bb;
+	text-transform: uppercase;
 }
 
 .content h3 {
@@ -84,16 +221,19 @@ body {
 	padding-top: 10px;
 	width: 100%;
 	border-bottom: 3px #5fc4bb solid;
+
 }
 
 .content h3 a {
-	font-family: textamed;
+	font-family: texta;
+	font-weight: bold;
 	font-size: 26px;
 	color: #5fc4bb;
 	text-decoration: none;
 	text-transform: uppercase;
 	padding-right: 40px;
 	padding-left: 40px;
+	cursor: pointer;
 }
 
 .content h3 a b {
@@ -112,7 +252,8 @@ body {
 	margin-bottom: 100px;
 	margin: 0;
 	text-align: center;
-	font-family: textamed;
+	font-family: texta;
+	font-weight: bold
 	font-size: 25px;
 	line-height: 1;
 	box-sizing: border-box;
@@ -152,4 +293,16 @@ body {
 @-webkit-keyframes movebg {
 	from {background-position: 0;}
 	to { background-position: 640px;}
+}
+
+
+.contentbox1 .innertext h2 {
+	font-size: 39px;
+	font-family: textabold;
+	color: #5fc4bb;
+	position: relative;
+	margin-top: 40px;
+	margin-bottom: -30px;
+	border-bottom: 0px;
+	text-transform: none;
 }

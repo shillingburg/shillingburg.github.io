@@ -1,0 +1,104 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<meta name="author" content="Flux User">
+		<meta name="description" content="My Website">
+		<meta name="keywords" content="Flux, Mac">
+		<link href="main.css" rel="stylesheet" media="screen" type="text/css">
+		<title class="cushycms-text" title="this is the page title that shows in the browser window.">Sample Student</title>
+	</head>
+	<body onload="hide2();">
+
+		<div class="cloud3"></div><div class="cloud2"></div><div class="cloud1"></div>
+
+		<div class="logobox" onclick="location.href='../index.html'"></div>
+
+		<div class="content">
+			<div class="studentimagecontainer"><img src="images/student.png" class="cushycms"></img></div>
+			<h2 class="cushycms-text" title="Enter your name.">Sample Student Name</h2>
+			<h3><a onclick="swapContent2();">Project 1: <b class="cushycms-text" title="Project Title 1">Exciting Topic</b></a><a onclick="swapContent1();">Project 2: <b class="cushycms-text" title="Project Title 2">Even More Exciting Topic</b></a></h3>
+
+<div id="visible">
+			<div class="contentbox1 cushycms" title="Content Box 1 – Header Image Or Video. Images placed in this box will stretch to full width. Text will be invisible.">
+				<iframe src="http://player.vimeo.com/video/35493512?title=0&amp;byline=0&amp;portrait=0&amp;color=a1e3a1" width="1020" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				
+			</div>
+
+
+			<div class="contentbox2 cushycms" title="Content Box 2. Add any written content about your project here. Images will not scale here and will be placed on their own line. Use the heading-2 style (What My Project is currently written in) to make a title bar.">
+
+				<h2>My Project</h2>
+			
+				 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin posuere efficitur. Quisque dignissim justo est, egestas suscipit augue iaculis non. Etiam a est ac purus mollis elementum. Ut nibh nisl, sollicitudin id magna eu, placerat elementum ipsum. Nullam quis nulla pharetra, feugiat dui quis, mattis diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales erat eget viverra blandit. Praesent metus risus, vulputate vel malesuada non, aliquam sed dolor. <img src="images/fillercontent2.png" />Vestibulum tempor tortor eget massa tincidunt, at dignissim lorem faucibus. Nullam fermentum ex ligula, sed dictum tortor aliquam euismod. Pellentesque in varius orci. Morbi et justo magna. Proin nec porta lectus. Vivamus pretium dolor nibh, eu suscipit diam rhoncus vitae. Sed nunc ante, ultricies ac neque id, vestibulum varius libero.
+
+			</div>
+
+			<div class="contentbox3 cushycms" title="Content Box 3. This is for text about the link below. it will be centered. If you dont have a link, leave this blank">
+				
+				Thanks for reading! Download the project here: </div>
+				<div class="dlbutton cushycms" title="Type link text in this field and use the link button to set a download link. If you don't have a download link, leave this blank. (Leaving 'download presentation' in the field is not leaving it blank, so delete that)" id="contentbutton">Download Presentation</button>
+				</div></div>
+
+<div id="invisible">
+			<div class="contentbox1 cushycms" title="PROJECT 2 Content Box 1 – Header Image Or Video. Images placed in this box will stretch to full width. Text will be invisible.">
+				<img src="images/fillercontent1.png" />
+				
+			</div>
+
+
+			<div class="contentbox2 cushycms" title="PROJECT 2 Content Box 2. Add any written content about your project here. Images will not scale here and will be placed on their own line. Use the heading-2 style (What My Project is currently written in) to make a title bar.">
+
+				<h2>My Project 2</h2>
+			Project 2 Sample content.
+
+			</div>
+
+			<div class="contentbox3 cushycms" title="PROJECT 2 Content Box 3. This is for text about the link below. it will be centered. If you dont have a link, leave this blank">
+				
+				Thanks for reading! Download the project here: </div>
+				<div class="dlbutton cushycms" title="PROJECT 2 - Type link text in this field and use the link button to set a download link. If you don't have a download link, leave this blank. (Leaving 'download presentation' in the field is not leaving it blank, so delete that)" id="contentbutton">Download Presentation</button>
+				</div>
+			</div>
+
+		</div>
+
+		</div>
+	</div>
+
+
+			
+
+			
+
+
+		
+		
+	</body>
+
+	<script>
+
+
+
+		var button = document.getElementById("contentbutton");
+		var content1 = document.getElementById("visible");
+		var content2 = document.getElementById("invisible");
+
+		function hide2 () {
+			content2.style.display = "none";
+		}
+
+		if (button.innerHTML == "") {
+			button.style.display = "none";
+		}
+
+		function swapContent1 () {
+			content1.style.display = "none";
+			content2.style.display = "inherit";
+		}
+		function swapContent2 () {
+			content2.style.display = "none";
+			content1.style.display = "inherit";
+		}
+
+	</script>
+</html>
