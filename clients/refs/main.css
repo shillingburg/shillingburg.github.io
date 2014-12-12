@@ -1,0 +1,112 @@
+body {
+	padding: 0;
+	margin: 0;
+	margin-left: 0;
+	overflow: hidden;
+	background-color: #001340;
+	background-image: url(images/bgf.png);
+	background-position: bottom left;
+	background-repeat: repeat-x;
+}
+
+
+
+.fader {
+	width: 100%;
+	height: 50%;
+	background-image: url(images/fader.png);
+	background-repeat: repeat-x;
+	pointer-events:none;
+	background-size: 100% 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+
+.content {
+	width: 500px;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: center center;
+	margin-left: auto;
+	margin-right: auto;
+	top: 37%;
+	left: 50%;
+	margin-left: -250px;
+	padding-top: 15%;
+	margin-top: -300px;
+	position: fixed;
+	z-index: 20;
+	vertical-align: center;
+}
+
+.positioner {
+	
+
+	
+}
+
+.sm {
+	width: 250px;
+}
+
+.link {
+	width: 100%;
+	height: 10%;
+	display: inline-block;
+
+}
+
+
+
+.lg {
+	width: 100%;
+}
+
+
+@media only screen and (max-width: 900px) {
+	.content {
+	       width: 400px;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: center center;
+	margin-left: auto;
+	margin-right: auto;
+	top: 38%;
+	left: 50%;
+	margin-left: -200px;
+	padding-top: 15%;
+	margin-top: -200px;
+	position: fixed;
+	z-index: 20;
+	vertical-align: center;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.content {
+	       width: 300px;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: center center;
+	margin-left: auto;
+	margin-right: auto;
+	top: 38%;
+	left: 50%;
+	margin-left: -153px;
+	padding-top: 15%;
+	margin-top: -100px;
+	position: fixed;
+	z-index: 20;
+	vertical-align: center;
+	}
+
+	.sm {width: 60%;}
+}
+
+
