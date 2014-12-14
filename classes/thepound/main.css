@@ -178,7 +178,6 @@ body {
 	position: absolute;
 	width: 80px;
 	height: 80px;
-	background-color: transparent;
 	border: 3px solid #fff;
 	border-radius: 100%;
 	top: 600;
@@ -191,6 +190,10 @@ body {
 	font-size: 30px;
 	color: #fff;
 	-webkit-animation-delay: -0.8s;
+	background-image: url(images/x-01.svg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 80% 80%;
 }
 
 /*-—————————- Homepage Styles -—————————-*/
