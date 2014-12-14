@@ -319,6 +319,18 @@ body {
 	pointer-events:none;
 }
 
+.ketchup {
+	width: 200px;
+	height: 200px;
+	background-image: url(images/ketchup.png);
+	background-repeat: no-repeat;
+	position:absolute;
+	background-size: 100% auto;
+	top: 1067px;
+	z-index: 100;
+	right: 53px;
+}
+
 
 /* ———————————————— Jiggle Meats —————————————— */
 
