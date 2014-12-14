@@ -79,6 +79,7 @@ body {
 	margin-top: 0px;
 	top: 0px;
 	opacity: 0.7;
+	display: none;
 }
 
 #dampen2 {
@@ -90,6 +91,7 @@ body {
 	margin-top: 0px;
 	top: 0px;
 	opacity: 0.7;
+	display: none;
 }
 
 
@@ -99,7 +101,7 @@ body {
 	z-index: 100;
 	width: 500px;
 
-	background-color: #FBE052;
+	background-color: #ec345b;
 	left: 134px;
 	top: 200px;
 	border: 3px solid #fff;
@@ -116,13 +118,14 @@ body {
 		1px 1px #fff,
 		6px 6px #fff,
 		5px 5px #fff;
+		display: none;
 }
 
 #menu h1 {
 	font-family: Texta-Black;
 	text-transform: uppercase;	
 	font-size: 30px;
-	color: #ec345b;
+	color: #fff;
 	border-bottom: 2px solid #fff;
 	padding-bottom: 20px;
 	margin-top: 0;
@@ -141,15 +144,15 @@ body {
 	padding: 14 0 14 0;
 	text-transform: uppercase;
 	font-family: Texta-Bold;
-	color: #fff;
+	color: #000;
 	font-size: 26px;
-	background-color: #ec345b;
-	border-radius: 10px;
+	background-color: #FBE052;
+
 	text-align: center;
-	-webkit-animation: redButtonGloss 2s infinite ease;
+	-webkit-animation: yellowButtonGloss 2s infinite ease;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	border: 3px #ec345b solid;
+	border: none;
 
 
 }
@@ -271,6 +274,21 @@ body {
 	position: relative;
 	top: 60px;
 	left: 44px;
+	z-index: 10;
+
+}
+
+.homeImages {
+	width: 100%;
+	height: 100%;
+	background-image: url(images/home_images.png);
+	background-size: 100% auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 7;
+	pointer-events:none;
+
 }
 
 .homeContentsMenu {
@@ -288,6 +306,19 @@ body {
 	font-size: 22px;
 	-webkit-animation: yellowButtonGloss 2s infinite ease;
 }
+
+.homeContent {
+	width: 100%;
+	height: 100%;
+	background-image: url(images/home_content.svg);
+	background-size: 100% auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 20;
+	pointer-events:none;
+}
+
 
 /* ———————————————— Jiggle Meats —————————————— */
 
@@ -355,8 +386,20 @@ body {
 	top: 0px;
 	float: right;
 	right: -200px;
+	z-index: 5;
 }
 
+.dog2 {
+	width: 500px;
+	height: 450px;
+	background-image: url(images/yellowdog.gif);
+	background-repeat: no-repeat;
+	position:absolute;
+	top: 40px;
+	float: left;
+	z-index: 6;
+	left: -20px;
+}
 
 
 
