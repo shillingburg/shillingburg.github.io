@@ -9,23 +9,54 @@
 	</head>
 	<body>
 		<div class="homeContainerCover">
+			<div id="dampen"></div>
 			<div class="meat1"></div><div class="meat2"></div><div class="meat3"></div><div class="meat4"></div><div class="meat5"></div>
 			<div class="homeCoverLogobox"></div>
 			<div class="homeCoverStoryList"></div>
 			<div class="homeCoverBarcode"></div>
 			<div class="homeCoverDownButton"></div>
 		</div>
+
 		<div class="homeContentsContainer">
 			<div class="homeContentsLogohead"></div>
 			<div class="dog1"></div>
+			<div class="homeContentsMenu" onclick="toggle('menu'); toggle('dampen'); toggle('dampen2');">CONTENTS</div>
+			<div id="menu">
+				<div class="closebutton" onclick="toggle('menu'); toggle('dampen'); toggle('dampen2');">&#8592;</div>
+				<h1>CHOOSE A SECTION</h1>
+				<button class="menuButton" id="delay1">Cover Page</button>
+				<button class="menuButton" id="delay2">Contents</button>
+				<button class="menuButton" id="delay3">Departments</button>
+				<button class="menuButton" id="delay4">Feature</button>
+				<button class="menuButton" id="delay5">Contributors</button>
+
+		
+
+
+			</div>
 
 
 
-
+			<div id="dampen2"></div>
 
 		</div>
 
 
 
 	</body>
+
+	<script>
+			function toggle(id) {
+
+      		var menu = document.getElementById(id);
+
+      		 if(menu.style.display == 'block')
+        		  menu.style.display = 'none';
+      		 else
+        		  menu.style.display = 'block';
+  		 	 }		
+
+	</script>
+
+
 </html>

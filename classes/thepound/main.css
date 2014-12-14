@@ -1,8 +1,22 @@
-/*-- Font Declarations --*/
+/*-—————————- Font Declarations -—————————-*/
+
+@font-face {
+	font-family: Texta;
+	src: url(fonts/Texta_Book.ttf);
+}
+
+@font-face {
+	font-family: Texta-Black;
+	src: url(fonts/Texta_Black.ttf);
+}
+
+@font-face {
+	font-family: Texta-Bold;
+	src: url(fonts/Texta_Bold.ttf);
+}
 
 
-
-/*-- Keyframing --*/
+/*-—————————- Keyframing -—————————-*/
 
 @-webkit-keyframes opacityFade {
 	0% {opacity: 1;}
@@ -10,13 +24,35 @@
 	100% {opacity: 1;}
 }
 
+@-webkit-keyframes yellowButtonGloss {
+	0% {background-color: #FBE052;}
+	50% {background-color: #FFEC7D;}
+	100% {background-color: #FBE052;}
+}
 
+@-webkit-keyframes redButtonGloss {
+	0% {background-color: #ec345b;
+			}
+	50% {background-color: #FF5069;
+			border-color: #FF766C;}
+	100% {background-color: #ec345b;
+			}
+}
 
-/*-- General Styling --*/
+@-webkit-keyframes borderPulse {
+	0% {
+		border: 3px solid rgba(255, 255, 255, 1) ;
+	}
+	50% {border: 3px solid rgba(255, 255, 255, 0.5);}
+	100% {border: 3px solid rgba(255, 255, 255, 1);}
+}
+
+/*-—————————- General Styling -—————————-*/
 
 
 body {
 	width: 768px;
+	max-width: 768px;
 	background-color: #000;
 	margin: 0;
 }
@@ -28,14 +64,144 @@ body {
 	position: relative;
 }
 
-/*-- Homepage Styles --*/
+.fullWidth {
+	width: 100%;
+}
 
+/* ———————————————— Menu System —————————————— */
+
+#dampen {
+	width: 100%;
+	height: 100%;
+	background-color: #ec345b;
+	z-index: 99;
+	position: absolute;
+	margin-top: 0px;
+	top: 0px;
+	opacity: 0.7;
+}
+
+#dampen2 {
+	width: 100%;
+	height: 100%;
+	background-color: #ec345b;
+	z-index: 99;
+	position: absolute;
+	margin-top: 0px;
+	top: 0px;
+	opacity: 0.7;
+}
+
+
+
+#menu {
+	position: fixed;
+	z-index: 100;
+	width: 500px;
+
+	background-color: #FBE052;
+	left: 134px;
+	top: 200px;
+	border: 3px solid #fff;
+
+	display: block;
+	-webkit-box-sizing: border-box;
+	padding: 30px;
+	text-align: center;
+	font-family: Texta;
+	-webkit-box-shadow:
+		4px 4px #fff,
+		3px 3px #fff,
+		2px 2px #fff,
+		1px 1px #fff,
+		6px 6px #fff,
+		5px 5px #fff;
+}
+
+#menu h1 {
+	font-family: Texta-Black;
+	text-transform: uppercase;	
+	font-size: 30px;
+	color: #ec345b;
+	border-bottom: 2px solid #fff;
+	padding-bottom: 20px;
+	margin-top: 0;
+}
+
+#menu h2 {
+	font-family: Texta-Black;
+	color: #fff;
+	font-size: 30px;
+	padding-top: 10px;
+}
+
+
+.menuButton {
+	width: 100%;
+	padding: 14 0 14 0;
+	text-transform: uppercase;
+	font-family: Texta-Bold;
+	color: #fff;
+	font-size: 26px;
+	background-color: #ec345b;
+	border-radius: 10px;
+	text-align: center;
+	-webkit-animation: redButtonGloss 2s infinite ease;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 3px #ec345b solid;
+
+
+}
+
+#delay1 {
+	-webkit-animation-delay: -0.8s;
+}
+
+#delay2 {
+	-webkit-animation-delay: -0.6s;
+}
+
+#delay3 {
+	-webkit-animation-delay: -0.4s;
+}
+
+#delay4 {
+	-webkit-animation-delay: -0.2s;
+}
+
+#delay5 {
+	-webkit-animation-delay: 0s;
+}
+
+.closebutton {
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	background-color: transparent;
+	border: 3px solid #fff;
+	border-radius: 100%;
+	top: 600;
+	position: absolute;
+	left: 50%;
+	margin-left: -40px;
+	-webkit-box-sizing: border-box;
+	padding-top:19px;
+	-webkit-animation: borderPulse 2s ease infinite;
+	font-size: 30px;
+	color: #fff;
+	-webkit-animation-delay: -0.8s;
+}
+
+/*-—————————- Homepage Styles -—————————-*/
+ 
 .homeContainerCover {
 	background-color: #ec345b;
 	width: 768px;
 	height: 1024px;
 	overflow: hidden;
 	position: relative;
+	z-index: -1;
 }
 
 .homeCoverLogobox {
@@ -85,7 +251,7 @@ body {
 	cursor: pointer;
 }
 
-/* ——————— */
+/* ——————————— Table of Contents ——————————— */
 
 .homeContentsContainer {
 	width: 768px;
@@ -104,7 +270,23 @@ body {
 	left: 44px;
 }
 
-/* Jiggle Meats */
+.homeContentsMenu {
+	width: 230px;
+	height: 46px;
+	background-color: #FBE052;
+	-webkit-box-sizing: border-box;
+	padding: 9 10 0 15;
+	color: #000;
+	font-family: Texta-Black;
+	position: absolute;
+	top: 92px;
+	right: 0px;
+	float: right;
+	font-size: 22px;
+	-webkit-animation: yellowButtonGloss 2s infinite ease;
+}
+
+/* ———————————————— Jiggle Meats —————————————— */
 
 .meat1 {
 	background-image: url(images/steak.gif);
@@ -171,3 +353,7 @@ body {
 	float: right;
 	right: -200px;
 }
+
+
+
+
