@@ -104,13 +104,14 @@ body {
 	background-color: #ec345b;
 	left: 134px;
 	top: 200px;
-	border: 3px solid #fff;
+	
 
 	display: block;
 	-webkit-box-sizing: border-box;
 	padding: 30px;
 	text-align: center;
 	font-family: Texta;
+	border: 3px solid #fff;
 	-webkit-box-shadow:
 		4px 4px #fff,
 		3px 3px #fff,
@@ -298,13 +299,23 @@ body {
 	height: 46px;
 	background-color: #FBE052;
 	-webkit-box-sizing: border-box;
-	padding: 9 10 0 15;
+	padding: 7 10 0 15;
 	color: #000;
 	font-family: Texta-Black;
 	position: fixed;
-	top: 92px;
+	top: 20px;
+	left: 541px;
 	font-size: 22px;
 	-webkit-animation: yellowButtonGloss 2s infinite ease;
+	z-index: 50;
+	border: 3px solid #fff;
+	-webkit-box-shadow:
+		4px 4px #fff,
+		3px 3px #fff,
+		2px 2px #fff,
+		1px 1px #fff,
+		6px 6px #fff,
+		5px 5px #fff;
 }
 
 .homeContent {
