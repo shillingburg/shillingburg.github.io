@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<meta name="author" content="Flux User">
+		<meta name="description" content="My Website">
+		<meta name="keywords" content="Flux, Mac">
+		<meta name=“viewport” content="initial-scale=1.0">
+		<meta name="viewport" content="width=device-width">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link href="main.css" rel="stylesheet" media="screen" type="text/css">
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+		<title>THE POUND</title>
+	</head>
+	<body>
+		
+
+		<div class="contributorContent">
+			<div class="homeContentsLogohead"></div>
+			<div class="closerBox3"><div class="dull"><a href="contents.html"><img src="images/logo2.svg" ></a></div></div>
+		</div>
+
+
+
+
+
+
+
+
+			<!-- Menu System -->
+
+			<div class="homeContentsMenu" onclick="menuOn();">CONTRIBUTORS</div>
+			<div id="menu">
+				<div class="closebutton" onclick="menuOn();"></div>
+				<h1>CHOOSE A SECTION</h1>
+				<button class="menuButton" id="delay1" onclick="location.href='index.html'">Cover Page</button>
+				<button class="menuButton" id="delay2" onclick="location.href='contents.html'; menuOn();">Contents</button>
+				<button class="menuButton" id="delay3" onclick="location.href='departments.html">Departments</button>
+				<button class="menuButton" id="delay4" onclick="location.href='feature.html'">Feature</button>
+				<button class="menuButton" id="delay5" onclick="location.href='departments.html#contributors'">Contributors</button>
+
+		
+
+
+			</div>
+
+
+
+			<div id="dampen" onclick="menuOn();"></div>
+
+		</div>
+
+
+
+	</body>
+
+	<script>
+			function menuOn () {
+				toggle('menu'); toggle('dampen'); toggle('dampen2');
+			}
+
+
+			function toggle(id) {
+
+      		var menu = document.getElementById(id);
+
+      		 if(menu.style.display == 'block')
+        		  menu.style.display = 'none';
+      		 else
+        		  menu.style.display = 'block';
+  		 	 }		
+
+	</script>
+
+
+
+</html>

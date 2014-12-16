@@ -101,6 +101,20 @@ body {
 	text-align: center;
 }
 
+.closerBox3 {
+	width: 768px;
+	height: 300px;
+	background-color: #34344F;
+	background-image: url(images/steak2.gif);
+	background-size: 100% auto;
+	background-position: center center;
+	background-repeat: no-repeat;
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	text-align: center;
+}
+
 
 
 .dull {
@@ -646,9 +660,18 @@ body {
 }
 
 
+/* ———————————————— Contributors —————————————— */
 
-
-
+.contributorContent {
+	width: 768px;
+	height: 1835px;
+	background-image: url(images/contrib.jpg);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
 
 
 
