@@ -457,7 +457,7 @@ body {
 	height: 1024px;
 	background-color: #fff;
 	position: absolute;
-	top: 1024;
+	top: 900;
 	left: 0;
 }
 
@@ -491,3 +491,13 @@ body {
 	z-index: 0;
 }
 
+.featureContent1 {
+	width: 768px;
+	height: 1500px;
+	background-image: url(images/featurecontent1.svg);
+	position: absolute;
+	left: 0;
+	background-repeat: no-repeat;
+	top: 213;
+	z-index: 50;
+}
