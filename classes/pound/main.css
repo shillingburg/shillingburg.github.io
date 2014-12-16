@@ -430,7 +430,7 @@ body {
 
 #canvas {
 	background-color: transparent;
-	position: fixed;
+	
 }
 
 .featureContentsContainer {
@@ -450,13 +450,22 @@ body {
 	left: 0;
 }
 
+.featureWhiteBox {
+	width: 768px;
+	height: 1024px;
+	background-color: #fff;
+	position: absolute;
+	top: 1024;
+	left: 0;
+}
+
 .featureMeat1 {
 	background-image: url(images/steak.gif);
 	width: 500px;
 	height: 400px;
 	left: -100px;
 	background-size: 100% auto;
-	position: absolute;
+	position: fixed;
 }
 
 .featureMeat2 {
@@ -466,7 +475,7 @@ body {
 	left: -100px;
 	top: 600px;
 	background-size: 100% auto;
-	position: absolute;
+	position: fixed;
 }
 
 .featureMeat3 {
@@ -476,6 +485,6 @@ body {
 	left: 500px;
 	top: 300px;
 	background-size: 100% auto;
-	position: absolute;
+	position: fixed;
 }
 
