@@ -19,7 +19,7 @@ var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 // Set the canvas width and height to occupy full window
-var W = window.innerWidth, H = window.innerHeight;
+var W = 768, H = 1024;
 canvas.width = 768;
 canvas.height = 1024;
 
