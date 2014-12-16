@@ -24,7 +24,7 @@ canvas.width = 768;
 canvas.height = 1024;
 
 // Some variables for later use
-var particleCount = 350,
+var particleCount = 300,
 	particles = [],
 	minDist = 20,
 	dist;
