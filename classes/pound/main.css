@@ -15,6 +15,11 @@
 	src: url(fonts/Texta_Bold.ttf);
 }
 
+@font-face {
+	font-family: Gentona;
+	src: url(fonts/Gentona.otf);
+}
+
 
 /*-—————————- Keyframing -—————————-*/
 
@@ -53,7 +58,7 @@
 body {
 	width: 768px;
 	max-width: 768px;
-	background-color: #000;
+	background-color: #ec345b;
 	margin: 0;
 }
 
@@ -504,11 +509,50 @@ body {
 
 .featureText {
 	width: 450px;
-	height: auto;
+	padding-right: 20px;
+	height: 1500px;
 	font-family: 'Droid Sans Mono';
 	font-size: 16px;
 	position: absolute;
 	top: 580px;
 	left: 57px;
 	line-height: 2em;
+	overflow: auto;
 }
+
+
+.featurePullQuote {
+	width: 200px;
+	float: right;
+	position: absolute;
+	top: 998px;
+	left: 568px;
+	font-size: 22px;
+	font-family: Gentona;
+	padding-bottom: 20px;
+	padding-right: 15px;
+	-webkit-box-sizing:border-box;
+	border-bottom: 4px #000 solid;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
