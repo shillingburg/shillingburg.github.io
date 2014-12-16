@@ -73,6 +73,19 @@ body {
 	width: 100%;
 }
 
+.closerBox {
+	width: 768px;
+	height: 300px;
+	background-color: #34344F;
+	background-image: url(images/logo2.svg);
+	background-size: 200px auto;
+	background-position: center center;
+	background-repeat: no-repeat;
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+}
+
 /* ———————————————— Menu System —————————————— */
 
 #dampen {
@@ -442,7 +455,7 @@ body {
 
 .featureContentsContainer {
 	width: 768px;
-	height: 4000px;
+	height: 6000px;
 	background-color: #fff;
 	position: relative;
 	overflow: hidden;
@@ -459,7 +472,7 @@ body {
 
 .featureWhiteBox {
 	width: 768px;
-	height: 3000px;
+	height: 7000px;
 	background-color: #fff;
 	position: absolute;
 	top: 900;
@@ -509,32 +522,83 @@ body {
 
 .featureText {
 	width: 450px;
-	padding-right: 20px;
-	height: 1500px;
+	height: auto;
 	font-family: 'Droid Sans Mono';
 	font-size: 16px;
 	position: absolute;
 	top: 580px;
 	left: 57px;
 	line-height: 2em;
-	overflow: auto;
 }
 
 
 .featurePullQuote {
-	width: 200px;
+	width: 210px;
 	float: right;
 	position: absolute;
 	top: 998px;
-	left: 568px;
-	font-size: 22px;
+	left: 558px;
+	font-size: 24px;
 	font-family: Gentona;
 	padding-bottom: 20px;
 	padding-right: 15px;
 	-webkit-box-sizing:border-box;
 	border-bottom: 4px #000 solid;
-
 }
+
+.featurePullQuote2 {
+	width: 210px;
+	float: right;
+	position: absolute;
+	top: 3549px;
+	left: 558px;
+	font-size: 24px;
+	font-family: Gentona;
+	padding-bottom: 20px;
+	padding-right: 15px;
+	-webkit-box-sizing:border-box;
+	border-bottom: 4px #000 solid;
+}
+
+.featurePullImg {
+	width: 210px;
+	float: right;
+	position: absolute;
+	top: 2245px;
+	left: 558px;
+	height: 190px;
+	background-image: url(images/happycow1.png);
+	background-repeat: no-repeat;
+	padding-bottom: 20px;
+	padding-right: 15px;
+	background-size: 120% auto;
+	-webkit-box-sizing:border-box;
+	border-bottom: 4px #000 solid;
+}
+
+.featureRecommended {
+	width: 768px;
+	margin-left: -57px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	height: 250px;
+	background-image: url(images/meatyarticle.jpg);
+	background-size: 768px auto;
+	background-repeat: no-repeat;
+}
+
+.zoom {
+	position: absolute;
+	top: -15px;
+	left: -15px;
+	width: 33px;
+	height: 33px;
+	border-radius: 100%;
+	border: 2px #fff solid;
+	background-image: url(images/zoom.svg);
+	background-size: 100% 100%;
+}
+
 
 
 
