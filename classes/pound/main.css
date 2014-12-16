@@ -437,7 +437,7 @@ body {
 
 .featureContentsContainer {
 	width: 768px;
-	height: 2168px;
+	height: 4000px;
 	background-color: #fff;
 	position: relative;
 	overflow: hidden;
@@ -454,7 +454,7 @@ body {
 
 .featureWhiteBox {
 	width: 768px;
-	height: 1024px;
+	height: 3000px;
 	background-color: #fff;
 	position: absolute;
 	top: 900;
@@ -500,4 +500,15 @@ body {
 	background-repeat: no-repeat;
 	top: 213;
 	z-index: 50;
+}
+
+.featureText {
+	width: 450px;
+	height: auto;
+	font-family: 'Droid Sans Mono';
+	font-size: 16px;
+	position: absolute;
+	top: 580px;
+	left: 57px;
+	line-height: 2em;
 }
