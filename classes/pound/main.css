@@ -303,7 +303,7 @@ body {
 	color: #000;
 	font-family: Texta-Black;
 	position: fixed;
-	top: 20px;
+	top: 40px;
 	left: 541px;
 	font-size: 22px;
 	-webkit-animation: yellowButtonGloss 2s infinite ease;
@@ -425,4 +425,57 @@ body {
 }
 
 
+/* ———————————————— Feature Article —————————————— */
+
+
+#canvas {
+	background-color: transparent;
+	position: fixed;
+}
+
+.featureContentsContainer {
+	width: 768px;
+	height: 2168px;
+	background-color: #fff;
+	position: relative;
+	overflow: hidden;
+}
+
+.featureRedBox {
+	width: 768px;
+	height: 1024px;
+	background-color: #ec345b;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.featureMeat1 {
+	background-image: url(images/steak.gif);
+	width: 500px;
+	height: 400px;
+	left: -100px;
+	background-size: 100% auto;
+	position: absolute;
+}
+
+.featureMeat2 {
+	background-image: url(images/steak.gif);
+	width: 500px;
+	height: 400px;
+	left: -100px;
+	top: 600px;
+	background-size: 100% auto;
+	position: absolute;
+}
+
+.featureMeat3 {
+	background-image: url(images/steak.gif);
+	width: 500px;
+	height: 400px;
+	left: 500px;
+	top: 300px;
+	background-size: 100% auto;
+	position: absolute;
+}
 
