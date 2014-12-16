@@ -430,6 +430,8 @@ body {
 
 #canvas {
 	background-color: transparent;
+	z-index: 3;
+	position: absolute;
 	
 }
 
@@ -486,5 +488,6 @@ body {
 	top: 300px;
 	background-size: 100% auto;
 	position: fixed;
+	z-index: 0;
 }
 
