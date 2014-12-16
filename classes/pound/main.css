@@ -665,7 +665,8 @@ body {
 .contributorContent {
 	width: 768px;
 	height: 1835px;
-	background-image: url(images/contrib.jpg);
+	background-color: #fff;
+	background-image: url(images/contrib-01.svg), url(images/contripeople-01.png);
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	position: absolute;
