@@ -1,0 +1,70 @@
+body {
+	background-size: 100% 100%;
+	background-image: url(images/bgs.png);
+	margin : 0 0 0 0;
+}
+
+.stars {
+	background-image: url(images/stars.png);
+	background-repeat: repeat;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.bottom {
+	background-image: url(images/compiledframes.gif);
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 40%;
+	background-position: center bottom;
+	background-size: 80%;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	float: left;
+}
+
+.overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-image: url(images/lightn.png);
+	background-size: 84%;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	float: left;
+	bottom: 0px;
+	left: 0px;
+}
+
+.logobox {
+	width: 100%;
+	height: 100%;
+	background-image: url(images/logo.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 40% auto;
+	z-index: 10;
+
+
+}
+
+.logolight {
+	width: 100%;
+	height: 100%;
+	background-image: url(images/bglightsm.png);
+	background-position: center center;
+	position: fixed;
+	background-size: 50% auto;
+	background-repeat: no-repeat;
+	z-index: -10;
+	opacity: 0.5;
+
+}
+
+#particles {
+	background-color: transparent;
+	position: absolute;
+	z-index: -11;
+}
