@@ -116,6 +116,14 @@ body {
 	.overlay {
 		background-image: url(images/lightn600.png);
 		background-size: 100%;
+	}
+	.cursorEffector {
+		width: 100%;
+		height: 50%;
+		background-color: #fff;
+		margin-left: 0;
+		margin-right: 0;
+		left: 0;
 	}	
 }
 
