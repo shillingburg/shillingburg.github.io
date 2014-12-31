@@ -6,7 +6,7 @@
 	<meta name="description" content="Future Warrior">
 	<meta name="keywords" content="">
 	<link href="main.css" rel="stylesheet" media="screen" type="text/css">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<title>Future Warrior</title>
 
 	<script>
@@ -15,25 +15,27 @@ var HEIGHT;
 var canvas;
 var con;
 var g;
+var particleCount;
 var pxs = new Array();
 var rint = 110;
 
 $(document).ready(function(){
 	WIDTH = window.innerWidth;
 	HEIGHT = window.innerHeight;
+	particleCount = window.innerHeight/10;
+
+
 	$('#container').width(WIDTH).height(HEIGHT);
 	canvas = document.getElementById('particles');
 	$(canvas).attr('width', WIDTH).attr('height',HEIGHT);
 	con = canvas.getContext('2d');
-	for(var i = 0; i < 100; i++) {
+	for(var i = 0; i < particleCount; i++) {
 		pxs[i] = new Circle();
 		pxs[i].reset();
 	}
 	setInterval(draw,rint);
 
-	var $mountains = $('#mountains');
-	var $grass = $('#grass');
-	var $container = $('#container');
+	
 });
 
 function draw() {
@@ -95,6 +97,9 @@ function Circle() {
 	<div class="overlay"></div>
 	<div class="logolight"></div>
 	<div class="logobox"></div>
+	<div class="email" onclick="location.href='mailto:futurewarriormusic@gmail.com'"></div>
+	<div class="cursorEffector" onclick="location.href='http://soundcloud.com/futurewarriormusic'"></div>
+
 	
 
 
