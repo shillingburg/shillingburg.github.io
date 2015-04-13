@@ -1,0 +1,180 @@
+<html>
+<head>
+	
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta name="author" content="Zach Lipkins">
+	<meta name="description" content="Zach Lipkins">
+	<meta name="keywords" content="">
+	<link href="main.css" rel="stylesheet" media="screen" type="text/css">
+	<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<title>✧･ﾟ:* sawtooth coffee *:ﾟ･✧</title>
+
+	<script>
+	var WIDTH;
+    var HEIGHT;
+    var canvas;
+    var con;
+    var g;
+    var particleCount;
+    var pxs = new Array();
+    var blues = new Array();
+    var rint = 110;
+
+document.ontouchmove = function(event){
+    event.preventDefault();
+}
+
+
+$(document).ready(function(){
+	WIDTH = window.innerWidth;
+	HEIGHT = window.innerHeight;
+	particleCount = window.innerHeight/6;
+
+
+	$('#container').width(WIDTH).height(HEIGHT);
+	canvas = document.getElementById('particles');
+	$(canvas).attr('width', WIDTH).attr('height',HEIGHT);
+	con = canvas.getContext('2d');
+	for(var i = 0; i < particleCount; i++) {
+		pxs[i] = new Circle();
+		pxs[i].reset();
+		blues[i] = new BlueCircle();
+		blues[i].reset();
+	}
+	setInterval(draw,rint);	
+});
+
+function draw() {
+	con.clearRect(0,0,WIDTH,HEIGHT);
+	for(var i = 0; i < pxs.length; i++) {
+		pxs[i].fade();
+		pxs[i].draw();
+		blues[i].fade();
+		blues[i].draw();
+	}
+}
+
+function Circle() {
+	this.s = {ttl:3500, xmax:5, ymax:2, rmax:5, rt:1, xdef:960, ydef:540, xdrift:4, ydrift: 4, random:true, blink:true};
+
+	this.reset = function() {
+		this.x = (this.s.random ? WIDTH*Math.random() : this.s.xdef);
+		this.y = (this.s.random ? HEIGHT*Math.random() : this.s.ydef);
+		this.r = ((this.s.rmax-1)*Math.random()) + 1;
+		this.hl = (this.s.ttl/rint)*(this.r/this.s.rmax);
+		this.rt = Math.random()*this.hl;
+		this.s.rt = Math.random()+0.5;
+		this.stop = Math.random()*.2+.4;
+	}
+
+	this.fade = function() {
+		this.rt += this.s.rt;
+	}
+
+	this.draw = function() {
+		if(this.s.blink && (this.rt <= 0 || this.rt >= this.hl)) this.s.rt = this.s.rt*-1;
+		else if(this.rt >= this.hl) this.reset();
+		var newo = 1-(this.rt/this.hl);
+		con.beginPath();
+		con.arc(this.x,this.y,this.r,0,Math.PI*2,true);
+		con.closePath();
+		var cr = this.r*newo;
+		g = con.createRadialGradient(this.x,this.y,0,this.x,this.y,(cr <= 0 ? 1 : cr));
+
+		g.addColorStop(0.4, 'rgba(236,94,160,'+newo+')');
+		g.addColorStop(1.0, 'rgba(255,145,110,0)');
+
+		con.fillStyle = g;
+		con.fill();
+	}
+
+}
+
+function BlueCircle() {
+	this.s = {ttl:3500, xmax:5, ymax:2, rmax:5, rt:1, xdef:960, ydef:540, xdrift:4, ydrift: 4, random:true, blink:true};
+
+	this.reset = function() {
+		this.x = (this.s.random ? WIDTH*Math.random() : this.s.xdef);
+		this.y = (this.s.random ? HEIGHT*Math.random() : this.s.ydef);
+		this.r = ((this.s.rmax-1)*Math.random()) + 1;
+		this.hl = (this.s.ttl/rint)*(this.r/this.s.rmax);
+		this.rt = Math.random()*this.hl;
+		this.s.rt = Math.random()+0.5;
+		this.stop = Math.random()*.2+.4;
+	}
+
+	this.fade = function() {
+		this.rt += this.s.rt;
+	}
+
+	this.draw = function() {
+		if(this.s.blink && (this.rt <= 0 || this.rt >= this.hl)) this.s.rt = this.s.rt*-1;
+		else if(this.rt >= this.hl) this.reset();
+		var newo = 1-(this.rt/this.hl);
+		con.beginPath();
+		con.arc(this.x,this.y,this.r,0,Math.PI*2,true);
+		con.closePath();
+		var cr = this.r*newo;
+		g = con.createRadialGradient(this.x,this.y,0,this.x,this.y,(cr <= 0 ? 1 : cr));
+
+		g.addColorStop(0.4, 'rgba(0,255,255,'+newo+')');
+		g.addColorStop(1.0, 'rgba(0,255,255,0)');
+
+		con.fillStyle = g;
+		con.fill();
+	}
+
+}
+
+</script>
+</head>
+
+
+<body>
+	<canvas id="particles"></canvas>
+    <div class="homeTop">
+        <div class="navBox">
+           <span class="navLink navCurrent"><a href="index.html">Home</a></span>
+           <span class="navLink navActive"><a href="menu.html">Menu</a></span>
+           <span class="navLink navActive"><a href="mixtapes.html">Mixtapes</a></span>
+        </div>
+        <div class="innerLogo">
+        </div>
+        <div class="leafs"></div>
+        <div class="homeMid">
+            <div class="subtitle">
+            Delicious drinks &amp; succulent sounds
+            </div>
+            <div class="pinkText">Sawtooth</div> is a coffee shop in Brooklyn, New York created with the idea of combining delicious coffee with fresh indie synth music. We stock a wide variety of coffee blends prepared in every way you can think of, sold by cup or by the ounce. Delivered on a weekly basis, <span class="pinkText">Sawtooth</span> also releases free digital mixtapes for you to enjoy with or without a steaming cup of joe, keeping your music taste fresh and your palette fresher.
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3022.959030946843!2d-73.98545299999999!3d40.740927!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a72c271509%3A0x8359368a9be200cf!2s327+Park+Ave+S%2C+New+York%2C+NY+10010!5e0!3m2!1sen!2sus!4v1428303599244" width="100%" height="300" frameborder="0" style="border:0"></iframe>
+        <div class="homeMid2">
+            <div class="thirdBlock">
+                <h1>HOURS OF OPERATION</h1><br>
+                <b>Monday&ndash;Thursday</b><br>8AM&ndash;11:30PM<br><br>
+                <b>Friday&ndash;Saturday</b><br>8AM&ndash;1:00AM<br><br>
+                <b>Sunday</b><br>10AM&ndash;8:30PM<br>
+            </div>
+            <div class="thirdBlock">
+                <h1>CONTACT US</h1><br>
+                Email<br><b>shout@sawtooth.coffee</b><br><br>
+                Phone<br><b>(212)410-8245</b><br><br>
+                Address<br><b>327 Park Ave S<br><span class="thinLineBreak">New York, NY 10010</span></b><br><br>
+            </div>
+            <div class="thirdBlockMixes"></div>
+    </div>
+    </div>
+    <div class="foot footerH">Copyright <a href="">Sawtooth Coffee</a> 2015. Made by <a href="http://shillingburg.co/">Shillingburg</a></div>
+	
+
+
+</body>
+
+
+	
+
+
+
+
+</html>

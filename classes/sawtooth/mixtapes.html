@@ -1,0 +1,91 @@
+<html>
+<head>
+	
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta name="author" content="Zach Lipkins">
+	<meta name="description" content="Zach Lipkins">
+	<meta name="keywords" content="">
+	<link href="main.css" rel="stylesheet" media="screen" type="text/css">
+	<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<title>✧･ﾟ:* sawtooth mixtapes *:ﾟ･✧</title>
+
+	
+</head>
+
+
+<body>
+    <div id="mixTop" class="mixTop">
+        <div class="navBox">
+           <span class="navLink navActive"><a href="index.html">Home</a></span>
+           <span class="navLink navActive"><a href="menu.html">Menu</a></span>
+           <span class="navLink navCurrent"><a href="mixtapes.html">Mixtapes</a></span>
+        </div>
+        <div class="swash"></div>
+       	<div class="titleText">
+       		<h3 class="bounceA">D</h3>
+       		<h3 class="bounceB">O</h3>
+       		<h3 class="bounceC">W</h3>
+       		<h3 class="bounceD">N</h3>
+       		<h3 class="bounceE">L</h3>
+       		<h3 class="bounceA">O</h3>
+       		<h3 class="bounceB">A</h3>
+       		<h3 class="bounceC">D</h3>&nbsp;&nbsp;
+       		<h3 class="bounceD">A</h3>&nbsp;&nbsp;
+       		<h3 class="bounceE">M</h3>
+       		<h3 class="bounceA">I</h3>
+       		<h3 class="bounceB">X</h3>
+       		<h3 class="bounceC">T</h3>
+       		<h3 class="bounceD">A</h3>
+       		<h3 class="bounceE">P</h3>
+       		<h3 class="bounceA">E</h3>
+       	</div>
+        <div class="mix">
+        	<div class="mixInput" type="text" name="Mix Name" contenteditable="true" spellcheck="false"  autocomplete="off" id="inputBox">CLICK HERE TO TYPE</div>
+        </div>
+        <button class="downloadButton" id="inputButton" onclick="begin();">FIND YOUR MIX</button>
+      </div> 
+    <div class="mixMid">
+    	<div class="thirdBlock">
+    		<h1>Downloading a Mix</h1>
+    		<img src="images/sidemixtext.svg" />
+    	</div>
+    	<div class="twothirdBlock">
+    		<h1>Weekly Free Mix</h1>
+    		<iframe width="100%" height="400" scrolling="no" style="" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/51622990&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+    	</div>
+    </div>
+    <div class="foot footerM">Copyright <a href="index.html">Sawtooth Coffee</a> 2015. Made by <a href="http://shillingburg.co/">Shillingburg</a></div>
+</body>
+
+	<script>
+	var mainMix;
+	var inputButton;
+	var inputBox;
+
+	function begin () {
+  		mainMix = "sawtooth";
+  		inputBox = document.getElementById("inputBox");
+  		inputButton = document.getElementById("inputButton");
+  		mixCheck();
+	};
+
+
+	window.setInterval(function(){
+  		//mixCheck();
+	}, 1000);
+
+	function mixCheck () {
+			document.getElementById("mixTop").classList.remove('mixTop');
+			document.getElementById("mixTop").classList.add('mixTopCustomized');
+	}
+
+	
+
+
+
+	</script>
+
+
+
+</html>
