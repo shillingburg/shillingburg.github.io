@@ -6,9 +6,9 @@
 	<meta name="description" content="Zach Lipkins">
 	<meta name="keywords" content="">
 	<link href="main.css" rel="stylesheet" media="screen" type="text/css">
-	<meta name="viewport" content="width=600; initial-scale=1; maximum-scale=1">
+	<meta name="viewport" content="width=700; initial-scale=1;">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<title>Zach Lipkins – Discography</title>
+	<title>Future Warrior</title>
 
 	<script>
 	var WIDTH;
@@ -21,13 +21,15 @@ var pxs = new Array();
 var blues = new Array();
 var rint = 110;
 
-
+document.ontouchmove = function(event){
+    event.preventDefault();
+}
 
 
 $(document).ready(function(){
 	WIDTH = window.innerWidth;
 	HEIGHT = window.innerHeight;
-	particleCount = window.innerHeight/10;
+	particleCount = window.innerHeight/8;
 
 
 	$('#container').width(WIDTH).height(HEIGHT);
@@ -468,7 +470,7 @@ function BlueCircle() {
                     </tr>
                 </table>
             </div>
-
+            <div class="title xpad"><a href="mailto:ZZacharyAndrew@gmail.com">EMAIL</a></div>
 	</div>
 	<div class="cursorEffector" onclick="location.href='#discography'"></div>
 
