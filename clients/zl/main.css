@@ -55,6 +55,7 @@ body {
 	margin-left: auto;
 	padding-top: 30%;
 	min-width: 500px;
+	min-height: 500px;
 }
 
 
@@ -78,6 +79,7 @@ body {
 
 .discography {
 	width: 100%;
+	min-width: 500px;
 	z-index: 100;
 	position: absolute;
 	background-image: url(images/fade.png);
