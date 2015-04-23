@@ -179,6 +179,21 @@ body {
 	}
 }
 
+@media only screen and (max-width: 701px) {
+	.logobox {
+		background-size: 90%;
+		margin-top: 20%;
+	}
+
+	.discography table
+	{
+		width: 90%;
+	}
+	.discography{
+		background-image: none;
+	}
+}
+
 .xpad {
 	padding-top: 90px;
 	text-transform: uppercase;
