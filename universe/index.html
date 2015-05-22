@@ -2,8 +2,8 @@
 <head>
 	
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-	<meta name="author" content="REFS">
-	<meta name="description" content="REFS">
+	<meta name="author" content="Universe">
+	<meta name="description" content="Welcome to Universe.">
 	<meta name="keywords" content="">
 	<link href="main.css" rel="stylesheet" media="screen" type="text/css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -25,7 +25,8 @@
 	</div>
 	<div id="anim"></div>
 	<div class="container">
-		<img src="images/logo.svg" class="logo" width="300"></div>
+		<img src="images/logo.svg" class="logo" width="300" onclick="playSound('pad');">
+		
 	</div>
 
 </body>
@@ -53,6 +54,8 @@ var two = new Two({ width: winWidth, height: winHeight }).appendTo(elem);
 
 var soloMid, soloHi, soloLow;
 var chordMid, chordHi, chordLow;
+var sweepMid, sweepHi, sweepLow;
+var pad;
 
 
 soundManager.setup({
@@ -113,6 +116,10 @@ window.onload = function() {
  	sweepLow = soundManager.createSound({
    	   id: 'sweepLow',
    	   url: 'audio/sweepLow.wav'
+ 	});
+ 	pad = soundManager.createSound({
+   	   id: 'pad',
+   	   url: 'audio/pad.mp3'
  	});
  
 };
