@@ -1,0 +1,179 @@
+<html>
+<head>
+	
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta name="author" content="REFS">
+	<meta name="description" content="REFS">
+	<meta name="keywords" content="">
+	<link href="main.css" rel="stylesheet" media="screen" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="two.min.js"></script>
+	<script src="soundmanager2-jsmin.js"></script>
+	<title>UNIVERSE</title>
+</head>
+<body>
+	<div class="buttonContainer">
+		<div class="buttonThird" onclick="playSound('soloHi');"></div>
+		<div class="buttonThird" onclick="playSound('chordHi');"></div>
+		<div class="buttonThird" onclick="playSound('sweepHi');"></div>
+		<div class="buttonThird" onclick="playSound('soloMid');"></div>
+		<div class="buttonThird" onclick="playSound('chordMid');"></div>
+		<div class="buttonThird" onclick="playSound('sweepMid');"></div>
+		<div class="buttonThird" onclick="playSound('soloLow');"></div>
+		<div class="buttonThird" onclick="playSound('chordLow');"></div>
+		<div class="buttonThird" onclick="playSound('sweepLow');"></div>
+	</div>
+	<div id="anim"></div>
+	<div class="container">
+		<img src="images/logo.svg" class="logo" width="300"></div>
+	</div>
+
+</body>
+<script>
+var elem = document.getElementById('anim');
+
+var winWidth = window.innerWidth;
+var winHeight = window.innerHeight;
+
+var lineCount = 100;
+var lineHeight = winHeight  - 200;
+
+var xSpacing = winWidth / lineCount;
+var ySpacing = winHeight / lineCount;
+
+var lines = new Array(lineCount);
+var pops = new Array();
+var notes = new Array(6);
+
+var currentNote = 0;
+
+
+
+var two = new Two({ width: winWidth, height: winHeight }).appendTo(elem);
+
+var soloMid, soloHi, soloLow;
+var chordMid, chordHi, chordLow;
+
+
+soundManager.setup({
+  url: '/path/to/swf-files/',
+  onready: function() {
+    
+  },
+  ontimeout: function() {
+    // Hrmm, SM2 could not start. Missing SWF? Flash blocked? Show an error, etc.?
+  }
+});
+
+window.onload = function() {
+	notes = [
+		"sweepMid",
+		"sweepHi",
+ 		   "soloHi",
+ 		   "chordLow",
+ 		   "sweepMid",
+ 		   "chordHi",
+ 		   "chordMid",
+ 		   "soloMid",
+ 		   "sweepLow"
+		];
+
+  	soloMid = soundManager.createSound({
+   	   id: 'soloMid',
+   	   url: 'audio/soloMid.wav'
+ 	});
+ 	soloLow = soundManager.createSound({
+   	   id: 'soloLow',
+   	   url: 'audio/soloLow.wav'
+ 	});
+ 	soloHi = soundManager.createSound({
+   	   id: 'soloHi',
+   	   url: 'audio/soloHi.wav'
+ 	});
+ 	chordMid = soundManager.createSound({
+   	   id: 'chordMid',
+   	   url: 'audio/chordMid.wav'
+ 	});
+ 	chordLow = soundManager.createSound({
+   	   id: 'chordLow',
+   	   url: 'audio/chordLow.wav'
+ 	});
+ 	chordHi = soundManager.createSound({
+   	   id: 'chordHi',
+   	   url: 'audio/chordHi.wav'
+ 	});
+ 	sweepMid = soundManager.createSound({
+   	   id: 'sweepMid',
+   	   url: 'audio/sweepMid.wav'
+ 	});
+ 	sweepHi = soundManager.createSound({
+   	   id: 'sweepHi',
+   	   url: 'audio/sweepHi.wav'
+ 	});
+ 	sweepLow = soundManager.createSound({
+   	   id: 'sweepLow',
+   	   url: 'audio/sweepLow.wav'
+ 	});
+ 
+};
+
+
+
+for (var i = 0; i < lineCount; i++) {
+		// var xPos = xSpacing + (xSpacing * i)
+ 		// lines[i] = two.makeLine(xPos, 100, xPos, winHeight-100);
+ 		// lines[i].linewidth = 3;
+ 		for (var i = 0; i < lineCount; i++) {
+
+ 		}
+}
+
+window.addEventListener("mousedown", addPop);
+
+	function addPop () {
+		var xPos = event.pageX;
+		var yPos = event.pageY;
+		var tapPop = two.makeCircle(xPos, yPos, 50);
+		tapPop.fill = 'transparent';
+		tapPop.stroke = '#ffffff';
+		tapPop.linewidth = 4;
+		pops.push(tapPop);
+
+		//soundManager.play(notes[currentNote]);
+		currentNote++;
+		
+		if(currentNote == 8) {
+			currentNote = 0;
+		}
+	}
+
+	function playSound (soundToPlay) {
+		soundManager.play(soundToPlay);
+	}
+
+var circle = two.makeCircle(-70, 0, 50);
+var rect = two.makeRectangle(70, 0, 100, 100);
+circle.fill = '#FF8000';
+rect.fill = 'rgba(0, 200, 255, 0.75)';
+
+var group = two.makeGroup(circle, rect);
+group.translation.set(two.width / 2, two.height / 2);
+group.scale = 0;
+group.noStroke();
+
+// Bind a function to scale and rotate the group
+// to the animation loop.
+two.bind('update', function(frameCount) {
+	for (var i = 0, len = pops.length; i < len; i++) {
+  		pops[i].scale += 0.1;
+  		pops[i].linewidth -= 0.2;
+  		pops[i].opacity -= 0.1;
+  		if(pops[i].linewidth < 0.001) {
+  			two.remove(pops[i]);
+  		}
+	}
+}).play();  // Finally, start the animation loop
+
+</script>
+
+</html>
