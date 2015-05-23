@@ -1,3 +1,17 @@
+@font-face {
+	font-family: "Aaux";
+	font-weight: normal;
+	src: url(images/aaux.otf);
+}
+
+@font-face {
+	font-family: "Aaux";
+	font-weight: normal;
+	font-style: italic;
+	src: url(images/aauxit.otf);
+}
+
+
 body {
 	padding: 0;
 	margin: 0;
@@ -41,10 +55,16 @@ body {
 	width: 100%;
 	height: 100%;
 	padding-left: 20%;
-	padding-right: 20%;
+	padding-right: 60%;
 	padding-top: 10rem;
 	-webkit-box-sizing: border-box;
+	color: #fff;
+	font-family: "Aaux";
+	font-size: 20px;
+	letter-spacing: 1.2px;
+	line-height: 1.2;
 }
+
 
 .buttonContainer {
 	width: 100%;

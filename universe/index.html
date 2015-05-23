@@ -26,7 +26,8 @@
 	<div id="anim"></div>
 	<div class="container">
 		<img src="images/logo.svg" class="logo" width="300" onclick="playSound('pad');">
-		
+		<br><br>
+		Our Teriyaki Original Chicken Sandwich is a crispy breaded white meat chicken fillet topped with a sweet and savory teriyaki sauce with a hint of ginger, ripe tomatoes, chopped lettuce, and creamy mayonnaise all on a toasted hoagie sesame seed bun. Our Teriyaki Original Chicken Sandwich is a crispy breaded white meat chicken fillet topped with a sweet and savory teriyaki sauce with a hint of ginger, ripe tomatoes, chopped lettuce, and creamy mayonnaise all on a toasted hoagie sesame seed bun. Our Teriyaki Original Chicken Sandwich is a crispy breaded white meat chicken fillet topped with a sweet and savory teriyaki sauce with a hint of ginger, ripe tomatoes, chopped lettuce, and creamy mayonnaise all on a toasted hoagie sesame seed bun.
 	</div>
 
 </body>
@@ -39,12 +40,15 @@ var winHeight = window.innerHeight;
 var lineCount = 100;
 var lineHeight = winHeight  - 200;
 
-var xSpacing = winWidth / lineCount;
-var ySpacing = winHeight / lineCount;
+var dotsX = window.innerWidth / 80;
+var dotsY = window.innerHeight/ 80;
+var xSpacing = winWidth / dotsX;
+var ySpacing = winHeight / dotsY;
 
-var lines = new Array(lineCount);
+var line;
 var pops = new Array();
 var notes = new Array(6);
+var dots = new Array();
 
 var currentNote = 0;
 
@@ -55,7 +59,17 @@ var two = new Two({ width: winWidth, height: winHeight }).appendTo(elem);
 var soloMid, soloHi, soloLow;
 var chordMid, chordHi, chordLow;
 var sweepMid, sweepHi, sweepLow;
-var pad;
+var xPos;
+var yPos;
+
+var distancemodifier = 0;
+
+var mouse = {x: 0, y: 0};
+
+document.addEventListener('mousemove', function(e){ 
+    mouse.x = e.clientX || e.pageX; 
+    mouse.y = e.clientY || e.pageY 
+}, false);
 
 
 soundManager.setup({
@@ -117,60 +131,59 @@ window.onload = function() {
    	   id: 'sweepLow',
    	   url: 'audio/sweepLow.wav'
  	});
- 	pad = soundManager.createSound({
-   	   id: 'pad',
-   	   url: 'audio/pad.mp3'
- 	});
  
 };
 
 
 
-for (var i = 0; i < lineCount; i++) {
-		// var xPos = xSpacing + (xSpacing * i)
- 		// lines[i] = two.makeLine(xPos, 100, xPos, winHeight-100);
- 		// lines[i].linewidth = 3;
- 		for (var i = 0; i < lineCount; i++) {
-
+for (var i = 0; i < (dotsX + 1); i++) {
+ 		for (var j = 0; j < (dotsY + 1); j++) {
+ 			var gridDot = two.makeCircle(i * xSpacing, j * ySpacing, 3);
+ 			gridDot.linewidth = 0;
+ 			dots.push(gridDot);
  		}
 }
 
 window.addEventListener("mousedown", addPop);
+window.addEventListener("mousedown", checkLine);
 
 	function addPop () {
-		var xPos = event.pageX;
-		var yPos = event.pageY;
+		distancemodifier = 0;
+		xPos = event.pageX;
+		yPos = event.pageY;
 		var tapPop = two.makeCircle(xPos, yPos, 50);
 		tapPop.fill = 'transparent';
 		tapPop.stroke = '#ffffff';
-		tapPop.linewidth = 4;
+		tapPop.linewidth = 6;
 		pops.push(tapPop);
 
 		//soundManager.play(notes[currentNote]);
 		currentNote++;
-		
+		var chordLine = two.makeLine(xPos, yPos, xPos, yPos);
+		line = chordLine;
 		if(currentNote == 8) {
 			currentNote = 0;
 		}
+	}
+
+	function checkLine () {
+
 	}
 
 	function playSound (soundToPlay) {
 		soundManager.play(soundToPlay);
 	}
 
-var circle = two.makeCircle(-70, 0, 50);
-var rect = two.makeRectangle(70, 0, 100, 100);
-circle.fill = '#FF8000';
-rect.fill = 'rgba(0, 200, 255, 0.75)';
+	function convertRange( value, r1, r2 ) { 
+    return ( value - r1[ 0 ] ) * ( r2[ 1 ] - r2[ 0 ] ) / ( r1[ 1 ] - r1[ 0 ] ) + r2[ 0 ];
+}
 
-var group = two.makeGroup(circle, rect);
-group.translation.set(two.width / 2, two.height / 2);
-group.scale = 0;
-group.noStroke();
 
 // Bind a function to scale and rotate the group
 // to the animation loop.
 two.bind('update', function(frameCount) {
+	distancemodifier += 0.01;
+
 	for (var i = 0, len = pops.length; i < len; i++) {
   		pops[i].scale += 0.1;
   		pops[i].linewidth -= 0.2;
@@ -179,6 +192,15 @@ two.bind('update', function(frameCount) {
   			two.remove(pops[i]);
   		}
 	}
+
+	for (var i = 0, len = dots.length; i < len; i++) {
+		delX = xPos;
+		delY = yPos;
+  		dots[i].opacity = convertRange(mouse.x, [ 0, winWidth ], [ 0, 1 ]);
+	}
+
+
+
 }).play();  // Finally, start the animation loop
 
 </script>
