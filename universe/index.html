@@ -186,6 +186,44 @@ window.addEventListener("mouseup", addPop);
       }
   });
 
+  document.addEventListener('touchend', function(e){ 
+    mouse.x = e.clientX || e.pageX; 
+    mouse.y = e.clientY || e.pageY;
+    var hThird = winHeight / 3;
+    var wThird = winWidth / 3;
+      if(mouse.x < wThird) {
+          if (mouse.y < hThird) {
+              playSound("soloHi");
+          }
+          else if (mouse.y >= hThird && mouse.y < hThird * 2) {
+              playSound("soloMid");
+          }
+          else if (mouse.y >= hThird * 2) {
+              playSound("soloLow");
+          }
+      } else if (mouse.x >= wThird && mouse.x < wThird * 2) {
+          if (mouse.y < hThird) {
+              playSound("chordHi");
+          }
+          else if (mouse.y >= hThird && mouse.y < hThird * 2) {
+              playSound("chordMid");
+          }
+          else if (mouse.y >= hThird * 2) {
+              playSound("chordLow");
+          }
+      } else if (mouse.x >= wThird * 2) {
+          if (mouse.y < hThird) {
+              playSound("sweepHi");
+          }
+          else if (mouse.y >= hThird && mouse.y < hThird * 2) {
+              playSound("sweepMid");
+          }
+          else if (mouse.y >= hThird * 2) {
+              playSound("sweepLow");
+          }
+      }
+  });
+
 
 	function addPop () {
 		distancemodifier = 0;
