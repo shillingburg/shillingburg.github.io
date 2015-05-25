@@ -77,13 +77,15 @@ document.addEventListener('mousemove', function(e){
 }, false);
 
 window.ondevicemotion = function(event) {  
-    var accelerationX = event.accelerationIncludingGravity.x;  
+    /*var accelerationX = event.accelerationIncludingGravity.x;  
     var accelerationY = event.accelerationIncludingGravity.y;  
     var accelerationZ = event.accelerationIncludingGravity.z; 
     for (var i = 0, len = dots.length; i < len; i++) {
     	dots[i].opacity = convertRange(accelerationY, [ 0, winHeight ], [ 0.3, 0.1 ]);
     dots[i].rotation = convertRange(Math.sqrt((accelerationZ * i) + (accelerationX * i)), [0, Math.sqrt(winWidth * winHeight)], [0.00001, 10]); 
 	} 
+	*/
+	soundManager.play(chordLow);
 }  
 
 
