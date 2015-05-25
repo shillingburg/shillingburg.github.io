@@ -12,6 +12,17 @@
 	<title>UNIVERSE</title>
 </head>
 <body>
+	<div class="buttonContainer">
+		<div class="buttonThird" onclick="playSound('soloHi');"></div>
+		<div class="buttonThird" onclick="playSound('chordHi');"></div>
+		<div class="buttonThird" onclick="playSound('sweepHi');"></div>
+		<div class="buttonThird" onclick="playSound('soloMid');"></div>
+		<div class="buttonThird" onclick="playSound('chordMid');"></div>
+		<div class="buttonThird" onclick="playSound('sweepMid');"></div>
+		<div class="buttonThird" onclick="playSound('soloLow');"></div>
+		<div class="buttonThird" onclick="playSound('chordLow');"></div>
+		<div class="buttonThird" onclick="playSound('sweepLow');"></div>
+	</div>
 	<div id="anim"></div>
 	<div class="container">
 		<img src="images/logo.svg" class="logo" width="300" onclick="playSound('pad');">
@@ -147,46 +158,6 @@ for (var i = 0; i < (dotsX + 1); i++) {
 window.addEventListener("mouseup", addPop);
 //window.addEventListener("mousedown", checkLine);
 
-
-  document.addEventListener('mouseup', function(e){ 
-    mouse.x = e.clientX || e.pageX; 
-    mouse.y = e.clientY || e.pageY;
-    var hThird = winHeight / 3;
-    var wThird = winWidth / 3;
-      if(mouse.x < wThird) {
-          if (mouse.y < hThird) {
-              playSound("soloHi");
-          }
-          else if (mouse.y >= hThird && mouse.y < hThird * 2) {
-              playSound("soloMid");
-          }
-          else if (mouse.y >= hThird * 2) {
-              playSound("soloLow");
-          }
-      } else if (mouse.x >= wThird && mouse.x < wThird * 2) {
-          if (mouse.y < hThird) {
-              playSound("chordHi");
-          }
-          else if (mouse.y >= hThird && mouse.y < hThird * 2) {
-              playSound("chordMid");
-          }
-          else if (mouse.y >= hThird * 2) {
-              playSound("chordLow");
-          }
-      } else if (mouse.x >= wThird * 2) {
-          if (mouse.y < hThird) {
-              playSound("sweepHi");
-          }
-          else if (mouse.y >= hThird && mouse.y < hThird * 2) {
-              playSound("sweepMid");
-          }
-          else if (mouse.y >= hThird * 2) {
-              playSound("sweepLow");
-          }
-      }
-  });
-
-
 	function addPop () {
 		distancemodifier = 0;
 		xPos = event.pageX;
@@ -203,6 +174,36 @@ window.addEventListener("mouseup", addPop);
 	// }
 
 	function playSound (soundToPlay) {
+	/*	switch(soundToPlay) {
+   			case 'sweepLow':
+   			     soundManager.play(soundToPlay);
+   			     break;
+   			case 'sweepMid':
+   			     soundManager.play(soundToPlay);
+   			     break;
+   			case 'sweepHi':
+   				soundManager.play(soundToPlay);
+   				break;
+   			case 'chordLow':
+   				soundManager.play(soundToPlay);
+   				break;
+   			case 'chordMid':
+   				soundManager.play(soundToPlay);
+   				break;
+   			case 'chordHi':
+   				soundManager.play(soundToPlay);
+   				break;
+   			case 'soloLow':
+   				soundManager.play(soundToPlay);
+   				break;
+   			case 'soloMid':
+   				soundManager.play(soundToPlay);
+   				break;
+   			case 'soloHi':
+   				soundManager.play(soundToPlay);
+   				break;
+		}
+	*/
 			soundManager.play(soundToPlay);
 	}
 
