@@ -70,7 +70,7 @@ soundManager.setup({
 
 });
 
-window.onload = function() {
+soundManager.onload = function() {
 	notes = [
 		"sweepMid",
 		"sweepHi",
@@ -83,49 +83,49 @@ window.onload = function() {
  		   "sweepLow"
 		];
 
-  	soloMid = soundManager.createSound({
-   	   id: 'soloMid',
-   	   url: 'audio/2/soloMid.wav',
-   	   autoLoad:true
+  soloMid = soundManager.createSound({
+     id: 'soloMid',
+     url: 'MP3/soloMid.mp3',
+     autoLoad:true
  	});
  	soloLow = soundManager.createSound({
    	   id: 'soloLow',
-   	   url: 'audio/2/soloLow.wav',
+   	   url: 'MP3/soloLow.mp3',
    	   autoLoad:true
  	});
  	soloHi = soundManager.createSound({
    	   id: 'soloHi',
-   	   url: 'audio/2/soloHi.wav',
+   	   url: 'MP3/soloHi.mp3',
    	   autoLoad:true
  	});
  	chordMid = soundManager.createSound({
    	   id: 'chordMid',
-   	   url: 'audio/2/chordMid.wav',
+   	   url: 'MP3/chordMid.mp3',
    	   autoLoad:true
  	});
  	chordLow = soundManager.createSound({
    	   id: 'chordLow',
-   	   url: 'audio/2/chordLow.wav',
+   	   url: 'mp3/chordLow.mp3',
    	   autoLoad:true
  	});
  	chordHi = soundManager.createSound({
    	   id: 'chordHi',
-   	   url: 'audio/2/chordHi.wav',
+   	   url: 'MP3/chordHi.mp3',
    	   autoLoad:true
  	});
  	sweepMid = soundManager.createSound({
    	   id: 'sweepMid',
-   	   url: 'audio/2/sweepMid.wav',
+   	   url: 'MP3/sweepMid.mp3',
    	   autoLoad:true
  	});
  	sweepHi = soundManager.createSound({
    	   id: 'sweepHi',
-   	   url: 'audio/2/sweepHi.wav',
+   	   url: 'MP3/sweepHi.mp3',
    	   autoLoad:true
  	});
  	sweepLow = soundManager.createSound({
    	   id: 'sweepLow',
-   	   url: 'audio/2/sweepLow.wav',
+   	   url: 'MP3/sweepLow.mp3',
    	   autoLoad:true
  	});
  
@@ -144,7 +144,7 @@ for (var i = 0; i < (dotsX + 1); i++) {
  		}
 }
 
-window.addEventListener("mouseup", addPop);
+//window.addEventListener("mouseup", addPop);
 //window.addEventListener("mousedown", checkLine);
 
 
@@ -156,32 +156,41 @@ window.addEventListener("mouseup", addPop);
       if(mouse.x < wThird) {
           if (mouse.y < hThird) {
               playSound("soloHi");
+              addPop(10, '#ffffff', 4);
           }
           else if (mouse.y >= hThird && mouse.y < hThird * 2) {
               playSound("soloMid");
+              addPop(10, '#ffffff', 4);
           }
           else if (mouse.y >= hThird * 2) {
               playSound("soloLow");
+              addPop(10, '#ffffff', 4);
           }
       } else if (mouse.x >= wThird && mouse.x < wThird * 2) {
           if (mouse.y < hThird) {
               playSound("chordHi");
+              addPop(20, '#ffffff', 4);
           }
           else if (mouse.y >= hThird && mouse.y < hThird * 2) {
               playSound("chordMid");
+              addPop(20, '#ffffff', 4);
           }
           else if (mouse.y >= hThird * 2) {
               playSound("chordLow");
+              addPop(20, '#ffffff', 4);
           }
       } else if (mouse.x >= wThird * 2) {
           if (mouse.y < hThird) {
               playSound("sweepHi");
+              addPop(30, '#ffffff', 4);
           }
           else if (mouse.y >= hThird && mouse.y < hThird * 2) {
               playSound("sweepMid");
+              addPop(30, '#ffffff', 4);
           }
           else if (mouse.y >= hThird * 2) {
               playSound("sweepLow");
+              addPop(30, '#ffffff', 4);
           }
       }
   });
@@ -194,45 +203,55 @@ window.addEventListener("mouseup", addPop);
       if(mouse.x < wThird) {
           if (mouse.y < hThird) {
               playSound("soloHi");
+              addPop(10, '#ffffff', 4);
           }
           else if (mouse.y >= hThird && mouse.y < hThird * 2) {
               playSound("soloMid");
+              addPop(10, '#ffffff', 4);
           }
           else if (mouse.y >= hThird * 2) {
               playSound("soloLow");
+              addPop(10, '#ffffff', 4);
           }
       } else if (mouse.x >= wThird && mouse.x < wThird * 2) {
           if (mouse.y < hThird) {
               playSound("chordHi");
+              addPop(20, '#ffffff', 4);
           }
           else if (mouse.y >= hThird && mouse.y < hThird * 2) {
               playSound("chordMid");
+              addPop(20, '#ffffff', 4);
           }
           else if (mouse.y >= hThird * 2) {
               playSound("chordLow");
+              addPop(20, '#ffffff', 4);
           }
       } else if (mouse.x >= wThird * 2) {
           if (mouse.y < hThird) {
               playSound("sweepHi");
+              addPop(30, '#ffffff', 4);
           }
           else if (mouse.y >= hThird && mouse.y < hThird * 2) {
               playSound("sweepMid");
+              addPop(30, '#ffffff', 4);
           }
           else if (mouse.y >= hThird * 2) {
               playSound("sweepLow");
+              addPop(30, '#ffffff', 4);
           }
       }
   });
 
 
-	function addPop () {
+
+	function addPop (size, strokecolor, strokewidth) {
 		distancemodifier = 0;
 		xPos = event.pageX;
 		yPos = event.pageY;
-		var tapPop = two.makeCircle(xPos, yPos, 10);
+		var tapPop = two.makeCircle(xPos, yPos, size);
 		tapPop.fill = 'transparent';
-		tapPop.stroke = '#ffffff';
-		tapPop.linewidth = 4;
+		tapPop.stroke = strokecolor;
+		tapPop.linewidth = strokewidth;
 		pops.push(tapPop);
 	}
 
@@ -246,15 +265,8 @@ window.addEventListener("mouseup", addPop);
 
 	function convertRange( value, r1, r2 ) { 
     return ( value - r1[ 0 ] ) * ( r2[ 1 ] - r2[ 0 ] ) / ( r1[ 1 ] - r1[ 0 ] ) + r2[ 0 ];
-}
-
-	function blendColors(c0, c1, p) {
-    var f=parseInt(c0.slice(1),16),t=parseInt(c1.slice(1),16),R1=f>>16,G1=f>>8&0x00FF,B1=f&0x0000FF,R2=t>>16,G2=t>>8&0x00FF,B2=t&0x0000FF;
-    return "#"+(0x1000000+(Math.round((R2-R1)*p)+R1)*0x10000+(Math.round((G2-G1)*p)+G1)*0x100+(Math.round((B2-B1)*p)+B1)).toString(16).slice(1);
-}
-
+  }
 	
-
 
 // Bind a function to scale and rotate the group
 // to the animation loop.
