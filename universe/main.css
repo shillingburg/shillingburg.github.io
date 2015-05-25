@@ -13,7 +13,7 @@
 @font-face {
 	font-family: "Calibre";
 	font-weight: normal;
-	src: url(images/calibreB.otf);
+	src: url(images/calibreb.otf);
 }
 
 @font-face {
@@ -28,15 +28,48 @@ body {
 	padding: 0;
 	margin: 0;
 	margin-left: 0;
-	overflow: hidden;
-	background: -webkit-linear-gradient(-76deg, #b0b8c6 0%, #dae3e8 100%);
-	-webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+	background: -webkit-linear-gradient(-76deg, #b0b8c6 0%, #dae3e8 100%) no-repeat;
+
+
 }
+
+p {
+	color: #535a63;
+	font-family: "Crique";
+	font-size: 20px;
+	letter-spacing: 1.3px;
+	line-height: 24pt;
+}
+
+b {
+	color: #535a63;
+	font-family: "Crique";
+	font-size: 20px;
+	font-weight: bold;
+}
+
+i {
+	font-family: "Aaux";
+	font-style: italic;
+	font-size: 20px;
+}
+
+br {
+	height: 12px;
+	display: block;
+	content: "";
+}
+
+a {
+	color: #535a63;
+	text-decoration: none;
+	font-weight: bold;
+	font-family: "Crique";
+	border-bottom: 1px dotted #535a63;
+
+}
+
+
 
 #tail {
 	position: absolute;
@@ -61,22 +94,73 @@ body {
 	position: fixed;
 	display: block;
 	z-index: -1;
+	user-select: none;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
+
 .container {
-	width: 100%;
-	height: 100%;
-	padding-left: 20%;
-	padding-right: 60%;
+	position: relative;
+	width: 45%;
 	padding-top: 10rem;
 	-webkit-box-sizing: border-box;
+	margin-left: auto;
+	margin-right: auto;
 	color: #535a63;
 	font-family: "Crique";
 	font-size: 20px;
 	letter-spacing: 1.2px;
 	line-height: 1.2;
+	margin-bottom: 100px;
 }
 
+.mainContent {
+	width: 60%;
+	min-height: 100px;
+	background-color: transparent;
+	float: left;
+	position: relative;
+	display: block;
+	-webkit-box-sizing: border-box;
+	padding-right: 60px;
+	margin-bottom: 100px;
+}
+
+.mainContent hr {
+	width: 100%;
+	margin-top: 80px;
+	border: 1px solid #fff;
+	margin-bottom: 0;
+}
+
+.heading {
+	font-family: "Calibre";
+	font-weight: normal;
+	font-style: normal;
+	color: #fff;
+	font-size: 20pt;
+	letter-spacing: 4px;
+	border-top: #fff 4px solid;
+	display: inline-block;
+	margin-top: 0;
+	padding-top: 8px;
+	text-transform: uppercase;
+}
+
+.quote {
+	width: 45%;
+	min-height: 100px;
+	position: relative;
+	display: block;
+	float: right;
+	margin-right: -60%;
+	-webkit-box-sizing: border-box;
+	margin-top: -19px;
+}
 
 .buttonContainer {
 	width: 100%;

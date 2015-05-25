@@ -14,9 +14,47 @@
 <body>
 	<div id="anim"></div>
 	<div class="container">
-		<img src="images/logo.svg" class="logo" width="300" onclick="playSound('pad');">
-		<br><br>
-		Our <b>Teriyaki Original Chicken Sandwich</b> is a crispy breaded white meat chicken fillet topped with a sweet and savory teriyaki sauce with a hint of ginger, ripe tomatoes, chopped lettuce, and creamy mayonnaise all on a toasted hoagie sesame seed bun. Our Teriyaki Original Chicken Sandwich is a crispy breaded white meat chicken fillet topped with a sweet and savory teriyaki sauce with a hint of ginger, ripe tomatoes, chopped lettuce, and creamy mayonnaise all on a toasted hoagie sesame seed bun. Our Teriyaki Original Chicken Sandwich is a crispy breaded white meat chicken fillet topped with a sweet and savory teriyaki sauce with a hint of ginger, ripe tomatoes, chopped lettuce, and creamy mayonnaise all on a toasted hoagie sesame seed bun.
+		<div class="mainContent"><img src="images/logodark.svg" width="275">
+      <hr>
+      <div class="heading">What</div>
+      <p>
+We are building the first <i>human</i> programming language: a creative tool for people, not programmers. This language is open-ended like LEGO. Building blocks, not templates. And it's designed for mobile devices: the computers we all have.<br>
+ It starts with a new kind of canvas. We call them cards. Not apps or websites, but cards. And  anyone can make them—no coding required. Cards run natively on your phone, but they can link to  each other and be embedded anywhere.<br></p>
+ <div class="quote"><p><i>“Simple things should be simple.
+ Complex things should be possible.”</i><br><b>&ndash;Alan Kay</b></p></div><p>
+ The cards you make aren't floating in space. They exist in a network called <b>Universe</b>.<br>
+ <b>Universe</b> isn't a single product or destination. It's a set of tools and a community designed to evolve what the world can do with the web.
+       </p>
+
+      <hr>
+      <div class="heading">Who</div>
+      <p>
+We are a group of designers & programmers, musicians & mathematicians, artists & philosophers.
+        <div class="quote"><p><i>"We are as gods and might as well get good at it. So far, remotely done power and glory—as via government, big business, formal education, church—has succeeded to the point where gross defects obscure actual gains. In response to this dilemma and to these gains a realm of intimate, personal power is developing—power of the individual to conduct his own education, find his own inspiration, shape his own environment, and share his adventure with whoever is interested."</i><br><b>&ndash;Stewart Brand</b></p></div><p>
+
+We come from companies like Google, Khan Academy, and Kickstarter. We have built startups before.
+
+We're students of thinkers old and new—Alan Kay, Seymour Papert, Doug Engelbart, Ted Nelson, Bill Atkinson, Stewart Brand, Bret Victor — and their creations—Hypercard, Smalltalk, Mindstorms, the Web. <br>
+
+Computers at their best decentralize power — they liberate the individual and facilitate collective intelligence. The devices have become mainstream but this profound freedom has not. We want to change that.<br>
+
+This is a dream project for each of us: a way to apply our learnings—and dreams—towards a better future for computing. <br>
+
+We're 7 people based in Brooklyn, NY. We've raised capital from premier investors, so we have the resources we need to make this dream real. Now we need you.
+</p>
+
+  <hr>
+  <div class="heading">You</div>
+  <p>
+    <i>Engineers & Designers</i><br>
+We're looking for gifted engineers and designers who know the ins-and-outs of iOS,  who can imagine new interactions, invent new user interfaces. <br><br>
+
+<i>Community of Creators</i><br>
+We're building a community of creators who share our vision and are eager to explore and create in this new mobile, digital world. <br>
+
+Reach out to <a href="mailto:curious@un1verse.co">curious@un1verse.co</a> with interest. Why does this project resonate? What have you made as an expression of <i>your</i> values?
+  </p>
+    </div>
 	</div>
 
 </body>
@@ -56,12 +94,12 @@ var distancemodifier = 0;
 
 var mouse = {x: 0, y: 0};
 
-document.addEventListener('mousemove', function(e){ 
-    mouse.x = e.clientX || e.pageX; 
-    mouse.y = e.clientY || e.pageY;
+window.addEventListener('mousemove', function(e){ 
+    mouse.x = e.clientX; 
+    mouse.y = e.clientY;
     for (var i = 0, len = dots.length; i < len; i++) {
     	dots[i].opacity = convertRange(mouse.y, [ 0, winHeight ], [ 0.5, 0.2 ]);
-    dots[i].rotation = convertRange(Math.sqrt((mouse.y * i) + (mouse.x * i)), [0, Math.sqrt(winWidth * winHeight)], [0.00001, 10]); 
+      dots[i].rotation = convertRange(Math.sqrt((mouse.y * i) + (mouse.x * i)), [0, Math.sqrt(winWidth * winHeight)], [0.00001, 10]); 
 	}
 }, false);
 
@@ -148,7 +186,7 @@ for (var i = 0; i < (dotsX + 1); i++) {
 //window.addEventListener("mousedown", checkLine);
 
 
-  document.addEventListener('mouseup', function(e){ 
+  window.addEventListener('mouseup', function(e){ 
     mouse.x = e.clientX || e.pageX; 
     mouse.y = e.clientY || e.pageY;
     var hThird = winHeight / 3;
@@ -195,7 +233,7 @@ for (var i = 0; i < (dotsX + 1); i++) {
       }
   });
 
-  document.addEventListener('touchend', function(e){ 
+  window.addEventListener('touchend', function(e){ 
     mouse.x = e.clientX || e.pageX; 
     mouse.y = e.clientY || e.pageY;
     var hThird = winHeight / 3;
@@ -285,8 +323,6 @@ two.bind('update', function(frameCount) {
 	for (var i = 0, len = dots.length; i < len; i++) {
   		dots[i].rotation += 0.02;
 	}
-
-
 
 }).play();  // Finally, start the animation loop
 
