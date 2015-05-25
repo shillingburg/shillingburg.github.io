@@ -55,7 +55,7 @@ var accentColor;
 
 
 
-var two = new Two({ width: winWidth, height: winHeight, type: Two.Types.canvas }).appendTo(elem);
+var two = new Two({ width: winWidth, height: winHeight, type: Two.Types.svg }).appendTo(elem);
 
 var soloMid, soloHi, soloLow;
 var chordMid, chordHi, chordLow;
@@ -69,16 +69,18 @@ var mouse = {x: 0, y: 0};
 
 document.addEventListener('mousemove', function(e){ 
     mouse.x = e.clientX || e.pageX; 
-    mouse.y = e.clientY || e.pageY;
-    for (var i = 0, len = dots.length; i < len; i++) {
-    	dots[i].opacity = convertRange(mouse.y, [ 0, winHeight ], [ 0.3, 0.1 ]);
-    dots[i].rotation = convertRange(Math.sqrt((mouse.y * i) + (mouse.x * i)), [0, Math.sqrt(winWidth * winHeight)], [0.00001, 10]); 
-	}
+    mouse.y = e.clientY || e.pageY 
 }, false);
 
 
 soundManager.setup({
-  url: 'swf',
+  url: '/path/to/swf-files/',
+  onready: function() {
+    
+  },
+  ontimeout: function() {
+    // Hrmm, SM2 could not start. Missing SWF? Flash blocked? Show an error, etc.?
+  }
 });
 
 window.onload = function() {
@@ -96,39 +98,39 @@ window.onload = function() {
 
   	soloMid = soundManager.createSound({
    	   id: 'soloMid',
-   	   url: 'audio/2/soloMid.wav'
+   	   url: 'audio/soloMid.wav'
  	});
  	soloLow = soundManager.createSound({
    	   id: 'soloLow',
-   	   url: 'audio/2/soloLow.wav'
+   	   url: 'audio/soloLow.wav'
  	});
  	soloHi = soundManager.createSound({
    	   id: 'soloHi',
-   	   url: 'audio/2/soloHi.wav'
+   	   url: 'audio/soloHi.wav'
  	});
  	chordMid = soundManager.createSound({
    	   id: 'chordMid',
-   	   url: 'audio/2/chordMid.wav'
+   	   url: 'audio/chordMid.wav'
  	});
  	chordLow = soundManager.createSound({
    	   id: 'chordLow',
-   	   url: 'audio/2/chordLow.wav'
+   	   url: 'audio/chordLow.wav'
  	});
  	chordHi = soundManager.createSound({
    	   id: 'chordHi',
-   	   url: 'audio/2/chordHi.wav'
+   	   url: 'audio/chordHi.wav'
  	});
  	sweepMid = soundManager.createSound({
    	   id: 'sweepMid',
-   	   url: 'audio/2/sweepMid.wav'
+   	   url: 'audio/sweepMid.wav'
  	});
  	sweepHi = soundManager.createSound({
    	   id: 'sweepHi',
-   	   url: 'audio/2/sweepHi.wav'
+   	   url: 'audio/sweepHi.wav'
  	});
  	sweepLow = soundManager.createSound({
    	   id: 'sweepLow',
-   	   url: 'audio/2/sweepLow.wav'
+   	   url: 'audio/sweepLow.wav'
  	});
  
 };
@@ -137,16 +139,14 @@ window.onload = function() {
 
 for (var i = 0; i < (dotsX + 1); i++) {
  		for (var j = 0; j < (dotsY + 1); j++) {
- 			//var gridDot = two.makeCircle(i * xSpacing, j * ySpacing, 3);
- 			var gridDot = two.makeLine(i* xSpacing, j * ySpacing, i* xSpacing + 20, j * ySpacing + 20);
- 			gridDot.stroke = '#ffffff';
- 			gridDot.linewidth = 2;
+ 			var gridDot = two.makeCircle(i * xSpacing, j * ySpacing, 3);
+ 			gridDot.linewidth = 0;
  			dots.push(gridDot);
  		}
 }
 
 window.addEventListener("mouseup", addPop);
-//window.addEventListener("mousedown", checkLine);
+window.addEventListener("mousedown", checkLine);
 
 	function addPop () {
 		distancemodifier = 0;
@@ -162,9 +162,9 @@ window.addEventListener("mouseup", addPop);
 		
 	}
 
-	// function checkLine () {
-	// 	line = two.makeLine(0, 0, 200, 200);
-	// }
+	function checkLine () {
+		line = two.makeLine(0, 0, 200, 200);
+	}
 
 	function playSound (soundToPlay) {
 		soundManager.play(soundToPlay);
@@ -179,8 +179,6 @@ window.addEventListener("mouseup", addPop);
     return "#"+(0x1000000+(Math.round((R2-R1)*p)+R1)*0x10000+(Math.round((G2-G1)*p)+G1)*0x100+(Math.round((B2-B1)*p)+B1)).toString(16).slice(1);
 }
 
-	
-
 
 // Bind a function to scale and rotate the group
 // to the animation loop.
@@ -188,7 +186,7 @@ two.bind('update', function(frameCount) {
 	distancemodifier += 0.01;
 
 	for (var i = 0, len = pops.length; i < len; i++) {
-  		pops[i].scale += 0.1;
+  		pops[i].scale += 0.05;
   		pops[i].linewidth -= 0.2;
   		pops[i].opacity -= 0.1;
   		if(pops[i].linewidth < 0.001) {
@@ -196,16 +194,12 @@ two.bind('update', function(frameCount) {
   		}
 	}
 
-	//for (var i = 0, len = dots.length; i < len; i++) {
-		//delX = convertRange(mouse.x, [ 0, winWidth ], [ 0, 1 ]);
-		//delY = convertRange(mouse.y, [ 0, winHeight ], [ 0, 1 ]);
-  		//dots[i].opacity = convertRange(mouse.y, [ 0, winHeight ], [ 1, 0 ]);
-  		//dots[i].rotation = convertRange(mouse.x * (i * 0.05), [ 0, winWidth ], [ 0, 1 ]);
-  		//dots[i].rotation -= convertRange(mouse.y * (i * 0.05), [ 0, winHeight ], [ 0, 1 ]);
-  		//dots[i].rotation = convertRange(delX, [ 0, winWidth ], [ 0, 360 ]);
-  		//dots[i].rotation += convertRange(mouse.x, [0, winWidth], [0, 90]);
+	for (var i = 0, len = dots.length; i < len; i++) {
+		delX = convertRange(mouse.x, [ 0, winWidth ], [ 0, 1 ]);
+		delY = convertRange(mouse.y, [ 0, winHeight ], [ 0, 1 ]);
+  		dots[i].opacity = convertRange(mouse.x, [ 0, winWidth ], [ 0, 1 ]);
 
-	//}
+	}
 
 
 
