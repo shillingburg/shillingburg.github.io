@@ -7,14 +7,15 @@
 	<meta name="keywords" content="">
 	<link href="main.css" rel="stylesheet" media="screen" type="text/css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="two.min.js"></script>
-	<script src="soundmanager2-jsmin.js"></script>
+	<script src="three.min.js"></script>
+  <script src="CanvasRenderer.js"></script>
+  <script src="Projector.js"></script>
+  <script src="OBJLoader.js"></script>
 	<title>UNIVERSE</title>
 </head>
 <body>
-	<div id="anim"></div>
 	<div class="container">
-		<div class="mainContent"><img src="images/logodark.svg" width="275">
+		<div class="mainContent"><img src="images/logo.svg" width="275">
       <hr>
       <div class="heading">What</div>
       <p>
@@ -153,278 +154,88 @@ We think that if everyone had the power to build things with technology—even i
 
 </body>
 <script>
-var elem = document.getElementById('anim');
-
-var winWidth = window.innerWidth;
-var winHeight = window.innerHeight;
-
-var lineCount = 100;
-var lineHeight = winHeight  - 200;
-
-var dotsX = window.innerWidth / 80;
-var dotsY = window.innerHeight/ 80;
-var xSpacing = winWidth / dotsX;
-var ySpacing = winHeight / dotsY;
-
-var line;
-var pops = new Array();
-var notes = new Array(6);
-var dots = new Array();
-
-var currentNote = 0;
-var accentColor;
-
-
-
-var two = new Two({ width: winWidth, height: winHeight, type: Two.Types.svg }).appendTo(elem);
-
-var soloMid, soloHi, soloLow;
-var chordMid, chordHi, chordLow;
-var sweepMid, sweepHi, sweepLow;
-var xPos;
-var yPos;
-
-var distancemodifier = 0;
-
-var mouse = {x: 0, y: 0};
-
-window.addEventListener('mousemove', function(e){ 
-    mouse.x = e.clientX; 
-    mouse.y = e.clientY;
-    for (var i = 0, len = dots.length; i < len; i++) {
-    	dots[i].opacity = convertRange(mouse.y, [ 0, winHeight ], [ 0.5, 0.2 ]);
-      //dots[i].rotation = convertRange(Math.sqrt((mouse.y * i) + (mouse.x * i)), [0, Math.sqrt(winWidth * winHeight)], [0.00001, 10]); 
-      dots[i].rotation += i/5000;
-	}
-}, false);
-
-soundManager.setup({
-  url: 'swf',
-
-});
-
-soundManager.onload = function() {
-	notes = [
-		"sweepMid",
-		"sweepHi",
- 		   "soloHi",
- 		   "chordLow",
- 		   "sweepMid",
- 		   "chordHi",
- 		   "chordMid",
- 		   "soloMid",
- 		   "sweepLow"
-		];
-
-  soloMid = soundManager.createSound({
-     id: 'soloMid',
-     url: 'MP3/soloMid.mp3',
-     autoLoad:true
- 	});
- 	soloLow = soundManager.createSound({
-   	   id: 'soloLow',
-   	   url: 'MP3/soloLow.mp3',
-   	   autoLoad:true
- 	});
- 	soloHi = soundManager.createSound({
-   	   id: 'soloHi',
-   	   url: 'MP3/soloHi.mp3',
-   	   autoLoad:true
- 	});
- 	chordMid = soundManager.createSound({
-   	   id: 'chordMid',
-   	   url: 'MP3/chordMid.mp3',
-   	   autoLoad:true
- 	});
- 	chordLow = soundManager.createSound({
-   	   id: 'chordLow',
-   	   url: 'MP3/chordLow.mp3',
-   	   autoLoad:true
- 	});
- 	chordHi = soundManager.createSound({
-   	   id: 'chordHi',
-   	   url: 'MP3/chordHi.mp3',
-   	   autoLoad:true
- 	});
- 	sweepMid = soundManager.createSound({
-   	   id: 'sweepMid',
-   	   url: 'MP3/sweepMid.mp3',
-   	   autoLoad:true
- 	});
- 	sweepHi = soundManager.createSound({
-   	   id: 'sweepHi',
-   	   url: 'MP3/sweepHi.mp3',
-   	   autoLoad:true
- 	});
- 	sweepLow = soundManager.createSound({
-   	   id: 'sweepLow',
-   	   url: 'MP3/sweepLow.mp3',
-   	   autoLoad:true
- 	});
- 
-};
-
-
-
-for (var i = 0; i < (dotsX + 1); i++) {
- 		for (var j = 0; j < (dotsY + 1); j++) {
- 			//var gridDot = two.makeCircle(i * xSpacing, j * ySpacing, 3);
- 			var gridDot = two.makeLine(i* xSpacing, j * ySpacing, i* xSpacing + 50, j * ySpacing + 50);
- 			gridDot.opacity = 0.5;
- 			gridDot.stroke = '#ffffff';
- 			gridDot.linewidth = 3;
-      gridDot._renderer.elem
- 			dots.push(gridDot);
- 		}
-}
-
-
-
-
-//window.addEventListener("mouseup", addPop);
-//window.addEventListener("mousedown", checkLine);
-
-
-  window.addEventListener('mouseup', function(e){ 
-    mouse.x = e.clientX; 
-    mouse.y = e.clientY;
-    var hThird = winHeight / 3;
-    var wThird = winWidth / 3;
-      if(mouse.x < wThird) {
-          if (mouse.y < hThird) {
-              playSound("soloHi");
-              addPop(10, '#ffffff', 4);
+    var container;
+      var camera, scene, renderer;
+      var mouseX = 0, mouseY = 0;
+      var wiremat = new THREE.MeshBasicMaterial( { color: 0xea3469, wireframe: true, blending: THREE.AdditiveBlending, wireframeLinewidth: 2, fog: false} );
+      var wireColor = 0xea3469;
+      var windowHalfX = window.innerWidth / 2;
+      var windowHalfY = window.innerHeight / 2;
+      init();
+      animate();
+      function init() {
+        container = document.createElement( 'div' );
+        document.body.appendChild( container );
+        camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
+        camera.position.z = 100;
+        // scene
+        scene = new THREE.Scene();
+        var directionalLight = new THREE.DirectionalLight( 0xffffff );
+        directionalLight.position.set( 0, 10, 1 );
+        scene.add( directionalLight );
+        // texture
+        var manager = new THREE.LoadingManager();
+        manager.onProgress = function ( item, loaded, total ) {
+          console.log( item, loaded, total );
+        };
+        var texture = new THREE.Texture();
+        var onProgress = function ( xhr ) {
+          if ( xhr.lengthComputable ) {
+            var percentComplete = xhr.loaded / xhr.total * 100;
+            console.log( Math.round(percentComplete, 2) + '% downloaded' );
           }
-          else if (mouse.y >= hThird && mouse.y < hThird * 2) {
-              playSound("soloMid");
-              addPop(10, '#ffffff', 4);
-          }
-          else if (mouse.y >= hThird * 2) {
-              playSound("soloLow");
-              addPop(10, '#ffffff', 4);
-          }
-      } else if (mouse.x >= wThird && mouse.x < wThird * 2) {
-          if (mouse.y < hThird) {
-              playSound("chordHi");
-              addPop(20, '#ffffff', 4);
-          }
-          else if (mouse.y >= hThird && mouse.y < hThird * 2) {
-              playSound("chordMid");
-              addPop(20, '#ffffff', 4);
-          }
-          else if (mouse.y >= hThird * 2) {
-              playSound("chordLow");
-              addPop(20, '#ffffff', 4);
-          }
-      } else if (mouse.x >= wThird * 2) {
-          if (mouse.y < hThird) {
-              playSound("sweepHi");
-              addPop(30, '#ffffff', 4);
-          }
-          else if (mouse.y >= hThird && mouse.y < hThird * 2) {
-              playSound("sweepMid");
-              addPop(30, '#ffffff', 4);
-          }
-          else if (mouse.y >= hThird * 2) {
-              playSound("sweepLow");
-              addPop(30, '#ffffff', 4);
-          }
+        };
+        var onError = function ( xhr ) {
+        };
+        var loader = new THREE.ImageLoader( manager );
+        loader.load( 'images/grad.png', function ( image ) {
+          texture.image = image;
+          texture.needsUpdate = true;
+        } );
+        // model
+        var loader = new THREE.OBJLoader( manager );
+        loader.load( 'images/mesh.obj', function ( object ) {
+          object.traverse( function ( child ) {
+            if ( child instanceof THREE.Mesh ) {
+              child.material = wiremat;
+            }
+          } );
+          object.position.y = - 80;
+          scene.add( object );
+        }, onProgress, onError );
+        //
+
+        renderer = new THREE.CanvasRenderer();
+        renderer.setPixelRatio( window.devicePixelRatio );
+        renderer.setSize( window.innerWidth, window.innerHeight );
+        container.appendChild( renderer.domElement );
+        document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+        window.addEventListener( 'resize', onWindowResize, false );
       }
-  });
-
-  window.addEventListener('touchend', function(e){ 
-    mouse.x = e.clientX; 
-    mouse.y = e.clientY;
-    var hThird = winHeight / 3;
-    var wThird = winWidth / 3;
-      if(mouse.x < wThird) {
-          if (mouse.y < hThird) {
-              playSound("soloHi");
-              addPop(10, '#ffffff', 4);
-          }
-          else if (mouse.y >= hThird && mouse.y < hThird * 2) {
-              playSound("soloMid");
-              addPop(10, '#ffffff', 4);
-          }
-          else if (mouse.y >= hThird * 2) {
-              playSound("soloLow");
-              addPop(10, '#ffffff', 4);
-          }
-      } else if (mouse.x >= wThird && mouse.x < wThird * 2) {
-          if (mouse.y < hThird) {
-              playSound("chordHi");
-              addPop(20, '#ffffff', 4);
-          }
-          else if (mouse.y >= hThird && mouse.y < hThird * 2) {
-              playSound("chordMid");
-              addPop(20, '#ffffff', 4);
-          }
-          else if (mouse.y >= hThird * 2) {
-              playSound("chordLow");
-              addPop(20, '#ffffff', 4);
-          }
-      } else if (mouse.x >= wThird * 2) {
-          if (mouse.y < hThird) {
-              playSound("sweepHi");
-              addPop(30, '#ffffff', 4);
-          }
-          else if (mouse.y >= hThird && mouse.y < hThird * 2) {
-              playSound("sweepMid");
-              addPop(30, '#ffffff', 4);
-          }
-          else if (mouse.y >= hThird * 2) {
-              playSound("sweepLow");
-              addPop(30, '#ffffff', 4);
-          }
+      function onWindowResize() {
+        windowHalfX = window.innerWidth / 2;
+        windowHalfY = window.innerHeight / 2;
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize( window.innerWidth, window.innerHeight );
       }
-  });
+      function onDocumentMouseMove( event ) {
+        mouseX = ( event.clientX - windowHalfX ) / 2;
+        mouseY = ( event.clientY - windowHalfY ) / 2;
+      }
+      //
+      function animate() {
+        requestAnimationFrame( animate );
+        render();
+      }
+      function render() {
 
-
-
-	function addPop (size, strokecolor, strokewidth) {
-		distancemodifier = 0;
-		xPos = event.pageX;
-		yPos = event.pageY;
-		var tapPop = two.makeCircle(xPos, yPos, size);
-		tapPop.fill = 'transparent';
-		tapPop.stroke = strokecolor;
-		tapPop.linewidth = strokewidth;
-		pops.push(tapPop);
-	}
-
-	// function checkLine () {
-	// 	line = two.makeLine(0, 0, 200, 200);
-	// }
-
-	function playSound (soundToPlay) {
-			soundManager.play(soundToPlay);
-	}
-
-	function convertRange( value, r1, r2 ) { 
-    return ( value - r1[ 0 ] ) * ( r2[ 1 ] - r2[ 0 ] ) / ( r1[ 1 ] - r1[ 0 ] ) + r2[ 0 ];
-  }
-	
-
-// Bind a function to scale and rotate the group
-// to the animation loop.
-two.bind('update', function(frameCount) {
-	distancemodifier += 0.01;
-
-	for (var i = 0, len = pops.length; i < len; i++) {
-  		pops[i].scale += 0.1;
-  		pops[i].linewidth -= 0.2;
-  		pops[i].opacity -= 0.1;
-  		if(pops[i].linewidth < 0.001) {
-  			two.remove(pops[i]);
-  		}
-	}
-
-	for (var i = 0, len = dots.length; i < len; i++) {
-  		dots[i].rotation += 0.01;
-
-	}
-
-}).play();  // Finally, start the animation loop
+        //camera.position.x += ( mouseX - camera.position.x ) * .05;
+        camera.position.x += ( mouseX - camera.position.x ) * .01;
+        //camera.position.y += ( - mouseY - camera.position.y ) * .05;
+        //camera.lookAt( scene.position );
+        renderer.render( scene, camera );
+      }
 
 </script>
 

@@ -195,6 +195,7 @@ window.addEventListener('mousemove', function(e){
     	dots[i].opacity = convertRange(mouse.y, [ 0, winHeight ], [ 0.5, 0.2 ]);
       //dots[i].rotation = convertRange(Math.sqrt((mouse.y * i) + (mouse.x * i)), [0, Math.sqrt(winWidth * winHeight)], [0.00001, 10]); 
       dots[i].rotation += i/5000;
+      
 	}
 }, false);
 
