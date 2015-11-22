@@ -24,18 +24,6 @@ body {
 	text-align: center;
 }
 
-@-webkit-keyframes buttonEffect {
-	0% {
-		-webkit-transform: scale(1.1,1.1);
-	}
-	70% {
-		-webkit-transform: scale(0.8,0.8);
-	}
-	100% {
-		-webkit-transform: scale(1.1,1.1);
-	}
-}
-
 .button {
 	background-color: #fff;
 	width: 300px;
@@ -43,25 +31,31 @@ body {
 	margin-right: auto;
 	border-radius: 25px;
 	padding: 20px;
+	padding-bottom: 23px;
 	font-size: 30px;
 	text-align: center;
 	font-family: "Birthday Cake";
 	color: #46c3d0;
 	-webkit-transition: background-color cubic-bezier(.06,.81,.44,.99) 0.5s, -webkit-transform cubic-bezier(.06,.81,.44,.99) 0.3s;
+	-o-transition: background-color cubic-bezier(.06,.81,.44,.99) 0.5s, -o-transform cubic-bezier(.06,.81,.44,.99) 0.3s;
+	-moz-transition: background-color cubic-bezier(.06,.81,.44,.99) 0.5s, -moz-transform cubic-bezier(.06,.81,.44,.99) 0.3s;
+	transition: background-color cubic-bezier(.06,.81,.44,.99) 0.5s, transform cubic-bezier(.06,.81,.44,.99) 0.3s;
 	cursor: pointer;
 	border: none;
 	letter-spacing: 1.7px;
 }
 
-.button:hover {
-	-webkit-transform: scale(1.1,1.1);
-	background-color: #cafdff;
+.button a {
+	text-decoration: none;
+	color: #46c3d0;
 }
 
-.button:focus {
-	background-color: #000;
-	outline: none;
-	-webkit-animation: buttonEffect 0.3s cubic-bezier(.06,.81,.44,.99);
+.button:hover {
+	-webkit-transform: scale(1.1,1.1);
+	-moz-transform: scale(1.1,1.1);
+	-o-transform: scale(1.1,1.1);
+	transform: scale(1.1,1.1);
+	background-color: #cafdff;
 }
 
 
@@ -91,6 +85,21 @@ body {
 }
 
 @-webkit-keyframes bgMove {
+	from {background-position: 0 0;}
+	to {background-position: 100px -100px;}
+
+}
+@-moz-keyframes bgMove {
+	from {background-position: 0 0;}
+	to {background-position: 100px -100px;}
+
+}
+@-o-keyframes bgMove {
+	from {background-position: 0 0;}
+	to {background-position: 100px -100px;}
+
+}
+@keyframes bgMove {
 	from {background-position: 0 0;}
 	to {background-position: 100px -100px;}
 
