@@ -1,0 +1,140 @@
+@font-face {
+	font-family: "Birthday Cake";
+	font-weight: normal;
+	src: url(bdc.otf);
+}
+
+
+body {
+	/* background-image: url(); */
+	margin : 0 0 0 0;
+	background-color: #000;
+}
+
+::selection {
+  background: #46c3d0;
+}
+
+.leftnav {
+	width: 15%;
+	height: 100%;
+	float: left;
+	background-color: #3079ff;
+	position: fixed;
+	text-align: center;
+}
+
+@-webkit-keyframes buttonEffect {
+	0% {
+		-webkit-transform: scale(1.1,1.1);
+	}
+	70% {
+		-webkit-transform: scale(0.8,0.8);
+	}
+	100% {
+		-webkit-transform: scale(1.1,1.1);
+	}
+}
+
+.button {
+	background-color: #fff;
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 25px;
+	padding: 20px;
+	font-size: 30px;
+	text-align: center;
+	font-family: "Birthday Cake";
+	color: #46c3d0;
+	-webkit-transition: background-color cubic-bezier(.06,.81,.44,.99) 0.5s, -webkit-transform cubic-bezier(.06,.81,.44,.99) 0.3s;
+	cursor: pointer;
+	border: none;
+	letter-spacing: 1.7px;
+}
+
+.button:hover {
+	-webkit-transform: scale(1.1,1.1);
+	background-color: #cafdff;
+}
+
+.button:focus {
+	background-color: #000;
+	outline: none;
+	-webkit-animation: buttonEffect 0.3s cubic-bezier(.06,.81,.44,.99);
+}
+
+
+.container {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	font-size: 200px;
+	font-family: "Birthday Cake";
+	background-attachment: fixed;
+	background: linear-gradient(45deg, #32b6d1 25%, #46c3d0 25%, #46c3d0 50%, #32b6d1 50%, #32b6d1 75%, #46c3d0 75%);
+	background-size: 100px 100px;
+	color: #fff;
+	display: table;
+	text-align: center;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	line-height: 1.05;
+	outline: none;
+	word-break: break-word;
+	-webkit-animation: bgMove 5s linear infinite;
+	-moz-animation: bgMove 5s linear infinite;
+	-o-animation: bgMove 5s linear infinite;
+	animation: bgMove 5s linear infinite;
+}
+
+@-webkit-keyframes bgMove {
+	from {background-position: 0 0;}
+	to {background-position: 100px -100px;}
+
+}
+
+.container p {
+	display: table-cell; 
+  vertical-align: middle; 
+  text-align: center; 
+}
+
+.foot {
+	height: 150px;
+	width: 100%;
+	background-color: transparent;
+	position: fixed;
+	bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	font-size: 80px;
+	font-family: "Birthday Cake";
+	color: #fff;
+	text-align: center;
+}
+
+@media (max-width: 1500px) {
+  .container {
+  	font-size: 170px;
+  }
+  .foot {
+  	font-size: 60px;
+  }
+
+}
+
+@media (max-width: 1200px) {
+  .container {
+  	font-size: 130px;
+  }
+  .foot {
+  	font-size: 50px;
+  }
+}
