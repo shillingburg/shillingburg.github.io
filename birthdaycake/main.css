@@ -24,40 +24,6 @@ body {
 	text-align: center;
 }
 
-.button {
-	background-color: #fff;
-	width: 300px;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 25px;
-	padding: 20px;
-	padding-bottom: 23px;
-	font-size: 30px;
-	text-align: center;
-	font-family: "Birthday Cake";
-	color: #46c3d0;
-	-webkit-transition: background-color cubic-bezier(.06,.81,.44,.99) 0.5s, -webkit-transform cubic-bezier(.06,.81,.44,.99) 0.3s;
-	-o-transition: background-color cubic-bezier(.06,.81,.44,.99) 0.5s, -o-transform cubic-bezier(.06,.81,.44,.99) 0.3s;
-	-moz-transition: background-color cubic-bezier(.06,.81,.44,.99) 0.5s, -moz-transform cubic-bezier(.06,.81,.44,.99) 0.3s;
-	transition: background-color cubic-bezier(.06,.81,.44,.99) 0.5s, transform cubic-bezier(.06,.81,.44,.99) 0.3s;
-	cursor: pointer;
-	border: none;
-	letter-spacing: 1.7px;
-}
-
-.button a {
-	text-decoration: none;
-	color: #46c3d0;
-}
-
-.button:hover {
-	-webkit-transform: scale(1.1,1.1);
-	-moz-transform: scale(1.1,1.1);
-	-o-transform: scale(1.1,1.1);
-	transform: scale(1.1,1.1);
-	background-color: #cafdff;
-}
-
 
 .container {
 	position: fixed;
@@ -123,19 +89,59 @@ body {
 	-webkit-box-sizing: border-box;
 	-o-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	font-size: 80px;
+	font-size: 26px;
 	font-family: "Birthday Cake";
 	color: #fff;
 	text-align: center;
+}
+
+.foot a {
+	text-decoration: none;
+	border-bottom: 1px dotted #fff;
+	color: #fff;
+	letter-spacing: 1.1px;
+}
+
+.foot .button {
+	background-color: #fff;
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 25px;
+	padding: 20px;
+	padding-bottom: 23px;
+	font-size: 30px;
+	text-align: center;
+	font-family: "Birthday Cake";
+	color: #46c3d0;
+	-webkit-transition: background-color cubic-bezier(.06,.81,.44,.99) 0.5s, -webkit-transform cubic-bezier(.06,.81,.44,.99) 0.3s;
+	-o-transition: background-color cubic-bezier(.06,.81,.44,.99) 0.5s, -o-transform cubic-bezier(.06,.81,.44,.99) 0.3s;
+	-moz-transition: background-color cubic-bezier(.06,.81,.44,.99) 0.5s, -moz-transform cubic-bezier(.06,.81,.44,.99) 0.3s;
+	transition: background-color cubic-bezier(.06,.81,.44,.99) 0.5s, transform cubic-bezier(.06,.81,.44,.99) 0.3s;
+	cursor: pointer;
+	border: none;
+	letter-spacing: 1.7px;
+	margin-bottom: 10px;
+}
+
+.button a {
+	text-decoration: none;
+	color: #46c3d0;
+}
+
+.button:hover {
+	-webkit-transform: scale(1.1,1.1);
+	-moz-transform: scale(1.1,1.1);
+	-o-transform: scale(1.1,1.1);
+	transform: scale(1.1,1.1);
+	background-color: #cafdff;
 }
 
 @media (max-width: 1500px) {
   .container {
   	font-size: 170px;
   }
-  .foot {
-  	font-size: 60px;
-  }
+
 
 }
 
@@ -143,7 +149,5 @@ body {
   .container {
   	font-size: 130px;
   }
-  .foot {
-  	font-size: 50px;
-  }
+
 }
