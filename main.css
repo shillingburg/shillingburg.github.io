@@ -85,6 +85,7 @@ canvas {
 	line-height: 0.9;
 	display: inline-block;
 	padding-bottom: 20px;
+	text-shadow: -3px 3px 0px rgba(22, 39, 73, 0.2);
 }
 
 .centralblurb p {
@@ -341,7 +342,13 @@ canvas {
   .centralblurb {
   	padding-left: 20%;
   	padding-right: 20%;
+  	font-size: 30px;
   }
+  .centralblurbSmalltext{
+	font-size: 25px;
+	word-break: break-word;
+	line-height: 1.3;
+}
 
 }
 
@@ -349,7 +356,13 @@ canvas {
   .centralblurb {
   	padding-left: 10%;
   	padding-right: 10%;
+  	font-size: 25px;
   }
+   .centralblurbSmalltext{
+	font-size: 20px;
+	word-break: break-word;
+	line-height: 1.3;
+}
 }
 
 @media (max-width: 850px) {
@@ -357,5 +370,11 @@ canvas {
   	font-size: 40px;
   	padding-left: 5%;
   	padding-right: 5%;
+  	font-size: 25px;
   }
+  .centralblurbSmalltext{
+	font-size: 20px;
+	word-break: break-word;
+	line-height: 1.3;
+}
 }
