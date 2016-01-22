@@ -349,6 +349,9 @@ canvas {
 	word-break: break-word;
 	line-height: 1.3;
 }
+  .centralblurbBigtext{
+	font-size: 55px;
+}
 
 }
 
@@ -363,6 +366,9 @@ canvas {
 	word-break: break-word;
 	line-height: 1.3;
 }
+  .centralblurbBigtext{
+	font-size: 49px;
+}
 }
 
 @media (max-width: 850px) {
@@ -372,6 +378,9 @@ canvas {
   	padding-right: 5%;
   	font-size: 25px;
   }
+    .centralblurbBigtext{
+	font-size: 45px;
+}
   .centralblurbSmalltext{
 	font-size: 20px;
 	word-break: break-word;
