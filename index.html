@@ -55,6 +55,7 @@ now get outta here!
 
 <script>
     var container;
+    var timeoffset = 0;
    var objectW;
    var chest;
    var drink;
@@ -416,6 +417,7 @@ now get outta here!
    }
 
    function onDocumentMouseMove(event) {
+      //timeoffset = 0;
        oldmouseY = mouseY;
        oldmouseX = mouseX;
        mouseX = (event.clientX - windowHalfX);
@@ -431,6 +433,7 @@ now get outta here!
    }
 
    function render() {
+      timeoffset += 0.005;
        GetOrientation();
        camera.position.x += (mouseX / 15 - camera.position.x) * .05;
        camera.position.y += (-mouseY / 18 - camera.position.y) * .05;
@@ -456,7 +459,7 @@ now get outta here!
        */
 
 
-       objectW.rotation.y = map_range(mouseX, -windowHalfX, windowHalfX, -1, 1) + xValue;
+       objectW.rotation.y = map_range(mouseX, -windowHalfX, windowHalfX, -1, 1) + xValue + timeoffset;
        objectW.rotation.z = map_range(mouseX, -windowHalfX, windowHalfX, 1.1, -1.1) + xValue;
        objectW.rotation.x = map_range(-mouseY, -windowHalfX, windowHalfX, -1, 1) + yValue;
        objectX.rotation.y = objectW.rotation.y;
