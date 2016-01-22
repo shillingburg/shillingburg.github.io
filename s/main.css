@@ -1,0 +1,85 @@
+@font-face {
+	font-family: "Birthday Cake";
+	font-weight: normal;
+	src: url(bdc.otf);
+}
+
+@-webkit-keyframes wave {
+	0% {-webkit-transform: translateY(-5px);}
+	50% {-webkit-transform: translateY(5px);}
+	100% {-webkit-transform: translateY(-5px);}
+}
+
+body {
+	/* background-image: url(); */
+	margin : 0 0 0 0;
+	background-color: #000;
+
+	font-family: "Birthday Cake";
+	font-size: 5em;
+	color: #fff;
+}
+
+::selection {
+  background: #46c3d0;
+}
+
+.leftChoice {
+	left:0;
+	width: 50%;
+	height: 100%;
+	background-color: #000;
+	position: fixed;
+	text-align: center;
+	-webkit-box-sizing: border-box;
+}
+
+.button {
+	position: relative;
+    top: 50%; 
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+.rightChoice {
+	right: 0;
+	width: 50%;
+	height: 100%;
+	background-color: #000;
+	position: fixed;
+	text-align: center;
+	-webkit-box-sizing: border-box;
+}
+
+.leftChoice:hover {
+	background: linear-gradient(45deg, #32b6d1 25%, #46c3d0 25%, #46c3d0 50%, #32b6d1 50%, #32b6d1 75%, #46c3d0 75%);
+	background-size: 100px 100px;
+}
+
+.rightChoice:hover {
+	background: linear-gradient(45deg, #32b6d1 25%, #46c3d0 25%, #46c3d0 50%, #32b6d1 50%, #32b6d1 75%, #46c3d0 75%);
+	background-size: 100px 100px;
+}
+
+.letterA {
+	display: inline-block;
+	-webkit-animation: wave 1s infinite cubic-bezier(.33,0,.65,1);
+}
+
+.letterB {
+	display: inline-block;
+	-webkit-animation: wave 1s infinite cubic-bezier(.33,0,.65,1);
+	-webkit-animation-delay: -0.1s;
+}
+
+.letterC {
+	display: inline-block;
+	-webkit-animation: wave 1s infinite cubic-bezier(.33,0,.65,1);
+	-webkit-animation-delay: -0.2s;
+}
+
+.letterD {
+	display: inline-block;
+	-webkit-animation: wave 1s infinite cubic-bezier(.33,0,.65,1);
+	-webkit-animation-delay: -0.3s;
+}
