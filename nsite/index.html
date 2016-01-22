@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html>
+<!--
 
- <!-- Hey! Get out of here! -->
+@@@@@@@@@@  @@@@@@@@  @@@@@@  @@@@@@ @@@ @@@     @@@@@@@  @@@@@@  @@@@@@@  @@@@@@@@
+@@! @@! @@! @@!      !@@     !@@     @@! !@@    !@@      @@!  @@@ @@!  @@@ @@!     
+@!! !!@ @!@ @!!!:!    !@@!!   !@@!!   !@!@!     !@!      @!@  !@! @!@  !@! @!!!:!  
+!!:     !!: !!:          !:!     !:!   !!:      :!!      !!:  !!! !!:  !!! !!:     
+ :      :   : :: ::  ::.: :  ::.: :    .:        :: :: :  : :. :  :: :  :  : :: :: 
 
+for more things made with messy code, follow @fancymichael on twitter
+
+now get outta here!
+
+-->
 <head>
     <title>&#10023; Michael Shillingburg &#10023;</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Michael Shillingburg, a graphic designer making games and things that move.">
+    <meta name="keywords" content="michael, shillingburg, game, design, graphic, unity, fancymichael, michaelshillingburg, super, sculptor, caffeine">
+    <meta name="author" content="Michael Shillingburg">
 
 
     <link href='https://fonts.googleapis.com/css?family=Rubik:700,400italic,500,400' rel='stylesheet' type='text/css'>
@@ -40,378 +54,442 @@
 
 <script>
     var container;
-    var objectW;
-    var chest;
-    var drink;
-    var sofa;
-    var screwdriver;
-    var objectX;
-    var objectY;
-    var objectZ;
-    var yValue = 0;
-    var xValue = 0;
-      var camera, scene, renderer;
-      var mouseX = 0, mouseY = 0;
-       var oldmouseX = 0, oldmouseY = 0;
-      var textureS = THREE.ImageUtils.loadTexture('images/tree.png');
-      var wiremat = new THREE.MeshBasicMaterial( {wireframe: false, blending: THREE.Normal, wireframeLinewidth: 2, fog: false, map:textureS} );
-      var textureD = THREE.ImageUtils.loadTexture('images/donutmap.jpg');
-      var wiremat2 = new THREE.MeshBasicMaterial( {wireframe: false, blending: THREE.Normal, wireframeLinewidth: 2, fog: false, map:textureD} );
-       var textureT = THREE.ImageUtils.loadTexture('images/tv.png');
-      var tvMat = new THREE.MeshBasicMaterial( {wireframe: false, blending: THREE.Normal, wireframeLinewidth: 2, fog: false, map:textureT} );
-       var bambooTex = THREE.ImageUtils.loadTexture('images/bamboo.png');
-      var bambooMat = new THREE.MeshBasicMaterial( {wireframe: false, blending: THREE.Normal, wireframeLinewidth: 2, fog: false, map:bambooTex} );
-      var chestTex = THREE.ImageUtils.loadTexture('images/chest.png');
-      var chestMat = new THREE.MeshBasicMaterial( {wireframe: false, blending: THREE.Normal, wireframeLinewidth: 2, fog: false, map:chestTex} );
-      var drinkTex = THREE.ImageUtils.loadTexture('images/hot_togo.png');
-      var drinkMat = new THREE.MeshBasicMaterial( {wireframe: false, blending: THREE.Normal, wireframeLinewidth: 2, fog: false, map:drinkTex} );
-      var sofaTex = THREE.ImageUtils.loadTexture('images/sofa.png');
-      var sofaMat = new THREE.MeshBasicMaterial( {wireframe: false, blending: THREE.Normal, wireframeLinewidth: 2, fog: false, map:sofaTex} );
-      var screwdriverTex = THREE.ImageUtils.loadTexture('images/screwdriver.png');
-      var screwdriverMat = new THREE.MeshBasicMaterial( {wireframe: false, blending: THREE.Normal, wireframeLinewidth: 2, fog: false, map:screwdriverTex} );
-      var swordTex = THREE.ImageUtils.loadTexture('images/sword.png');
-      var swordMat = new THREE.MeshBasicMaterial( {wireframe: false, blending: THREE.Normal, wireframeLinewidth: 2, fog: false, map:swordTex} );
-      var wireColor = 0xea3469;
-      var windowHalfX = window.innerWidth / 2;
-      var windowHalfY = window.innerHeight / 2;
-      var scaleModifier = map_range(window.innerWidth, 500, 1900, 0.4, 0.8);
-      init();
-      animate();
-      function init() {
-        container = document.createElement( 'div' );
-        document.body.appendChild( container );
-      camera = new THREE.OrthographicCamera( window.innerWidth / - 2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / - 2, 1, 1000 );
-        camera.position.z = 100;
-        // scene
-        scene = new THREE.Scene();
-        var directionalLight = new THREE.DirectionalLight( 0xffffff );
-        directionalLight.position.set( 0, 10, 1 );
-        scene.add( directionalLight );
-        // texture
-        var manager = new THREE.LoadingManager();
-        manager.onProgress = function ( item, loaded, total ) {
-          console.log( item, loaded, total );
-        };
-        var texture = new THREE.Texture();
-        var onProgress = function ( xhr ) {
-          if ( xhr.lengthComputable ) {
-            var percentComplete = xhr.loaded / xhr.total * 100;
-            console.log( Math.round(percentComplete, 2) + '% downloaded' );
-          }
+   var objectW;
+   var chest;
+   var drink;
+   var sofa;
+   var screwdriver;
+   var objectX;
+   var objectY;
+   var objectZ;
+   var yValue = 0;
+   var xValue = 0;
+   var camera, scene, renderer;
+   var mouseX = 0,
+       mouseY = 0;
+   var oldmouseX = 0,
+       oldmouseY = 0;
+   var textureS = THREE.ImageUtils.loadTexture('images/tree.png');
+   var wiremat = new THREE.MeshBasicMaterial({
+       wireframe: false,
+       blending: THREE.Normal,
+       wireframeLinewidth: 2,
+       fog: false,
+       map: textureS
+   });
+   var textureD = THREE.ImageUtils.loadTexture('images/donutmap.jpg');
+   var wiremat2 = new THREE.MeshBasicMaterial({
+       wireframe: false,
+       blending: THREE.Normal,
+       wireframeLinewidth: 2,
+       fog: false,
+       map: textureD
+   });
+   var textureT = THREE.ImageUtils.loadTexture('images/tv.png');
+   var tvMat = new THREE.MeshBasicMaterial({
+       wireframe: false,
+       blending: THREE.Normal,
+       wireframeLinewidth: 2,
+       fog: false,
+       map: textureT
+   });
+   var bambooTex = THREE.ImageUtils.loadTexture('images/bamboo.png');
+   var bambooMat = new THREE.MeshBasicMaterial({
+       wireframe: false,
+       blending: THREE.Normal,
+       wireframeLinewidth: 2,
+       fog: false,
+       map: bambooTex
+   });
+   var chestTex = THREE.ImageUtils.loadTexture('images/chest.png');
+   var chestMat = new THREE.MeshBasicMaterial({
+       wireframe: false,
+       blending: THREE.Normal,
+       wireframeLinewidth: 2,
+       fog: false,
+       map: chestTex
+   });
+   var drinkTex = THREE.ImageUtils.loadTexture('images/hot_togo.png');
+   var drinkMat = new THREE.MeshBasicMaterial({
+       wireframe: false,
+       blending: THREE.Normal,
+       wireframeLinewidth: 2,
+       fog: false,
+       map: drinkTex
+   });
+   var sofaTex = THREE.ImageUtils.loadTexture('images/sofa.png');
+   var sofaMat = new THREE.MeshBasicMaterial({
+       wireframe: false,
+       blending: THREE.Normal,
+       wireframeLinewidth: 2,
+       fog: false,
+       map: sofaTex
+   });
+   var screwdriverTex = THREE.ImageUtils.loadTexture('images/screwdriver.png');
+   var screwdriverMat = new THREE.MeshBasicMaterial({
+       wireframe: false,
+       blending: THREE.Normal,
+       wireframeLinewidth: 2,
+       fog: false,
+       map: screwdriverTex
+   });
+   var swordTex = THREE.ImageUtils.loadTexture('images/sword.png');
+   var swordMat = new THREE.MeshBasicMaterial({
+       wireframe: false,
+       blending: THREE.Normal,
+       wireframeLinewidth: 2,
+       fog: false,
+       map: swordTex
+   });
+   var wireColor = 0xea3469;
+   var windowHalfX = window.innerWidth / 2;
+   var windowHalfY = window.innerHeight / 2;
+   var scaleModifier = map_range(window.innerWidth, 500, 1900, 0.4, 0.8);
+   init();
+   animate();
 
-          renderer.setClearColor( 0x162749, 1 );
-        };
-        var onError = function ( xhr ) {
-        };
-        // model
-        var loader = new THREE.OBJLoader( manager );
-        loader.load( 'images/spruce.obj',
-          function ( object ) {
-              object.traverse( function ( child ) {
-                if ( child instanceof THREE.Mesh ) {
-                  child.material = wiremat;
-                }
-              } );
+   function init() {
+       container = document.createElement('div');
+       document.body.appendChild(container);
+       camera = new THREE.OrthographicCamera(window.innerWidth / -2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / -2, 1, 1000);
+       camera.position.z = 100;
+       // scene
+       scene = new THREE.Scene();
+       var directionalLight = new THREE.DirectionalLight(0xffffff);
+       directionalLight.position.set(0, 10, 1);
+       scene.add(directionalLight);
+       // texture
+       var manager = new THREE.LoadingManager();
+       manager.onProgress = function(item, loaded, total) {
+           console.log(item, loaded, total);
+       };
+       var texture = new THREE.Texture();
+       var onProgress = function(xhr) {
+           if (xhr.lengthComputable) {
+               var percentComplete = xhr.loaded / xhr.total * 100;
+               console.log(Math.round(percentComplete, 2) + '% downloaded');
+           }
 
-          scene.add( object );
-          object.scale.set(4 * scaleModifier, 4 * scaleModifier , 4 * scaleModifier);
-          object.position.x = windowHalfX / 3;
-           object.position.y = windowHalfY / 5;
-          object.position.z -= 200;
-          objectX = object;
-        }, onProgress, onError );
+           renderer.setClearColor(0x162749, 1);
+       };
+       var onError = function(xhr) {};
+       // model
+       var loader = new THREE.OBJLoader(manager);
+       loader.load('images/spruce.obj',
+           function(object) {
+               object.traverse(function(child) {
+                   if (child instanceof THREE.Mesh) {
+                       child.material = wiremat;
+                   }
+               });
 
-        loader.load( 'images/donut.obj',
-          function ( object ) {
-            objectY = object;
-             objectY.traverse( function ( child ) {
-                if ( child instanceof THREE.Mesh ) {
-                  child.material = wiremat2;
-                }
-              } );
+               scene.add(object);
+               object.scale.set(4 * scaleModifier, 4 * scaleModifier, 4 * scaleModifier);
+               object.position.x = windowHalfX / 3;
+               object.position.y = windowHalfY / 5;
+               object.position.z -= 200;
+               objectX = object;
+           }, onProgress, onError);
 
-          scene.add( object );
-          object.scale.set(2 * scaleModifier, 2 * scaleModifier , 2 * scaleModifier);
-          object.position.x = -windowHalfX / 2;
-           object.position.y = -windowHalfY / 3;
-          object.position.z -= 200;
-     
-        }, onProgress, onError );
+       loader.load('images/donut.obj',
+           function(object) {
+               objectY = object;
+               objectY.traverse(function(child) {
+                   if (child instanceof THREE.Mesh) {
+                       child.material = wiremat2;
+                   }
+               });
 
-         loader.load( 'images/tv.obj',
-          function ( object ) {
-            objectZ = object;
-             objectZ.traverse( function ( child ) {
-                if ( child instanceof THREE.Mesh ) {
-                  child.material = tvMat;
-                }
-              } );
+               scene.add(object);
+               object.scale.set(2 * scaleModifier, 2 * scaleModifier, 2 * scaleModifier);
+               object.position.x = -windowHalfX / 2;
+               object.position.y = -windowHalfY / 3;
+               object.position.z -= 200;
 
-          scene.add( object );
-          object.scale.set(1.2 * scaleModifier, 1.2 * scaleModifier , 1.2 * scaleModifier);
-          object.position.x = -windowHalfX / 8;
-           object.position.y = -windowHalfY / 4;
-          object.position.z -= 200;
-     
-        }, onProgress, onError );
+           }, onProgress, onError);
 
-          loader.load( 'images/bamboo.obj',
-          function ( object ) {
-            objectW = object;
-             objectW.traverse( function ( child ) {
-                if ( child instanceof THREE.Mesh ) {
-                  child.material = bambooMat;
-                }
-              } );
+       loader.load('images/tv.obj',
+           function(object) {
+               objectZ = object;
+               objectZ.traverse(function(child) {
+                   if (child instanceof THREE.Mesh) {
+                       child.material = tvMat;
+                   }
+               });
 
-          scene.add( object );
-          object.scale.set(1 * scaleModifier, 1 * scaleModifier , 1 * scaleModifier);
-          object.position.x = -windowHalfX / 3;
-           object.position.y = -windowHalfY / 2;
-          object.position.z -= 200;
-     
-        }, onProgress, onError );
+               scene.add(object);
+               object.scale.set(1.2 * scaleModifier, 1.2 * scaleModifier, 1.2 * scaleModifier);
+               object.position.x = -windowHalfX / 8;
+               object.position.y = -windowHalfY / 4;
+               object.position.z -= 200;
 
-           loader.load( 'images/chest.obj',
-          function ( object ) {
-            chest = object;
-             chest.traverse( function ( child ) {
-                if ( child instanceof THREE.Mesh ) {
-                  child.material = chestMat;
-                }
-              } );
+           }, onProgress, onError);
 
-          scene.add( object );
-          object.scale.set(0.6 * scaleModifier, 0.6 * scaleModifier , 0.6 * scaleModifier);
-          object.position.x = windowHalfX / 3;
-           object.position.y = -windowHalfY / 3;
-          object.position.z -= 200;
-     
-        }, onProgress, onError );
+       loader.load('images/bamboo.obj',
+           function(object) {
+               objectW = object;
+               objectW.traverse(function(child) {
+                   if (child instanceof THREE.Mesh) {
+                       child.material = bambooMat;
+                   }
+               });
 
-         loader.load( 'images/hot_togo.obj',
-          function ( object ) {
-            drink = object;
-             drink.traverse( function ( child ) {
-                if ( child instanceof THREE.Mesh ) {
-                  child.material = drinkMat;
-                }
-              } );
+               scene.add(object);
+               object.scale.set(1 * scaleModifier, 1 * scaleModifier, 1 * scaleModifier);
+               object.position.x = -windowHalfX / 3;
+               object.position.y = -windowHalfY / 2;
+               object.position.z -= 200;
 
-          scene.add( object );
-          object.scale.set(1 * scaleModifier, 1 * scaleModifier , 1 * scaleModifier);
-          object.position.x = windowHalfX / 20;
-           object.position.y = windowHalfY / 4;
-          object.position.z -= 200;
-     
-        }, onProgress, onError );
+           }, onProgress, onError);
 
-         loader.load( 'images/sofa.obj',
-          function ( object ) {
-            sofa = object;
-             sofa.traverse( function ( child ) {
-                if ( child instanceof THREE.Mesh ) {
-                  child.material = sofaMat;
-                }
-              } );
+       loader.load('images/chest.obj',
+           function(object) {
+               chest = object;
+               chest.traverse(function(child) {
+                   if (child instanceof THREE.Mesh) {
+                       child.material = chestMat;
+                   }
+               });
 
-          scene.add( object );
-          object.scale.set(1 * scaleModifier, 1 * scaleModifier , 1 * scaleModifier);
-          object.position.x = -windowHalfX / 2.2;
-           object.position.y = windowHalfY / 3;
-          object.position.z -= 450;
-     
-        }, onProgress, onError );
+               scene.add(object);
+               object.scale.set(0.6 * scaleModifier, 0.6 * scaleModifier, 0.6 * scaleModifier);
+               object.position.x = windowHalfX / 3;
+               object.position.y = -windowHalfY / 3;
+               object.position.z -= 200;
 
-         loader.load( 'images/screwdriver.obj',
-          function ( object ) {
-            screwdriver = object;
-             screwdriver.traverse( function ( child ) {
-                if ( child instanceof THREE.Mesh ) {
-                  child.material = screwdriverMat;
-                }
-              } );
+           }, onProgress, onError);
 
-          scene.add( object );
-          object.scale.set(1 * scaleModifier, 1 * scaleModifier , 1 * scaleModifier);
-          object.position.x = windowHalfX / 17;
-          object.position.y = -windowHalfY / 1.9;
-          object.position.z -= 400;
-     
-        }, onProgress, onError );
+       loader.load('images/hot_togo.obj',
+           function(object) {
+               drink = object;
+               drink.traverse(function(child) {
+                   if (child instanceof THREE.Mesh) {
+                       child.material = drinkMat;
+                   }
+               });
 
-        loader.load( 'images/sword.obj',
-          function ( object ) {
-            sword = object;
-             sword.traverse( function ( child ) {
-                if ( child instanceof THREE.Mesh ) {
-                  child.material = swordMat;
-                }
-              } );
+               scene.add(object);
+               object.scale.set(1 * scaleModifier, 1 * scaleModifier, 1 * scaleModifier);
+               object.position.x = windowHalfX / 20;
+               object.position.y = windowHalfY / 4;
+               object.position.z -= 200;
 
-          scene.add( object );
-          object.scale.set(0.8 * scaleModifier, 0.8 * scaleModifier , 0.8 * scaleModifier);
-          object.position.x = -windowHalfX / 17;
-          object.position.y = windowHalfY / 2.4;
-          object.position.z -= 700;
-     
-        }, onProgress, onError );
-        //
+           }, onProgress, onError);
 
-        var geometry = new THREE.SphereGeometry( 5, 5, 5 );
-    var materialGreen = new THREE.MeshBasicMaterial( {color: 0x31FF93} );
-    var materialOrange = new THREE.MeshBasicMaterial( {color: 0xFA742F} );
-    var materialBlue = new THREE.MeshBasicMaterial( {color: 0x1866EF} );
-    var materialPink = new THREE.MeshBasicMaterial( {color: 0xFF337D} );
-    
-    for (i = 0; i < windowHalfX/18; i++) { 
-      var sphere = new THREE.Mesh( geometry, materialGreen );
-        scene.add( sphere );
-        sphere.position.x = Math.random() * (-windowHalfX - windowHalfX) + windowHalfX;
-        sphere.position.y = Math.random() * (-windowHalfY - windowHalfY) + windowHalfY;
-        sphere.position.z = -700;
-        var randomscale = Math.random();
-        sphere.scale.set (randomscale, randomscale, randomscale);
-    }
-    for (i = 0; i < windowHalfX/18; i++) { 
-      var sphere = new THREE.Mesh( geometry, materialBlue );
-        scene.add( sphere );
-        sphere.position.x = Math.random() * (-windowHalfX - windowHalfX) + windowHalfX;
-        sphere.position.y = Math.random() * (-windowHalfY - windowHalfY) + windowHalfY;
-        var randomscale = Math.random();
-        sphere.scale.set (randomscale, randomscale, randomscale);
-    }
-    for (i = 0; i < windowHalfX/18; i++) { 
-      var sphere = new THREE.Mesh( geometry, materialPink );
-        scene.add( sphere );
-        sphere.position.x = Math.random() * (-windowHalfX - windowHalfX) + windowHalfX;
-        sphere.position.y = Math.random() * (-windowHalfY - windowHalfY) + windowHalfY;
-        var randomscale = Math.random();
-        sphere.scale.set (randomscale, randomscale, randomscale);
-    }
-    for (i = 0; i < windowHalfX/18; i++) { 
-      var sphere = new THREE.Mesh( geometry, materialOrange );
-        scene.add( sphere );
-        sphere.position.x = Math.random() * (-windowHalfX - windowHalfX) + windowHalfX;
-        sphere.position.y = Math.random() * (-windowHalfY - windowHalfY) + windowHalfY;
-        var randomscale = Math.random();
-        sphere.scale.set (randomscale, randomscale, randomscale);
-    }
+       loader.load('images/sofa.obj',
+           function(object) {
+               sofa = object;
+               sofa.traverse(function(child) {
+                   if (child instanceof THREE.Mesh) {
+                       child.material = sofaMat;
+                   }
+               });
+
+               scene.add(object);
+               object.scale.set(1 * scaleModifier, 1 * scaleModifier, 1 * scaleModifier);
+               object.position.x = -windowHalfX / 2.2;
+               object.position.y = windowHalfY / 3;
+               object.position.z -= 450;
+
+           }, onProgress, onError);
+
+       loader.load('images/screwdriver.obj',
+           function(object) {
+               screwdriver = object;
+               screwdriver.traverse(function(child) {
+                   if (child instanceof THREE.Mesh) {
+                       child.material = screwdriverMat;
+                   }
+               });
+
+               scene.add(object);
+               object.scale.set(1 * scaleModifier, 1 * scaleModifier, 1 * scaleModifier);
+               object.position.x = windowHalfX / 17;
+               object.position.y = -windowHalfY / 1.9;
+               object.position.z -= 400;
+
+           }, onProgress, onError);
+
+       loader.load('images/sword.obj',
+           function(object) {
+               sword = object;
+               sword.traverse(function(child) {
+                   if (child instanceof THREE.Mesh) {
+                       child.material = swordMat;
+                   }
+               });
+
+               scene.add(object);
+               object.scale.set(0.8 * scaleModifier, 0.8 * scaleModifier, 0.8 * scaleModifier);
+               object.position.x = -windowHalfX / 17;
+               object.position.y = windowHalfY / 2.4;
+               object.position.z -= 700;
+
+           }, onProgress, onError);
+       //
+
+       var geometry = new THREE.SphereGeometry(5, 5, 5);
+       var materialGreen = new THREE.MeshBasicMaterial({
+           color: 0x31FF93
+       });
+       var materialOrange = new THREE.MeshBasicMaterial({
+           color: 0xFA742F
+       });
+       var materialBlue = new THREE.MeshBasicMaterial({
+           color: 0x1866EF
+       });
+       var materialPink = new THREE.MeshBasicMaterial({
+           color: 0xFF337D
+       });
+
+       for (i = 0; i < windowHalfX / 18; i++) {
+           var sphere = new THREE.Mesh(geometry, materialGreen);
+           scene.add(sphere);
+           sphere.position.x = Math.random() * (-windowHalfX - windowHalfX) + windowHalfX;
+           sphere.position.y = Math.random() * (-windowHalfY - windowHalfY) + windowHalfY;
+           sphere.position.z = -700;
+           var randomscale = Math.random();
+           sphere.scale.set(randomscale, randomscale, randomscale);
+       }
+       for (i = 0; i < windowHalfX / 18; i++) {
+           var sphere = new THREE.Mesh(geometry, materialBlue);
+           scene.add(sphere);
+           sphere.position.x = Math.random() * (-windowHalfX - windowHalfX) + windowHalfX;
+           sphere.position.y = Math.random() * (-windowHalfY - windowHalfY) + windowHalfY;
+           var randomscale = Math.random();
+           sphere.scale.set(randomscale, randomscale, randomscale);
+       }
+       for (i = 0; i < windowHalfX / 18; i++) {
+           var sphere = new THREE.Mesh(geometry, materialPink);
+           scene.add(sphere);
+           sphere.position.x = Math.random() * (-windowHalfX - windowHalfX) + windowHalfX;
+           sphere.position.y = Math.random() * (-windowHalfY - windowHalfY) + windowHalfY;
+           var randomscale = Math.random();
+           sphere.scale.set(randomscale, randomscale, randomscale);
+       }
+       for (i = 0; i < windowHalfX / 18; i++) {
+           var sphere = new THREE.Mesh(geometry, materialOrange);
+           scene.add(sphere);
+           sphere.position.x = Math.random() * (-windowHalfX - windowHalfX) + windowHalfX;
+           sphere.position.y = Math.random() * (-windowHalfY - windowHalfY) + windowHalfY;
+           var randomscale = Math.random();
+           sphere.scale.set(randomscale, randomscale, randomscale);
+       }
 
 
-        renderer = new THREE.WebGLRenderer();
-        renderer.setPixelRatio( window.devicePixelRatio );
-        renderer.setSize( window.innerWidth, window.innerHeight );
-        container.appendChild( renderer.domElement );
-        document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-        window.addEventListener( 'resize', onWindowResize, false );
-      }
+       renderer = new THREE.WebGLRenderer();
+       renderer.setPixelRatio(window.devicePixelRatio);
+       renderer.setSize(window.innerWidth, window.innerHeight);
+       container.appendChild(renderer.domElement);
+       document.addEventListener('mousemove', onDocumentMouseMove, false);
+       window.addEventListener('resize', onWindowResize, false);
+   }
 
- function GetOrientation () {
-      if (window.DeviceOrientationEvent) {
-    window.addEventListener("deviceorientation", function () {
-        yValue = map_range(event.beta, -2.5, 2.5, -0.01, 0.03);
-        xValue = map_range(event.gamma, -2.5, 2.5, -0.02, 0.02) * -1;
+   function GetOrientation() {
+       if (window.DeviceOrientationEvent) {
+           window.addEventListener("deviceorientation", function() {
+               yValue = map_range(event.beta, -2.5, 2.5, -0.01, 0.03);
+               xValue = map_range(event.gamma, -2.5, 2.5, -0.02, 0.02) * -1;
 
-    }, true);
-} else if (window.DeviceMotionEvent) {
-    window.addEventListener('devicemotion', function () {
-      yValue = map_range(event.beta, -2.5, 2.5, -0.01, 0.03);
-        xValue = map_range(event.gamma, -2.5, 2.5, -0.02, 0.02) * -1;
-    }, true);
-} else {
-    window.addEventListener("MozOrientation", function () {
-     yValue = map_range(event.beta, -2.5, 2.5, -0.01, 0.03);
-        xValue = map_range(event.gamma, -2.5, 2.5, -0.02, 0.02) * -1;
-    }, true);
-}
+           }, true);
+       } else if (window.DeviceMotionEvent) {
+           window.addEventListener('devicemotion', function() {
+               yValue = map_range(event.beta, -2.5, 2.5, -0.01, 0.03);
+               xValue = map_range(event.gamma, -2.5, 2.5, -0.02, 0.02) * -1;
+           }, true);
+       } else {
+           window.addEventListener("MozOrientation", function() {
+               yValue = map_range(event.beta, -2.5, 2.5, -0.01, 0.03);
+               xValue = map_range(event.gamma, -2.5, 2.5, -0.02, 0.02) * -1;
+           }, true);
+       }
 
-}
+   }
 
-      function onWindowResize() {
-        windowHalfX = window.innerWidth / 2;
-        windowHalfY = window.innerHeight / 2;
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize( window.innerWidth, window.innerHeight );
-      }
-      function onDocumentMouseMove( event ) {
-        oldmouseY = mouseY;
-        oldmouseX = mouseX;
-        mouseX = ( event.clientX - windowHalfX );
-        mouseY = ( event.clientY - windowHalfY );
+   function onWindowResize() {
+       windowHalfX = window.innerWidth / 2;
+       windowHalfY = window.innerHeight / 2;
+       camera.aspect = window.innerWidth / window.innerHeight;
+       camera.updateProjectionMatrix();
+       renderer.setSize(window.innerWidth, window.innerHeight);
+   }
+
+   function onDocumentMouseMove(event) {
+       oldmouseY = mouseY;
+       oldmouseX = mouseX;
+       mouseX = (event.clientX - windowHalfX);
+       mouseY = (event.clientY - windowHalfY);
        // objectX.rotationMatrix = new THREE.Vector3(mouseX, mouseY, 0);
 
-      }
-      //
-      function animate() {
-        requestAnimationFrame( animate );
-        render();
-      
-      }
+   }
+   //
+   function animate() {
+       requestAnimationFrame(animate);
+       render();
 
-      function render() {
-        GetOrientation();
-        camera.position.x += ( mouseX/15 - camera.position.x ) * .05;
-        camera.position.y += ( -mouseY/18 - camera.position.y ) * .05;
+   }
 
-
-        // objectX.rotateY(map_range(mouseX, -windowHalfX, windowHalfX, 0.001, 0.1));
-        // objectX.rotateZ(map_range(mouseY/2, -windowHalfY, windowHalfY, 0,  -0.1));
-        // objectY.rotateY(map_range(mouseX, -windowHalfX, windowHalfX, 0.001, 0.1));
-        // objectY.rotateZ(map_range(mouseY/2, -windowHalfY, windowHalfY, 0,  -0.1));
-        // objectZ.rotateY(map_range(mouseX, -windowHalfX, windowHalfX, 0.001, 0.1));
-        // objectZ.rotateZ(map_range(mouseY/2, -windowHalfY, windowHalfY, 0,  -0.1));
-        //camera.position.y = map_range(mouseX, -windowHalfX, windowHalfX, -1, 1);
-        // var accelerometerOffsetY;
-        // var accelerometerOffsetX;
-        /*
-        if(yValue == 0) {
-          accelerometerOffsetY = 0;
-          accelerometerOffsetX = 0;
-        } else if (Math.abs(yValue) > 0) {
-          accelerometerOffsetY = map_range(yValue, 0, 1, -1, 1);
-          accelerometerOffsetX = map_range(xValue, 0, 1, -1, 1);
-        }
-        */
+   function render() {
+       GetOrientation();
+       camera.position.x += (mouseX / 15 - camera.position.x) * .05;
+       camera.position.y += (-mouseY / 18 - camera.position.y) * .05;
 
 
-        objectW.rotation.y = map_range(mouseX, -windowHalfX, windowHalfX, -1, 1) + xValue;
-        objectW.rotation.z = map_range(mouseX, -windowHalfX, windowHalfX, 1.1, -1.1) + xValue;
-        objectW.rotation.x = map_range(-mouseY, -windowHalfX, windowHalfX, -1, 1) + yValue;
-        objectX.rotation.y = objectW.rotation.y;
-        objectX.rotation.z = objectW.rotation.z;
-        objectX.rotation.x = objectW.rotation.x;
-        objectY.rotation.y = objectW.rotation.y;
-        objectY.rotation.z = objectW.rotation.z;
-        objectY.rotation.x = objectW.rotation.x;
-        objectZ.rotation.y = objectW.rotation.y;
-        objectZ.rotation.z = objectW.rotation.z;
-        objectZ.rotation.x = objectW.rotation.x;
-        chest.rotation.y = objectW.rotation.y;
-        chest.rotation.z = objectW.rotation.z;
-        chest.rotation.x = objectW.rotation.x;
-        drink.rotation.y = objectW.rotation.y;
-        drink.rotation.z = objectW.rotation.z;
-        drink.rotation.x = objectW.rotation.x;
-        sofa.rotation.y = objectW.rotation.y;
-        sofa.rotation.z = objectW.rotation.z;
-        sofa.rotation.x = objectW.rotation.x;
-        screwdriver.rotation.y = objectW.rotation.y;
-        screwdriver.rotation.z = objectW.rotation.z;
-        screwdriver.rotation.x = objectW.rotation.x;
-        sword.rotation.y = objectW.rotation.y;
-        sword.rotation.z = objectW.rotation.z;
-        sword.rotation.x = objectW.rotation.x;
-        //camera.position.y += ( - mouseY - camera.position.y ) * .05;
-        //camera.lookAt( scene.position );
-        renderer.render( scene, camera );
-      }
+       // objectX.rotateY(map_range(mouseX, -windowHalfX, windowHalfX, 0.001, 0.1));
+       // objectX.rotateZ(map_range(mouseY/2, -windowHalfY, windowHalfY, 0,  -0.1));
+       // objectY.rotateY(map_range(mouseX, -windowHalfX, windowHalfX, 0.001, 0.1));
+       // objectY.rotateZ(map_range(mouseY/2, -windowHalfY, windowHalfY, 0,  -0.1));
+       // objectZ.rotateY(map_range(mouseX, -windowHalfX, windowHalfX, 0.001, 0.1));
+       // objectZ.rotateZ(map_range(mouseY/2, -windowHalfY, windowHalfY, 0,  -0.1));
+       //camera.position.y = map_range(mouseX, -windowHalfX, windowHalfX, -1, 1);
+       // var accelerometerOffsetY;
+       // var accelerometerOffsetX;
+       /*
+       if(yValue == 0) {
+         accelerometerOffsetY = 0;
+         accelerometerOffsetX = 0;
+       } else if (Math.abs(yValue) > 0) {
+         accelerometerOffsetY = map_range(yValue, 0, 1, -1, 1);
+         accelerometerOffsetX = map_range(xValue, 0, 1, -1, 1);
+       }
+       */
 
-      function map_range(value, low1, high1, low2, high2) {
-        return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
-}
 
+       objectW.rotation.y = map_range(mouseX, -windowHalfX, windowHalfX, -1, 1) + xValue;
+       objectW.rotation.z = map_range(mouseX, -windowHalfX, windowHalfX, 1.1, -1.1) + xValue;
+       objectW.rotation.x = map_range(-mouseY, -windowHalfX, windowHalfX, -1, 1) + yValue;
+       objectX.rotation.y = objectW.rotation.y;
+       objectX.rotation.z = objectW.rotation.z;
+       objectX.rotation.x = objectW.rotation.x;
+       objectY.rotation.y = objectW.rotation.y;
+       objectY.rotation.z = objectW.rotation.z;
+       objectY.rotation.x = objectW.rotation.x;
+       objectZ.rotation.y = objectW.rotation.y;
+       objectZ.rotation.z = objectW.rotation.z;
+       objectZ.rotation.x = objectW.rotation.x;
+       chest.rotation.y = objectW.rotation.y;
+       chest.rotation.z = objectW.rotation.z;
+       chest.rotation.x = objectW.rotation.x;
+       drink.rotation.y = objectW.rotation.y;
+       drink.rotation.z = objectW.rotation.z;
+       drink.rotation.x = objectW.rotation.x;
+       sofa.rotation.y = objectW.rotation.y;
+       sofa.rotation.z = objectW.rotation.z;
+       sofa.rotation.x = objectW.rotation.x;
+       screwdriver.rotation.y = objectW.rotation.y;
+       screwdriver.rotation.z = objectW.rotation.z;
+       screwdriver.rotation.x = objectW.rotation.x;
+       sword.rotation.y = objectW.rotation.y;
+       sword.rotation.z = objectW.rotation.z;
+       sword.rotation.x = objectW.rotation.x;
+       //camera.position.y += ( - mouseY - camera.position.y ) * .05;
+       //camera.lookAt( scene.position );
+       renderer.render(scene, camera);
+   }
+
+   function map_range(value, low1, high1, low2, high2) {
+       return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
+   }
 </script>
 
   <script>
