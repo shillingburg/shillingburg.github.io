@@ -9,32 +9,32 @@
 
     <link href='https://fonts.googleapis.com/css?family=Rubik:700,400italic,500,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="main.css">
-    	<script src="three.min.js"></script>
+      <script src="three.min.js"></script>
   <script src="CanvasRenderer.js"></script>
   <script src="Projector.js"></script>
   <script src="OBJLoader.js"></script>
 </head>
 <body>
 
-	<div class="centralblurb">
-		<p><img src="av.jpg" /><br>
-		<span class="centralblurbBigtext">Hi! I'm<br><b style="color: #31FF93;">
-		<span class="w1">M</span><span class="w2">i</span><span class="w3">c</span><span class="w4">h</span><span class="w5">a</span><span class="w6">e</span><span class="w7">l</span>&nbsp;&nbsp;<span class="w1">S</span><span class="w2">h</span><span class="w3">i</span><span class="w4">l</span><span class="w5">l</span><span class="w6">i</span><span class="w7">n</span><span class="w8">g</span><span class="w9">b</span><span class="w10">u</span><span class="w11">r</span><span class="w12">g</span></b>.</span>
-		<br>I'm a graphic designer &amp; 3D illustrator creating fun experiences for people to view and interact with.<br>
-		<br><span class="centralblurbSmalltext">Have a project you'd like me to work on? Send me an email!</span></p>
-	
-	</div>
-	<canvas></canvas>
-	<div id="container">
-		<div class="navcontainer">
+  <div class="centralblurb">
+    <p><img src="av.jpg" /><br>
+    <span class="centralblurbBigtext">Hi! I'm<br><b style="color: #31FF93;">
+    <span class="w1">M</span><span class="w2">i</span><span class="w3">c</span><span class="w4">h</span><span class="w5">a</span><span class="w6">e</span><span class="w7">l</span>&nbsp;&nbsp;<span class="w1">S</span><span class="w2">h</span><span class="w3">i</span><span class="w4">l</span><span class="w5">l</span><span class="w6">i</span><span class="w7">n</span><span class="w8">g</span><span class="w9">b</span><span class="w10">u</span><span class="w11">r</span><span class="w12">g</span></b>.</span>
+    <br>I'm a graphic designer &amp; 3D illustrator creating fun experiences for people to view and interact with.<br>
+    <br><span class="centralblurbSmalltext">Have a project you'd like me to work on? Send me an email!</span></p>
+  
+  </div>
+  <canvas></canvas>
+  <div id="container">
+    <div class="navcontainer">
       <a href="http://michaelshillingburg.tumblr.com/">
-		<div class="navbutton" id="button1" onmouseover="UpdateFooter('#31FF93 6px solid')"
-		onmouseout="UpdateFooter('#1A3C72 6px solid')"><span class="w1">T</span><span class="w2">u</span><span class="w3">m</span><span class="w4">b</span><span class="w5">l</span><span class="w6">r</span></div></a>
-		<a href="http://www.twitter.com/fancymichael/"><div class="navbutton" id="button2" onmouseover="UpdateFooter('#FA742F 6px solid')" onmouseout="UpdateFooter('#1A3C72 6px solid')"><span class="w7">T</span><span class="w6">w</span><span class="w5">i</span><span class="w4">t</span><span class="w3">t</span><span class="w2">e</span><span class="w1">r</span></div></a>
-		<a href="http://shillingburg.itch.io/"><div class="navbutton" id="button3" onmouseover="UpdateFooter('#FF337D 6px solid')" onmouseout="UpdateFooter('#1A3C72 6px solid')"><span class="w1">i</span><span class="w2">t</span><span class="w3">c</span><span class="w4">h</span><span class="w5">.</span><span class="w6">i</span><span class="w7">o</span></div></a>
-		<a href="mailto:michaelshillingburg@gmail.com"><div class="navbutton" id="button4" onmouseover="UpdateFooter('#1866EF 6px solid')" onmouseout="UpdateFooter('#1A3C72 6px solid')"><span class="w8">E</span><span class="w7">m</span><span class="w6">a</span><span class="w5">i</span><span class="w4">l</span><span class="w3">&nbsp;</span><span class="w2">m</span><span class="w1">e</span></div></a>
-	</div>
-	</div>
+    <div class="navbutton" id="button1" onmouseover="UpdateFooter('#31FF93 6px solid')"
+    onmouseout="UpdateFooter('#1A3C72 6px solid')"><span class="w1">T</span><span class="w2">u</span><span class="w3">m</span><span class="w4">b</span><span class="w5">l</span><span class="w6">r</span></div></a>
+    <a href="http://www.twitter.com/fancymichael/"><div class="navbutton" id="button2" onmouseover="UpdateFooter('#FA742F 6px solid')" onmouseout="UpdateFooter('#1A3C72 6px solid')"><span class="w7">T</span><span class="w6">w</span><span class="w5">i</span><span class="w4">t</span><span class="w3">t</span><span class="w2">e</span><span class="w1">r</span></div></a>
+    <a href="http://shillingburg.itch.io/"><div class="navbutton" id="button3" onmouseover="UpdateFooter('#FF337D 6px solid')" onmouseout="UpdateFooter('#1A3C72 6px solid')"><span class="w1">i</span><span class="w2">t</span><span class="w3">c</span><span class="w4">h</span><span class="w5">.</span><span class="w6">i</span><span class="w7">o</span></div></a>
+    <a href="mailto:michaelshillingburg@gmail.com"><div class="navbutton" id="button4" onmouseover="UpdateFooter('#1866EF 6px solid')" onmouseout="UpdateFooter('#1A3C72 6px solid')"><span class="w8">E</span><span class="w7">m</span><span class="w6">a</span><span class="w5">i</span><span class="w4">l</span><span class="w3">&nbsp;</span><span class="w2">m</span><span class="w1">e</span></div></a>
+  </div>
+  </div>
 </body>
 </html>
 
@@ -106,138 +106,138 @@
         // model
         var loader = new THREE.OBJLoader( manager );
         loader.load( 'images/spruce.obj',
-        	function ( object ) {
-		          object.traverse( function ( child ) {
-		            if ( child instanceof THREE.Mesh ) {
-		              child.material = wiremat;
-		            }
-		          } );
+          function ( object ) {
+              object.traverse( function ( child ) {
+                if ( child instanceof THREE.Mesh ) {
+                  child.material = wiremat;
+                }
+              } );
 
-		      scene.add( object );
-		      object.scale.set(4 * scaleModifier, 4 * scaleModifier , 4 * scaleModifier);
-		      object.position.x = windowHalfX / 3;
-		       object.position.y = windowHalfY / 5;
-		      object.position.z -= 200;
-		      objectX = object;
+          scene.add( object );
+          object.scale.set(4 * scaleModifier, 4 * scaleModifier , 4 * scaleModifier);
+          object.position.x = windowHalfX / 3;
+           object.position.y = windowHalfY / 5;
+          object.position.z -= 200;
+          objectX = object;
         }, onProgress, onError );
 
         loader.load( 'images/donut.obj',
-        	function ( object ) {
-        		objectY = object;
-		         objectY.traverse( function ( child ) {
-		            if ( child instanceof THREE.Mesh ) {
-		              child.material = wiremat2;
-		            }
-		          } );
+          function ( object ) {
+            objectY = object;
+             objectY.traverse( function ( child ) {
+                if ( child instanceof THREE.Mesh ) {
+                  child.material = wiremat2;
+                }
+              } );
 
-		      scene.add( object );
-		      object.scale.set(2 * scaleModifier, 2 * scaleModifier , 2 * scaleModifier);
-		      object.position.x = -windowHalfX / 2;
-		       object.position.y = -windowHalfY / 3;
-		      object.position.z -= 200;
-		 
+          scene.add( object );
+          object.scale.set(2 * scaleModifier, 2 * scaleModifier , 2 * scaleModifier);
+          object.position.x = -windowHalfX / 2;
+           object.position.y = -windowHalfY / 3;
+          object.position.z -= 200;
+     
         }, onProgress, onError );
 
          loader.load( 'images/tv.obj',
-        	function ( object ) {
-        		objectZ = object;
-		         objectZ.traverse( function ( child ) {
-		            if ( child instanceof THREE.Mesh ) {
-		              child.material = tvMat;
-		            }
-		          } );
+          function ( object ) {
+            objectZ = object;
+             objectZ.traverse( function ( child ) {
+                if ( child instanceof THREE.Mesh ) {
+                  child.material = tvMat;
+                }
+              } );
 
-		      scene.add( object );
-		      object.scale.set(1.2 * scaleModifier, 1.2 * scaleModifier , 1.2 * scaleModifier);
-		      object.position.x = -windowHalfX / 8;
-		       object.position.y = -windowHalfY / 4;
-		      object.position.z -= 200;
-		 
+          scene.add( object );
+          object.scale.set(1.2 * scaleModifier, 1.2 * scaleModifier , 1.2 * scaleModifier);
+          object.position.x = -windowHalfX / 8;
+           object.position.y = -windowHalfY / 4;
+          object.position.z -= 200;
+     
         }, onProgress, onError );
 
           loader.load( 'images/bamboo.obj',
-        	function ( object ) {
-        		objectW = object;
-		         objectW.traverse( function ( child ) {
-		            if ( child instanceof THREE.Mesh ) {
-		              child.material = bambooMat;
-		            }
-		          } );
+          function ( object ) {
+            objectW = object;
+             objectW.traverse( function ( child ) {
+                if ( child instanceof THREE.Mesh ) {
+                  child.material = bambooMat;
+                }
+              } );
 
-		      scene.add( object );
-		      object.scale.set(1 * scaleModifier, 1 * scaleModifier , 1 * scaleModifier);
-		      object.position.x = -windowHalfX / 3;
-		       object.position.y = -windowHalfY / 2;
-		      object.position.z -= 200;
-		 
+          scene.add( object );
+          object.scale.set(1 * scaleModifier, 1 * scaleModifier , 1 * scaleModifier);
+          object.position.x = -windowHalfX / 3;
+           object.position.y = -windowHalfY / 2;
+          object.position.z -= 200;
+     
         }, onProgress, onError );
 
            loader.load( 'images/chest.obj',
-        	function ( object ) {
-        		chest = object;
-		         chest.traverse( function ( child ) {
-		            if ( child instanceof THREE.Mesh ) {
-		              child.material = chestMat;
-		            }
-		          } );
+          function ( object ) {
+            chest = object;
+             chest.traverse( function ( child ) {
+                if ( child instanceof THREE.Mesh ) {
+                  child.material = chestMat;
+                }
+              } );
 
-		      scene.add( object );
-		      object.scale.set(0.6 * scaleModifier, 0.6 * scaleModifier , 0.6 * scaleModifier);
-		      object.position.x = windowHalfX / 3;
-		       object.position.y = -windowHalfY / 3;
-		      object.position.z -= 200;
-		 
+          scene.add( object );
+          object.scale.set(0.6 * scaleModifier, 0.6 * scaleModifier , 0.6 * scaleModifier);
+          object.position.x = windowHalfX / 3;
+           object.position.y = -windowHalfY / 3;
+          object.position.z -= 200;
+     
         }, onProgress, onError );
 
          loader.load( 'images/hot_togo.obj',
-        	function ( object ) {
-        		drink = object;
-		         drink.traverse( function ( child ) {
-		            if ( child instanceof THREE.Mesh ) {
-		              child.material = drinkMat;
-		            }
-		          } );
+          function ( object ) {
+            drink = object;
+             drink.traverse( function ( child ) {
+                if ( child instanceof THREE.Mesh ) {
+                  child.material = drinkMat;
+                }
+              } );
 
-		      scene.add( object );
-		      object.scale.set(1 * scaleModifier, 1 * scaleModifier , 1 * scaleModifier);
-		      object.position.x = windowHalfX / 20;
-		       object.position.y = windowHalfY / 4;
-		      object.position.z -= 200;
-		 
+          scene.add( object );
+          object.scale.set(1 * scaleModifier, 1 * scaleModifier , 1 * scaleModifier);
+          object.position.x = windowHalfX / 20;
+           object.position.y = windowHalfY / 4;
+          object.position.z -= 200;
+     
         }, onProgress, onError );
 
          loader.load( 'images/sofa.obj',
-        	function ( object ) {
-        		sofa = object;
-		         sofa.traverse( function ( child ) {
-		            if ( child instanceof THREE.Mesh ) {
-		              child.material = sofaMat;
-		            }
-		          } );
+          function ( object ) {
+            sofa = object;
+             sofa.traverse( function ( child ) {
+                if ( child instanceof THREE.Mesh ) {
+                  child.material = sofaMat;
+                }
+              } );
 
-		      scene.add( object );
-		      object.scale.set(1 * scaleModifier, 1 * scaleModifier , 1 * scaleModifier);
-		      object.position.x = -windowHalfX / 2.2;
-		       object.position.y = windowHalfY / 3;
-		      object.position.z -= 450;
-		 
+          scene.add( object );
+          object.scale.set(1 * scaleModifier, 1 * scaleModifier , 1 * scaleModifier);
+          object.position.x = -windowHalfX / 2.2;
+           object.position.y = windowHalfY / 3;
+          object.position.z -= 450;
+     
         }, onProgress, onError );
 
          loader.load( 'images/screwdriver.obj',
-        	function ( object ) {
-        		screwdriver = object;
-		         screwdriver.traverse( function ( child ) {
-		            if ( child instanceof THREE.Mesh ) {
-		              child.material = screwdriverMat;
-		            }
-		          } );
+          function ( object ) {
+            screwdriver = object;
+             screwdriver.traverse( function ( child ) {
+                if ( child instanceof THREE.Mesh ) {
+                  child.material = screwdriverMat;
+                }
+              } );
 
-		      scene.add( object );
-		      object.scale.set(1 * scaleModifier, 1 * scaleModifier , 1 * scaleModifier);
-		      object.position.x = windowHalfX / 17;
-		      object.position.y = -windowHalfY / 1.9;
-		      object.position.z -= 400;
-		 
+          scene.add( object );
+          object.scale.set(1 * scaleModifier, 1 * scaleModifier , 1 * scaleModifier);
+          object.position.x = windowHalfX / 17;
+          object.position.y = -windowHalfY / 1.9;
+          object.position.z -= 400;
+     
         }, onProgress, onError );
 
         loader.load( 'images/sword.obj',
@@ -259,44 +259,44 @@
         //
 
         var geometry = new THREE.SphereGeometry( 5, 5, 5 );
-		var materialGreen = new THREE.MeshBasicMaterial( {color: 0x31FF93} );
-		var materialOrange = new THREE.MeshBasicMaterial( {color: 0xFA742F} );
-		var materialBlue = new THREE.MeshBasicMaterial( {color: 0x1866EF} );
-		var materialPink = new THREE.MeshBasicMaterial( {color: 0xFF337D} );
-		
-		for (i = 0; i < windowHalfX/18; i++) { 
-			var sphere = new THREE.Mesh( geometry, materialGreen );
-    		scene.add( sphere );
-    		sphere.position.x = Math.random() * (-windowHalfX - windowHalfX) + windowHalfX;
-    		sphere.position.y = Math.random() * (-windowHalfY - windowHalfY) + windowHalfY;
-    		sphere.position.z = -700;
-    		var randomscale = Math.random();
-    		sphere.scale.set (randomscale, randomscale, randomscale);
-		}
-		for (i = 0; i < windowHalfX/18; i++) { 
-			var sphere = new THREE.Mesh( geometry, materialBlue );
-    		scene.add( sphere );
-    		sphere.position.x = Math.random() * (-windowHalfX - windowHalfX) + windowHalfX;
-    		sphere.position.y = Math.random() * (-windowHalfY - windowHalfY) + windowHalfY;
-    		var randomscale = Math.random();
-    		sphere.scale.set (randomscale, randomscale, randomscale);
-		}
-		for (i = 0; i < windowHalfX/18; i++) { 
-			var sphere = new THREE.Mesh( geometry, materialPink );
-    		scene.add( sphere );
-    		sphere.position.x = Math.random() * (-windowHalfX - windowHalfX) + windowHalfX;
-    		sphere.position.y = Math.random() * (-windowHalfY - windowHalfY) + windowHalfY;
-    		var randomscale = Math.random();
-    		sphere.scale.set (randomscale, randomscale, randomscale);
-		}
-		for (i = 0; i < windowHalfX/18; i++) { 
-			var sphere = new THREE.Mesh( geometry, materialOrange );
-    		scene.add( sphere );
-    		sphere.position.x = Math.random() * (-windowHalfX - windowHalfX) + windowHalfX;
-    		sphere.position.y = Math.random() * (-windowHalfY - windowHalfY) + windowHalfY;
-    		var randomscale = Math.random();
-    		sphere.scale.set (randomscale, randomscale, randomscale);
-		}
+    var materialGreen = new THREE.MeshBasicMaterial( {color: 0x31FF93} );
+    var materialOrange = new THREE.MeshBasicMaterial( {color: 0xFA742F} );
+    var materialBlue = new THREE.MeshBasicMaterial( {color: 0x1866EF} );
+    var materialPink = new THREE.MeshBasicMaterial( {color: 0xFF337D} );
+    
+    for (i = 0; i < windowHalfX/18; i++) { 
+      var sphere = new THREE.Mesh( geometry, materialGreen );
+        scene.add( sphere );
+        sphere.position.x = Math.random() * (-windowHalfX - windowHalfX) + windowHalfX;
+        sphere.position.y = Math.random() * (-windowHalfY - windowHalfY) + windowHalfY;
+        sphere.position.z = -700;
+        var randomscale = Math.random();
+        sphere.scale.set (randomscale, randomscale, randomscale);
+    }
+    for (i = 0; i < windowHalfX/18; i++) { 
+      var sphere = new THREE.Mesh( geometry, materialBlue );
+        scene.add( sphere );
+        sphere.position.x = Math.random() * (-windowHalfX - windowHalfX) + windowHalfX;
+        sphere.position.y = Math.random() * (-windowHalfY - windowHalfY) + windowHalfY;
+        var randomscale = Math.random();
+        sphere.scale.set (randomscale, randomscale, randomscale);
+    }
+    for (i = 0; i < windowHalfX/18; i++) { 
+      var sphere = new THREE.Mesh( geometry, materialPink );
+        scene.add( sphere );
+        sphere.position.x = Math.random() * (-windowHalfX - windowHalfX) + windowHalfX;
+        sphere.position.y = Math.random() * (-windowHalfY - windowHalfY) + windowHalfY;
+        var randomscale = Math.random();
+        sphere.scale.set (randomscale, randomscale, randomscale);
+    }
+    for (i = 0; i < windowHalfX/18; i++) { 
+      var sphere = new THREE.Mesh( geometry, materialOrange );
+        scene.add( sphere );
+        sphere.position.x = Math.random() * (-windowHalfX - windowHalfX) + windowHalfX;
+        sphere.position.y = Math.random() * (-windowHalfY - windowHalfY) + windowHalfY;
+        var randomscale = Math.random();
+        sphere.scale.set (randomscale, randomscale, randomscale);
+    }
 
 
         renderer = new THREE.WebGLRenderer();
@@ -307,6 +307,7 @@
         window.addEventListener( 'resize', onWindowResize, false );
       }
 
+ function GetOrientation () {
       if (window.DeviceOrientationEvent) {
     window.addEventListener("deviceorientation", function () {
         xValue = event.beta;
@@ -325,6 +326,8 @@
     }, true);
 }
 
+}
+
       function onWindowResize() {
         windowHalfX = window.innerWidth / 2;
         windowHalfY = window.innerHeight / 2;
@@ -333,8 +336,8 @@
         renderer.setSize( window.innerWidth, window.innerHeight );
       }
       function onDocumentMouseMove( event ) {
-      	oldmouseY = mouseY;
-      	oldmouseX = mouseX;
+        oldmouseY = mouseY;
+        oldmouseX = mouseX;
         mouseX = ( event.clientX - windowHalfX );
         mouseY = ( event.clientY - windowHalfY );
        // objectX.rotationMatrix = new THREE.Vector3(mouseX, mouseY, 0);
@@ -348,17 +351,17 @@
       }
 
       function render() {
-
+        GetOrientation();
         camera.position.x += ( mouseX/15 - camera.position.x ) * .05;
         camera.position.y += ( -mouseY/18 - camera.position.y ) * .05;
 
 
         // objectX.rotateY(map_range(mouseX, -windowHalfX, windowHalfX, 0.001, 0.1));
-        // objectX.rotateZ(map_range(mouseY/2, -windowHalfY, windowHalfY, 0,	-0.1));
+        // objectX.rotateZ(map_range(mouseY/2, -windowHalfY, windowHalfY, 0,  -0.1));
         // objectY.rotateY(map_range(mouseX, -windowHalfX, windowHalfX, 0.001, 0.1));
-        // objectY.rotateZ(map_range(mouseY/2, -windowHalfY, windowHalfY, 0,	-0.1));
+        // objectY.rotateZ(map_range(mouseY/2, -windowHalfY, windowHalfY, 0,  -0.1));
         // objectZ.rotateY(map_range(mouseX, -windowHalfX, windowHalfX, 0.001, 0.1));
-        // objectZ.rotateZ(map_range(mouseY/2, -windowHalfY, windowHalfY, 0,	-0.1));
+        // objectZ.rotateZ(map_range(mouseY/2, -windowHalfY, windowHalfY, 0,  -0.1));
         //camera.position.y = map_range(mouseX, -windowHalfX, windowHalfX, -1, 1);
         // var accelerometerOffsetY;
         // var accelerometerOffsetX;
@@ -371,7 +374,9 @@
           accelerometerOffsetX = map_range(xValue, 0, 1, -1, 1);
         }
         */
-		    objectW.rotation.y = map_range(mouseX, -windowHalfX, windowHalfX, -1, 1) + xValue;
+
+
+        objectW.rotation.y = map_range(mouseX, -windowHalfX, windowHalfX, -1, 1) + xValue;
         objectW.rotation.z = map_range(mouseX, -windowHalfX, windowHalfX, 1.1, -1.1) + xValue;
         objectW.rotation.x = map_range(-mouseY, -windowHalfX, windowHalfX, -1, 1) + yValue;
         objectX.rotation.y = objectW.rotation.y;
@@ -404,17 +409,17 @@
       }
 
       function map_range(value, low1, high1, low2, high2) {
-    		return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
+        return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
 }
 
 </script>
 
-	<script>
+  <script>
 
-	function UpdateFooter(color) {
+  function UpdateFooter(color) {
     document.getElementById("container").style.borderBottom = color;
 
-	}
+  }
 
 
-	</script>
+  </script>
