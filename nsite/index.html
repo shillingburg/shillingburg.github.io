@@ -310,19 +310,19 @@
  function GetOrientation () {
       if (window.DeviceOrientationEvent) {
     window.addEventListener("deviceorientation", function () {
-        yValue = map_range(event.beta, -2.5, 2.5, 0.2, 0.03);
-        xValue = map_range(event.gamma, -2.5, 2.5, 0.2, 0.05);
+        yValue = map_range(event.beta, -2.5, 2.5, -0.01, 0.3);
+        xValue = map_range(event.gamma, -2.5, 2.5, -0.02, 0.2);
 
     }, true);
 } else if (window.DeviceMotionEvent) {
     window.addEventListener('devicemotion', function () {
-      yValue = map_range(event.beta, -2.5, 2.5, 0.2, 0.03);
-        xValue = map_range(event.gamma, -2.5, 2.5, 0.2, 0.05);
+      yValue = map_range(event.beta, -2.5, 2.5, -0.01, 0.3);
+        xValue = map_range(event.gamma, -2.5, 2.5, -0.02, 0.2);
     }, true);
 } else {
     window.addEventListener("MozOrientation", function () {
-      yValue = map_range(event.beta, -2.5, 2.5, 0.2, 0.03);
-        xValue = map_range(event.gamma, -2.5, 2.5, 0.2, 0.05);
+     yValue = map_range(event.beta, -2.5, 2.5, -0.01, 0.3);
+        xValue = map_range(event.gamma, -2.5, 2.5, -0.02, 0.2);
     }, true);
 }
 
