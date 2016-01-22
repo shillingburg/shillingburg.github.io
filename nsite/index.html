@@ -307,10 +307,23 @@
         window.addEventListener( 'resize', onWindowResize, false );
       }
 
-      window.addEventListener("deviceorientation", function(event) {
-            xValue = Math.round(event.gamma);
-            yValue = Math.round(event.beta);
-      }, true);
+      if (window.DeviceOrientationEvent) {
+    window.addEventListener("deviceorientation", function () {
+        xValue = event.beta;
+        yValue = event.gamma;
+
+    }, true);
+} else if (window.DeviceMotionEvent) {
+    window.addEventListener('devicemotion', function () {
+       xValue = event.beta;
+        yValue = event.gamma;
+    }, true);
+} else {
+    window.addEventListener("MozOrientation", function () {
+       xValue = event.beta;
+        yValue = event.gamma;
+    }, true);
+}
 
       function onWindowResize() {
         windowHalfX = window.innerWidth / 2;
@@ -347,8 +360,9 @@
         // objectZ.rotateY(map_range(mouseX, -windowHalfX, windowHalfX, 0.001, 0.1));
         // objectZ.rotateZ(map_range(mouseY/2, -windowHalfY, windowHalfY, 0,	-0.1));
         //camera.position.y = map_range(mouseX, -windowHalfX, windowHalfX, -1, 1);
-        var accelerometerOffsetY;
-        var accelerometerOffsetX;
+        // var accelerometerOffsetY;
+        // var accelerometerOffsetX;
+        /*
         if(yValue == 0) {
           accelerometerOffsetY = 0;
           accelerometerOffsetX = 0;
@@ -356,10 +370,10 @@
           accelerometerOffsetY = map_range(yValue, 0, 1, -1, 1);
           accelerometerOffsetX = map_range(xValue, 0, 1, -1, 1);
         }
-
-		    objectW.rotation.y = map_range(mouseX, -windowHalfX, windowHalfX, -1, 1) + accelerometerOffsetX;
-        objectW.rotation.z = map_range(mouseX, -windowHalfX, windowHalfX, 1.1, -1.1) + accelerometerOffsetX;
-        objectW.rotation.x = map_range(-mouseY, -windowHalfX, windowHalfX, -1, 1) + accelerometerOffsetY;
+        */
+		    objectW.rotation.y = map_range(mouseX, -windowHalfX, windowHalfX, -1, 1) + xValue;
+        objectW.rotation.z = map_range(mouseX, -windowHalfX, windowHalfX, 1.1, -1.1) + xValue;
+        objectW.rotation.x = map_range(-mouseY, -windowHalfX, windowHalfX, -1, 1) + yValue;
         objectX.rotation.y = objectW.rotation.y;
         objectX.rotation.z = objectW.rotation.z;
         objectX.rotation.x = objectW.rotation.x;
