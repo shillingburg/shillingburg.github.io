@@ -45,6 +45,24 @@ body {
 }
 */
 
+.pdfbutton a {
+	position: absolute;
+	top: 26px;
+	left: 26px;
+	font-size: 23px;
+	color: #3390FF;
+	font-family: "Rubik";
+	font-weight: 700;
+	text-transform: uppercase;
+	border-bottom: 2px #3390FF dotted;
+	text-decoration: none;
+	-webkit-transition: border-bottom-color 0.4s ease;
+}
+
+.pdfbutton a:hover {
+	border-bottom-color: #fff;
+-webkit-transition: border-bottom-color 0.4s ease;
+}
 
 canvas {
 	width: 100%;
