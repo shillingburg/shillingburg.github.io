@@ -53,7 +53,6 @@ body {
 	color: #3390FF;
 	font-family: "Rubik";
 	font-weight: 700;
-	text-transform: uppercase;
 	border-bottom: 2px #3390FF dotted;
 	text-decoration: none;
 	-webkit-transition: border-bottom-color 0.4s ease;
