@@ -103,6 +103,7 @@ canvas {
 .centralblurbBigtext {
 	font-size: 60px;
 	font-weight: bold;
+	color: #3390FF;
 	word-break: break-word;
 	line-height: 0.9;
 	display: inline-block;
@@ -299,10 +300,6 @@ canvas {
 	line-height: 1.05;
 	outline: none;
 	word-break: break-word;
-	-webkit-animation: bgMove 5s linear infinite;
-	-moz-animation: bgMove 5s linear infinite;
-	-o-animation: bgMove 5s linear infinite;
-	animation: bgMove 5s linear infinite;
 }
 
 @-webkit-keyframes bgMove {
