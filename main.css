@@ -1,7 +1,13 @@
 @font-face {
-	font-family: "Birthday Cake";
+	font-family: "Greycliff";
 	font-weight: normal;
-	src: url(bdc.otf);
+	src: url(fonts/gcb.ttf);
+}
+
+@font-face {
+	font-family: "Greycliff";
+	font-weight: bold;
+	src: url(fonts/gch.ttf);
 }
 
 
@@ -51,16 +57,15 @@ body {
 	left: 26px;
 	font-size: 18px;
 	color: #3390FF;
-	font-family: "Rubik";
-	font-weight: 700;
-	border-bottom: 2px #3390FF dotted;
+	font-family: "Greycliff";
+	font-weight: bold;
 	text-decoration: none;
-	-webkit-transition: border-bottom-color 0.4s ease;
+	-webkit-transition: color 0.4s ease;
 }
 
 .pdfbutton a:hover {
-	border-bottom-color: #fff;
--webkit-transition: border-bottom-color 0.4s ease;
+	color: #fff;
+-webkit-transition: color 0.4s ease;
 }
 
 canvas {
@@ -77,8 +82,8 @@ canvas {
 	width: 100%;
 	height: 100%;
 	font-size: 35px;
-	font-family: "Rubik";
-	font-weight: 400;
+	font-family: "Greycliff";
+	font-weight: normal;
 	color: #fff;
 	display: table;
 	text-align: left;
@@ -97,7 +102,7 @@ canvas {
 
 .centralblurbBigtext {
 	font-size: 60px;
-	font-weight: 700;
+	font-weight: bold;
 	word-break: break-word;
 	line-height: 0.9;
 	display: inline-block;
@@ -113,9 +118,8 @@ canvas {
 
 .centralblurbSmalltext{
 	display: inline-block;
-	font-size: 28px;
-	font-weight: 400;
-	font-style: italic;
+	font-size: 24px;
+	font-weight: normal;
 	word-break: break-word;
 	line-height: 1.3;
 }
@@ -133,13 +137,13 @@ canvas {
 	background-position: center center;
 	background-size: 150% 150%;
 	right: 50%;
-	background-image: url(av.jpg);
+	background-image: url(bloo.png);
 }
 
 .centralblurb img {
-	width: 200px;
-	height: 200px;
-	border-radius: 100px;
+	width: 100px;
+	height: 100px;
+	margin-bottom: 20px;
 }
 
 #button1 {
@@ -253,7 +257,7 @@ canvas {
 	padding: 10px;
 	font-size: 23px;
 	text-align: center;
-	font-family: "Rubik";
+	font-family: "Greycliff";
 	font-weight: 400;
 	color: #fff;
 	-webkit-transition: background-color cubic-bezier(.06,.81,.44,.99) 0.2s, -webkit-transform cubic-bezier(.06,.81,.44,.99) 0.3s, box-shadow cubic-bezier(.06,.81,.44,.99) 0.3s, transform cubic-bezier(.06,.81,.44,.99) 0.3s;
@@ -283,10 +287,7 @@ canvas {
 	width: 100%;
 	height: 60px;
 	font-size: 50px;
-	font-family: "Birthday Cake";
-	background-attachment: fixed;
-	background: linear-gradient(45deg, #101B3A 25%, #0E1630 25%, #0E1630 50%, #101B3A 50%, #101B3A 75%, #0E1630 75%);
-	background-size: 100px 100px;
+	background-color: transparent;
 	color: #fff;
 	display: table;
 	text-align: center;
