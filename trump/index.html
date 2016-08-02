@@ -140,14 +140,14 @@ var __slice = Array.prototype.slice;
     onEvent: function(e) {
       switch (e.type) {
         case 'mousedown':
-        case 'touchstart':
+        //case 'touchstart':
           this.startPainting();
           break;
         case 'mouseup':
         case 'mouseout':
         case 'mouseleave':
-        case 'touchend':
-        case 'touchcancel':
+        //case 'touchend':
+       // case 'touchcancel':
           this.stopPainting();
       }
       if (this.painting) {
