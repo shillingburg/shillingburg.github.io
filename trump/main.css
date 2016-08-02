@@ -74,6 +74,25 @@ body {
 	background-position: center center;
 }
 
+.av {
+	width: 50pt;
+	height: 50pt;
+	background-image: url(images/av.svg);
+	background-size: 80% 80%;
+	position: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-transition: background-size 0.6s cubic-bezier(.05, .87, .55, 1);
+	top:10pt;
+	left: 10pt;
+	cursor: pointer;
+}
+
+.av:hover {
+	background-size: 100% 100%;
+	-webkit-transition: background-size 0.6s cubic-bezier(.05, .87, .55, 1);
+}
+
 .colorbox {
 	position: fixed;
 	overflow: auto;
