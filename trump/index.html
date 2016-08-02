@@ -146,7 +146,8 @@ var __slice = Array.prototype.slice;
         case 'mouseup':
         case 'mouseout':
         case 'mouseleave':
-
+        case 'touchend':
+        case 'touchcancel':
           this.stopPainting();
       }
       if (this.painting) {
@@ -177,7 +178,7 @@ var __slice = Array.prototype.slice;
   };
 
 
-
+/*
   return $.sketch.tools.eraser = {
     onEvent: function(e) {
       return $.sketch.tools.marker.onEvent.call(this, e);
@@ -191,6 +192,7 @@ var __slice = Array.prototype.slice;
       return this.context.globalCompositeOperation = oldcomposite;
     }
   };
+  */
 })(jQuery);
 </script>
 	<title>obliterate.me</title>
