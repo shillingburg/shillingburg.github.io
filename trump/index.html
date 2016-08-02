@@ -177,6 +177,10 @@ var __slice = Array.prototype.slice;
     }
   };
 
+  $( document ).ready(function() {
+    $('#canvas').sketch();
+});
+
 
 /*
   return $.sketch.tools.eraser = {
@@ -200,16 +204,7 @@ var __slice = Array.prototype.slice;
 <body>
 	
 <canvas id="canvas" width="3000" height="3000"></canvas>
-<script type="text/javascript">
-  $(function() {
-    $('#canvas').sketch();
-  });
-</script>
-<!-- 
-	<div class="roundbutton">
-		<a href="#canvas" data-tool="marker"><img src="images/draw.svg" width="60" height="60"></a>
-	</div>
--->
+
 	<div class="overlay"></div>
 	<div class="colorbox">
 		<p><a href="#canvas" data-color="#ffffff" style="background-color: #ffffff;"></a></p>
