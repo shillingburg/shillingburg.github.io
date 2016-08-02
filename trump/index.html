@@ -93,7 +93,7 @@ var __slice = Array.prototype.slice;
     Sketch.prototype.startPainting = function() {
       this.painting = true;
       return this.action = {
-        tool: this.tool,
+       // tool: this.tool,
         color: this.color,
         size: parseFloat(this.size),
         events: []
@@ -140,7 +140,7 @@ var __slice = Array.prototype.slice;
     onEvent: function(e) {
       switch (e.type) {
         case 'mousedown':
-        //case 'touchstart':
+        case 'touchstart':
           this.startPainting();
           break;
         case 'mouseup':
