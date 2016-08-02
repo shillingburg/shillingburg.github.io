@@ -3,14 +3,13 @@ body {
 	margin: 0;
 	margin-left: 0;
 	overflow: hidden;
-	background-color: #000000;
+	background-color: #e9f1f4;
 }
 
 #canvas {
 
 	background-size: cover;
 	position: fixed;
-	background-color: #e9f1f4;
 
 }
 
