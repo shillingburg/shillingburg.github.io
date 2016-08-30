@@ -56,7 +56,7 @@ body {
 	top: 26px;
 	left: 26px;
 	font-size: 18px;
-	color: #3390FF;
+	color: #0093ff;
 	font-family: "Greycliff";
 	font-weight: bold;
 	text-decoration: none;
@@ -103,7 +103,7 @@ canvas {
 .centralblurbBigtext {
 	font-size: 60px;
 	font-weight: bold;
-	color: #3390FF;
+	color: #0093ff;
 	word-break: break-word;
 	line-height: 0.9;
 	display: inline-block;
@@ -147,7 +147,7 @@ canvas {
 }
 
 #button1 {
-	background-color: #31FF93;
+	background-color: #0aefb9;
 }
 
 #button1:hover {
@@ -239,7 +239,7 @@ canvas {
 }
 
 #button4 {
-	background-color: #3390FF;
+	background-color: #0093ff;
 }
 
 #button4:hover {
