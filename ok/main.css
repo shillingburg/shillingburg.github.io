@@ -1,0 +1,83 @@
+@font-face {
+	font-family: 'Greycliff';
+	font-weight: normal;
+	src: url ('fonts/GreycliffCF-Regular.eot');
+	src: url ('fonts/GreycliffCF-Regular.woff2') format ('woff2'),
+       url ('fonts/GreycliffCF-Regular.woff') format ('woff'),
+       url ('fonts/GreycliffCF-Regular.ttf') format ('truetype');
+}
+
+@font-face {
+	font-family: 'Greycliff';
+	font-weight: bold;
+	src: url ('../fonts/GreycliffCF-ExtraBold.eot');
+	src: url ('fonts/GreycliffCF-ExtraBold.woff2') format ('woff2'),
+       url ('fonts/GreycliffCF-ExtraBold.woff') format ('woff'),
+       url ('fonts/GreycliffCF-ExtraBold.ttf') format ('truetype');
+}
+
+body {
+	background-color: #f8f9fd;
+	margin: 0;
+}
+
+.pageContainer {
+	margin-left: 15%;
+	margin-right: 15%;
+	height: 100%;
+}
+
+.navigation {
+	padding-top: 100pt;
+	padding-bottom: 80pt;
+	width: 100%;
+	text-align: center;
+	font-family: 'Greycliff';
+}
+
+.navigation img {
+	height: 60px;
+	width: 60px;
+	margin-right: 20px;
+	text-align: center;
+	display: inline-block;
+	float: left;
+}
+
+.navigation a {
+	display: inline-block;
+	padding: 5pt 13pt 6pt 13pt;
+	background-color: transparent;
+	margin-top: 20pt;
+	text-decoration: none;
+	border-radius: 25px;
+	color: #5e6670;
+	font-size: 18px;
+	font-family: 'Greycliff';
+}
+
+.blue {
+	font-weight: bold;
+	color: #0068ff !important;
+}
+
+.navigation a:hover {
+	background-color: #0068ff;
+	color: #f8f9fd!important;
+}
+
+.navigationLeft {
+	width: 49%;
+	display: inline-block;
+	min-width: 200px;
+	text-align: left;
+}
+
+.navigationRight {
+	width: 49%;
+	display: inline-block;
+	text-align: right;
+	min-width: 300px;
+}
+
+
