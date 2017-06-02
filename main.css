@@ -61,6 +61,7 @@ body {
 	font-weight: bold;
 	text-decoration: none;
 	-webkit-transition: color 0.4s ease;
+	display: none;
 }
 
 .pdfbutton a:hover {
@@ -147,11 +148,11 @@ canvas {
 }
 
 #button1 {
-	background-color: #0aefb9;
+	background-color: #0093ff;
 }
 
 #button1:hover {
-	box-shadow: -2px 3px 0px #02C18F;
+	box-shadow: -2px 3px 0px #1866EF;
 	-webkit-transition: background-color cubic-bezier(.06,.81,.44,.99) 0.2s, -webkit-transform cubic-bezier(.06,.81,.44,.99) 0.3s, box-shadow cubic-bezier(.06,.81,.44,.99) 0.3s;
 }
 
@@ -220,21 +221,21 @@ canvas {
 }
 
 #button2 {
-	background-color: #FA742F;
+	background-color: #0093ff;
 }
 
 #button2:hover {
-	box-shadow: -2px 3px 0px #F74D19;
+	box-shadow: -2px 3px 0px #1866EF;
 	-webkit-transition: background-color cubic-bezier(.06,.81,.44,.99) 0.2s, -webkit-transform cubic-bezier(.06,.81,.44,.99) 0.3s, box-shadow cubic-bezier(.06,.81,.44,.99) 0.3s;
 }
 
 
 #button3 {
-	background-color: #FF337D;
+	background-color: #0093ff;
 }
 
 #button3:hover {
-	box-shadow: -2px 3px 0px #CC177E;
+	box-shadow: -2px 3px 0px #1866EF;
 	-webkit-transition: background-color cubic-bezier(.06,.81,.44,.99) 0.2s, -webkit-transform cubic-bezier(.06,.81,.44,.99) 0.3s, box-shadow cubic-bezier(.06,.81,.44,.99) 0.3s;
 }
 

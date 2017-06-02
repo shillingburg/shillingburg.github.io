@@ -1,5 +1,5 @@
 @font-face {
-	font-family: 'Greycliff';
+	font-family: 'GreycliffCF-Regular';
 	font-weight: normal;
 	src: url ('fonts/GreycliffCF-Regular.eot');
 	src: url ('fonts/GreycliffCF-Regular.woff2') format ('woff2'),
@@ -8,9 +8,9 @@
 }
 
 @font-face {
-	font-family: 'Greycliff';
+	font-family: 'GreycliffCF-ExtraBold';
 	font-weight: bold;
-	src: url ('../fonts/GreycliffCF-ExtraBold.eot');
+	src: url ('fonts/GreycliffCF-ExtraBold.eot');
 	src: url ('fonts/GreycliffCF-ExtraBold.woff2') format ('woff2'),
        url ('fonts/GreycliffCF-ExtraBold.woff') format ('woff'),
        url ('fonts/GreycliffCF-ExtraBold.ttf') format ('truetype');
@@ -32,7 +32,7 @@ body {
 	padding-bottom: 80pt;
 	width: 100%;
 	text-align: center;
-	font-family: 'Greycliff';
+	font-family: 'GreycliffCF-Regular';
 }
 
 .navigation img {
@@ -53,7 +53,7 @@ body {
 	border-radius: 25px;
 	color: #5e6670;
 	font-size: 18px;
-	font-family: 'Greycliff';
+	font-family: 'GreycliffCF-Regular';
 }
 
 .blue {
